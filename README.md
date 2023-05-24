@@ -1,12 +1,11 @@
 # Gutachten
 
 ## Description
-Frappe app based on healthcare
+Frappe app based on healthcare module for Gutachtenpraxis
 
 #### License
 MIT
 
-Hallo!
 
 # How to install
 
