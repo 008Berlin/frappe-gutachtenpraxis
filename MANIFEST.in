@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include health_gutachtenpraxis *.css
+recursive-include health_gutachtenpraxis *.csv
+recursive-include health_gutachtenpraxis *.html
+recursive-include health_gutachtenpraxis *.ico
+recursive-include health_gutachtenpraxis *.js
+recursive-include health_gutachtenpraxis *.json
+recursive-include health_gutachtenpraxis *.md
+recursive-include health_gutachtenpraxis *.png
+recursive-include health_gutachtenpraxis *.py
+recursive-include health_gutachtenpraxis *.svg
+recursive-include health_gutachtenpraxis *.txt
+recursive-exclude health_gutachtenpraxis *.pyc
