@@ -9,7 +9,15 @@
  "field_order": [
   "vorname",
   "nachname",
-  "geburtsdatum"
+  "patient_name",
+  "geburtsdatum",
+  "official_address",
+  "current_address",
+  "contact",
+  "notes",
+  "medical_history",
+  "dolmetscher",
+  "notes_daylist"
  ],
  "fields": [
   {
@@ -29,12 +37,58 @@
   {
    "fieldname": "geburtsdatum",
    "fieldtype": "Data",
-   "label": "Geburtsdatum"
+   "label": "Geburtsdatum",
+   "reqd": 1
+  },
+  {
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "official_address",
+   "fieldtype": "Link",
+   "label": "Meldeadresse",
+   "options": "Address"
+  },
+  {
+   "fieldname": "current_address",
+   "fieldtype": "Link",
+   "label": "aktuelle Adresse",
+   "options": "Address"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "label": "Kontakt",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Zus\u00e4tzliche Hinweise"
+  },
+  {
+   "fieldname": "medical_history",
+   "fieldtype": "Link",
+   "label": "Anamnesebogen",
+   "options": "Anamnesebogen"
+  },
+  {
+   "default": "0",
+   "fieldname": "dolmetscher",
+   "fieldtype": "Check",
+   "label": "Dolmetscher"
+  },
+  {
+   "fieldname": "notes_daylist",
+   "fieldtype": "Data",
+   "label": "Notizen f\u00fcr Tagesliste"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-24 16:25:53.103365",
+ "modified": "2023-05-24 17:25:55.209054",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten Patient",
