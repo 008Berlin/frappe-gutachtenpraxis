@@ -142,8 +142,8 @@ bench --site health.localhost install-app healthcare
 
 To install gutachten app
 ```shell
-bench get-app https://github.com/aronjanosch/frappe-gutachten.git
-bench --site health.localhost install-app gutachten
+bench get-app https://github.com/aronjanosch/frappe-gutachtenpraxis.git
+bench --site health.localhost install-app health_gutachtenpraxis
 ```
 
 ## Start Frappe without debugging
@@ -188,6 +188,14 @@ To debug workers, skip starting worker with honcho and start it with VSCode debu
 
 For advance vscode configuration in the devcontainer, change the config files in `development/.vscode`.
 
-## Hier kommt ein Merge Konflikt
+## Running the containers
 
-Ich habe gerade einen Kaffee getrunken.
+```shell
+docker-compose -f .devcontainer/docker-compose.yml up -d
+```
+
+And enter the interactive shell for the development container with the following command:
+
+```shell
+docker exec -e "TERM=xterm-256color" -w /workspace/development -it devcontainer-frappe-1 bash
+
