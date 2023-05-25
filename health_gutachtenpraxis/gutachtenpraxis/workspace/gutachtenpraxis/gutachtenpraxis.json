@@ -1,0 +1,113 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"SonG5lmlVh\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gutachtenpraxis</span>\",\"col\":12}},{\"id\":\"COerA9eLao\",\"type\":\"card\",\"data\":{\"card_name\":\"Gutachten\",\"col\":4}},{\"id\":\"SJ5LHCupzt\",\"type\":\"card\",\"data\":{\"card_name\":\"Patient\",\"col\":4}},{\"id\":\"mDK0fjsdnO\",\"type\":\"card\",\"data\":{\"card_name\":\"Gericht\",\"col\":4}}]",
+ "creation": "2023-05-24 16:34:21.219434",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "heart-active",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Gutachtenpraxis",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Gutachten",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Gutachten",
+   "link_count": 0,
+   "link_to": "Gutachten",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Patient",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Patienten",
+   "link_count": 0,
+   "link_to": "Gutachten Patient",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Anamnesebogen",
+   "link_count": 0,
+   "link_to": "Anamnesebogen",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Kontakpersonen",
+   "link_count": 0,
+   "link_to": "Contact",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Gericht",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Gericht",
+   "link_count": 0,
+   "link_to": "Gericht",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Richter",
+   "link_count": 0,
+   "link_to": "Richter",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2023-05-25 13:52:38.110161",
+ "modified_by": "Administrator",
+ "module": "Gutachtenpraxis",
+ "name": "Gutachtenpraxis",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 10.0,
+ "shortcuts": [],
+ "title": "Gutachtenpraxis"
+}
