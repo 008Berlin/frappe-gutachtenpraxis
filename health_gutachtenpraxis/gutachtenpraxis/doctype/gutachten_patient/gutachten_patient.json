@@ -11,7 +11,8 @@
   "first_name",
   "last_name",
   "patient_name",
-  "geburtsdatum",
+  "dob",
+  "age_html",
   "official_address",
   "current_address",
   "contact",
@@ -21,12 +22,6 @@
   "notes_daylist"
  ],
  "fields": [
-  {
-   "fieldname": "geburtsdatum",
-   "fieldtype": "Data",
-   "label": "Geburtsdatum",
-   "reqd": 1
-  },
   {
    "bold": 1,
    "fieldname": "patient_name",
@@ -91,12 +86,27 @@
    "in_list_view": 1,
    "label": "Nachname",
    "reqd": 1
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "Geburtsdatum",
+   "reqd": 1
+  },
+  {
+   "fieldname": "age_html",
+   "fieldtype": "HTML",
+   "label": "Alter",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
   }
  ],
  "icon": "fa fa-user",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-25 13:53:36.137936",
+ "modified": "2023-05-25 15:35:23.620414",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten Patient",
