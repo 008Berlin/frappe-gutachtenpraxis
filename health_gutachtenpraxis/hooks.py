@@ -199,3 +199,6 @@ app_license = "MIT"
 # auth_hooks = [
 #	"health_gutachtenpraxis.auth.validate"
 # ]
+fixtures = [
+    'Gutachtenarten',
+]

@@ -1,0 +1,74 @@
+[
+ {
+  "appraisal_category": "M1",
+  "appraisal_rate": 80.0,
+  "appraisal_type": "Verl\u00e4ngerung oder Aufhebung der Betreuung",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 15:50:16.866576",
+  "name": "Verl\u00e4ngerung oder Aufhebung der Betreuung"
+ },
+ {
+  "appraisal_category": "M1",
+  "appraisal_rate": 80.0,
+  "appraisal_type": "Erweiterung der Betreuung",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 15:59:13.406704",
+  "name": "Erweiterung der Betreuung"
+ },
+ {
+  "appraisal_category": "M1",
+  "appraisal_rate": 80.0,
+  "appraisal_type": "Aufhebung der bestehenden Betreuung",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 15:59:52.718040",
+  "name": "Aufhebung der bestehenden Betreuung"
+ },
+ {
+  "appraisal_category": "M1",
+  "appraisal_rate": 80.0,
+  "appraisal_type": "Gutachtenerg\u00e4nzung",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 16:00:13.464771",
+  "name": "Gutachtenerg\u00e4nzung"
+ },
+ {
+  "appraisal_category": "M2",
+  "appraisal_rate": 90.0,
+  "appraisal_type": "Einrichtung einer Betreuung",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 16:00:37.338459",
+  "name": "Einrichtung einer Betreuung"
+ },
+ {
+  "appraisal_category": "M2",
+  "appraisal_rate": 90.0,
+  "appraisal_type": "Einwilligungsvorbehalt",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 16:01:08.727810",
+  "name": "Einwilligungsvorbehalt"
+ },
+ {
+  "appraisal_category": "M2",
+  "appraisal_rate": 90.0,
+  "appraisal_type": "Einwilligungsf\u00e4higkeit bei bestehender geistiger Behinderung",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 16:02:01.204133",
+  "name": "Einwilligungsf\u00e4higkeit bei bestehender geistiger Behinderung"
+ },
+ {
+  "appraisal_category": "M2",
+  "appraisal_rate": 90.0,
+  "appraisal_type": "Einrichtung einer Betreuung und Einwilligungsvorbehalt",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 16:02:18.868621",
+  "name": "Einrichtung einer Betreuung und Einwilligungsvorbehalt"
+ }
+]

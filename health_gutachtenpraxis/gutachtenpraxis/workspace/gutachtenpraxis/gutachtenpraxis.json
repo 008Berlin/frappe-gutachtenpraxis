@@ -15,24 +15,6 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Gutachten",
-   "link_count": 1,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Gutachten",
-   "link_count": 0,
-   "link_to": "Gutachten",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Patient",
    "link_count": 3,
    "onboard": 0,
@@ -95,9 +77,37 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Gutachten",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Gutachten",
+   "link_count": 0,
+   "link_to": "Gutachten",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Gutachtenarten",
+   "link_count": 0,
+   "link_to": "Gutachtenarten",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2023-05-25 13:52:38.110161",
+ "modified": "2023-05-25 15:47:53.771505",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachtenpraxis",
