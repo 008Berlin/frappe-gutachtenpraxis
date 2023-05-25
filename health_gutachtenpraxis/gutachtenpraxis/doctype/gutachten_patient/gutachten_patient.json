@@ -4,11 +4,12 @@
  "creation": "2023-05-24 16:25:53.103365",
  "default_view": "List",
  "doctype": "DocType",
+ "document_type": "Document",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "vorname",
-  "nachname",
+  "first_name",
+  "last_name",
   "patient_name",
   "geburtsdatum",
   "official_address",
@@ -21,29 +22,21 @@
  ],
  "fields": [
   {
-   "fieldname": "vorname",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Vorname",
-   "reqd": 1
-  },
-  {
-   "fieldname": "nachname",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Nachname",
-   "reqd": 1
-  },
-  {
    "fieldname": "geburtsdatum",
    "fieldtype": "Data",
    "label": "Geburtsdatum",
    "reqd": 1
   },
   {
+   "bold": 1,
    "fieldname": "patient_name",
    "fieldtype": "Data",
-   "label": "Full Name"
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Full Name",
+   "read_only": 1,
+   "search_index": 1
   },
   {
    "fieldname": "official_address",
@@ -84,11 +77,26 @@
    "fieldname": "notes_daylist",
    "fieldtype": "Data",
    "label": "Notizen f\u00fcr Tagesliste"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Vorname",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nachname",
+   "reqd": 1
   }
  ],
+ "icon": "fa fa-user",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-24 17:25:55.209054",
+ "modified": "2023-05-25 13:31:56.036911",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten Patient",
@@ -107,7 +115,10 @@
    "write": 1
   }
  ],
+ "search_fields": "patient_name",
+ "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "patient_name"
 }
