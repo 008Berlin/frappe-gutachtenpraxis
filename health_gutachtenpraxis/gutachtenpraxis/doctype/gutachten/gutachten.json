@@ -1,13 +1,26 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:GN {#####}",
  "creation": "2023-05-24 16:24:06.480953",
  "default_view": "List",
  "doctype": "DocType",
+ "document_type": "Document",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "file_number"
+  "file_number",
+  "court",
+  "judge",
+  "decision_date",
+  "receipt_date",
+  "period",
+  "due_date",
+  "preliminary_end",
+  "type",
+  "pricing",
+  "patient",
+  "anamnese"
  ],
  "fields": [
   {
@@ -16,14 +29,78 @@
    "in_list_view": 1,
    "label": "Aktenzeichen",
    "reqd": 1
+  },
+  {
+   "fieldname": "court",
+   "fieldtype": "Link",
+   "label": "Amtsgericht",
+   "options": "Gericht"
+  },
+  {
+   "fieldname": "judge",
+   "fieldtype": "Link",
+   "label": "RIchter",
+   "options": "Richter"
+  },
+  {
+   "fieldname": "decision_date",
+   "fieldtype": "Date",
+   "label": "Beschlussdatum"
+  },
+  {
+   "fieldname": "receipt_date",
+   "fieldtype": "Date",
+   "label": "Eingangsdatum"
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Data",
+   "label": "Frist"
+  },
+  {
+   "description": "Wird automatisch bef\u00fcllt",
+   "fieldname": "due_date",
+   "fieldtype": "Data",
+   "label": "F\u00e4llig am"
+  },
+  {
+   "fieldname": "preliminary_end",
+   "fieldtype": "Data",
+   "label": "Vorl\u00e4ufiges Ende"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Gutachten Patient"
+  },
+  {
+   "fetch_from": "patient.medical_history",
+   "fieldname": "anamnese",
+   "fieldtype": "Link",
+   "label": "Anamnesebogen",
+   "options": "Anamnesebogen"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Gutachtenart",
+   "options": "Typ 1\nTyp 2\nTyp 3"
+  },
+  {
+   "fieldname": "pricing",
+   "fieldtype": "Select",
+   "label": "Berechnungssatz",
+   "options": "Preis 1\nPreis 2\nPreis 3"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-24 16:24:06.480953",
+ "modified": "2023-05-25 15:27:10.596606",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
