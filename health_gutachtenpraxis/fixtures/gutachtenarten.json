@@ -70,5 +70,230 @@
   "doctype": "Gutachtenarten",
   "modified": "2023-05-25 16:02:18.868621",
   "name": "Einrichtung einer Betreuung und Einwilligungsvorbehalt"
+ },
+ {
+  "appraisal_category": "M3",
+  "appraisal_rate": 120.0,
+  "appraisal_type": "Unterbringung in einer geschlossenen Einrichtung",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:38:19.698146",
+  "name": "Unterbringung in einer geschlossenen Einrichtung"
+ },
+ {
+  "appraisal_category": "M3",
+  "appraisal_rate": 120.0,
+  "appraisal_type": "Einrichtung freiheitsentziehende Ma\u00dfnahmen",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:38:52.332886",
+  "name": "Einrichtung freiheitsentziehende Ma\u00dfnahmen"
+ },
+ {
+  "appraisal_category": "M3",
+  "appraisal_rate": 120.0,
+  "appraisal_type": "Erforderlichkeit der Unterbringung in einer  geschlossenen Einrichtung",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:39:25.990127",
+  "name": "Erforderlichkeit der Unterbringung in einer  geschlossenen Einrichtung"
+ },
+ {
+  "appraisal_category": "M3",
+  "appraisal_rate": 120.0,
+  "appraisal_type": "Betreuungseinrichtung und Unterbringung in einer geschlossenen Einrichtung",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:39:48.507945",
+  "name": "Betreuungseinrichtung und Unterbringung in einer geschlossenen Einrichtung"
+ },
+ {
+  "appraisal_category": "M3",
+  "appraisal_rate": 120.0,
+  "appraisal_type": "Zwangsmedikation",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:40:10.537664",
+  "name": "Zwangsmedikation"
+ },
+ {
+  "appraisal_category": "Eigene",
+  "appraisal_rate": 0.0,
+  "appraisal_type": "Gruppensupervision  1x90 Minuten",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:41:22.854835",
+  "name": "Gruppensupervision  1x90 Minuten"
+ },
+ {
+  "appraisal_category": "Eigene",
+  "appraisal_rate": 0.0,
+  "appraisal_type": "Telefonsupervision",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:41:59.294252",
+  "name": "Telefonsupervision"
+ },
+ {
+  "appraisal_category": "Eigene",
+  "appraisal_rate": 0.0,
+  "appraisal_type": "Unterbringung / unterbringungs\u00e4hnliche Ma\u00dfnahmen",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:42:23.237757",
+  "name": "Unterbringung / unterbringungs\u00e4hnliche Ma\u00dfnahmen"
+ },
+ {
+  "appraisal_category": "Eigene",
+  "appraisal_rate": 0.0,
+  "appraisal_type": "Genehmigung einer freiheitsentziehende Ma\u00dfnahme",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:42:42.844017",
+  "name": "Genehmigung einer freiheitsentziehende Ma\u00dfnahme"
+ },
+ {
+  "appraisal_category": "Eigene",
+  "appraisal_rate": 0.0,
+  "appraisal_type": "Medizinische Voraussetzungen freiheitsentziehender Ma\u00dfnahmen",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:43:06.648246",
+  "name": "Medizinische Voraussetzungen freiheitsentziehender Ma\u00dfnahmen"
+ },
+ {
+  "appraisal_category": "Eigene",
+  "appraisal_rate": 0.0,
+  "appraisal_type": "Medizinische Voraussetzungen freiheitsentziehender Unterbringung",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:43:32.702565",
+  "name": "Medizinische Voraussetzungen freiheitsentziehender Unterbringung"
+ },
+ {
+  "appraisal_category": "Eigene",
+  "appraisal_rate": 0.0,
+  "appraisal_type": "Erforderlichkeit der Unterbringung in einer geschlossenen Einrichtung und \u00e4rztl. Zwangsma\u00dfnahmen",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:44:04.951792",
+  "name": "Erforderlichkeit der Unterbringung in einer geschlossenen Einrichtung und \u00e4rztl. Zwangsma\u00dfnahmen"
+ },
+ {
+  "appraisal_category": "Eigene",
+  "appraisal_rate": 0.0,
+  "appraisal_type": "Einschr\u00e4nkung der Betreuung",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:44:31.558862",
+  "name": "Einschr\u00e4nkung der Betreuung"
+ },
+ {
+  "appraisal_category": "Eigene",
+  "appraisal_rate": 0.0,
+  "appraisal_type": "Verl\u00e4ngerung oder Aufhebung der Betreuung und des Einwilligungsvorbehaltes",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:44:55.331066",
+  "name": "Verl\u00e4ngerung oder Aufhebung der Betreuung und des Einwilligungsvorbehaltes"
+ },
+ {
+  "appraisal_category": "Eigene",
+  "appraisal_rate": 0.0,
+  "appraisal_type": "Erforderlichkeit \u00e4rztlicher Behandlungsma\u00dfnahmen",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:45:27.027970",
+  "name": "Erforderlichkeit \u00e4rztlicher Behandlungsma\u00dfnahmen"
+ },
+ {
+  "appraisal_category": "Eigene",
+  "appraisal_rate": 0.0,
+  "appraisal_type": "Genehmigung der Unterbringung/unterbringungs\u00e4hnliche Ma\u00dfnahme",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:45:48.653929",
+  "name": "Genehmigung der Unterbringung/unterbringungs\u00e4hnliche Ma\u00dfnahme"
+ },
+ {
+  "appraisal_category": "Eigene",
+  "appraisal_rate": 0.0,
+  "appraisal_type": "Einschr\u00e4nkung oder Aufhebung der Betreuung",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:46:41.457928",
+  "name": "Einschr\u00e4nkung oder Aufhebung der Betreuung"
+ },
+ {
+  "appraisal_category": "Eigene",
+  "appraisal_rate": 0.0,
+  "appraisal_type": "Gutachten zur Feststellung der Schuldf\u00e4higkeit",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:47:02.776592",
+  "name": "Gutachten zur Feststellung der Schuldf\u00e4higkeit"
+ },
+ {
+  "appraisal_category": "Eigene",
+  "appraisal_rate": 0.0,
+  "appraisal_type": "Gruppensupervision",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:47:29.018637",
+  "name": "Gruppensupervision"
+ },
+ {
+  "appraisal_category": "Eigene",
+  "appraisal_rate": 0.0,
+  "appraisal_type": "Erweiterung der Betreuung im Bereich der Aufenthaltsbestimmung",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:50:26.978339",
+  "name": "Erweiterung der Betreuung im Bereich der Aufenthaltsbestimmung"
+ },
+ {
+  "appraisal_category": "Eigene",
+  "appraisal_rate": 0.0,
+  "appraisal_type": "Unterbringung in einer geschlossenen Einrichtung und Einrichtung der Betreuung",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:50:47.957502",
+  "name": "Unterbringung in einer geschlossenen Einrichtung und Einrichtung der Betreuung"
+ },
+ {
+  "appraisal_category": "Eigene",
+  "appraisal_rate": 0.0,
+  "appraisal_type": "Erweiterung der Betreuung und der Anordnung eines Einwilligungsvorbehalts",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:51:09.678355",
+  "name": "Erweiterung der Betreuung und der Anordnung eines Einwilligungsvorbehalts"
+ },
+ {
+  "appraisal_category": "Eigene",
+  "appraisal_rate": 0.0,
+  "appraisal_type": "Erg\u00e4nzung zur Unterbringung",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:51:28.185473",
+  "name": "Erg\u00e4nzung zur Unterbringung"
+ },
+ {
+  "appraisal_category": "Eigene",
+  "appraisal_rate": 0.0,
+  "appraisal_type": "Entscheidung \u00fcber die Genehmigung zur Wohnungsk\u00fcndigung",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:51:49.266374",
+  "name": "Entscheidung \u00fcber die Genehmigung zur Wohnungsk\u00fcndigung"
+ },
+ {
+  "appraisal_category": "Eigene",
+  "appraisal_rate": 0.0,
+  "appraisal_type": "Nachbegutachtung (freiheitsentziehende Unterbringung)",
+  "docstatus": 0,
+  "doctype": "Gutachtenarten",
+  "modified": "2023-05-25 19:52:09.899961",
+  "name": "Nachbegutachtung (freiheitsentziehende Unterbringung)"
  }
 ]
