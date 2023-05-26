@@ -53,9 +53,11 @@
    "label": "Eingangsdatum"
   },
   {
+   "description": "in Tagen",
    "fieldname": "period",
-   "fieldtype": "Data",
-   "label": "Frist"
+   "fieldtype": "Select",
+   "label": "Frist",
+   "options": "14\n30\n44\n60"
   },
   {
    "description": "Wird automatisch bef\u00fcllt",
@@ -96,7 +98,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-25 15:27:10.596606",
+ "modified": "2023-05-26 12:50:08.065310",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten",
