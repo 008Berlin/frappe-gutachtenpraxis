@@ -8,15 +8,27 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "salutation",
   "first_name",
   "last_name",
   "patient_name",
-  "dob",
-  "age_html",
-  "official_address",
-  "current_address",
+  "patient_birthdate",
+  "patient_phone",
+  "patient_additions",
+  "adresse_section",
+  "meldeadresse_column",
+  "m_patient_street",
+  "m_patient_zipcode",
+  "m_patient_city",
+  "aktuelle_adresse_section",
+  "a_patient_residence",
+  "a_patient_residence_name",
+  "a_patient_residence_station",
+  "a_patient_street",
+  "a_patient_zipcode",
+  "a_patient_city",
+  "a_patient_residence_phone",
   "contact",
-  "notes",
   "medical_history",
   "dolmetscher",
   "notes_daylist"
@@ -34,27 +46,10 @@
    "search_index": 1
   },
   {
-   "fieldname": "official_address",
-   "fieldtype": "Link",
-   "label": "Meldeadresse",
-   "options": "Address"
-  },
-  {
-   "fieldname": "current_address",
-   "fieldtype": "Link",
-   "label": "aktuelle Adresse",
-   "options": "Address"
-  },
-  {
    "fieldname": "contact",
    "fieldtype": "Link",
    "label": "Kontakt",
    "options": "Contact"
-  },
-  {
-   "fieldname": "notes",
-   "fieldtype": "Text Editor",
-   "label": "Zus\u00e4tzliche Hinweise"
   },
   {
    "fieldname": "medical_history",
@@ -88,25 +83,99 @@
    "reqd": 1
   },
   {
-   "fieldname": "dob",
+   "fieldname": "salutation",
+   "fieldtype": "Select",
+   "label": "Anrede",
+   "options": "M\u00e4nnlich\nWeiblich\nDivers",
+   "reqd": 1
+  },
+  {
+   "fieldname": "adresse_section",
+   "fieldtype": "Tab Break",
+   "label": "Adresse"
+  },
+  {
+   "fieldname": "patient_phone",
+   "fieldtype": "Data",
+   "label": "Telefon"
+  },
+  {
+   "fieldname": "patient_additions",
+   "fieldtype": "Text Editor",
+   "label": "Zus\u00e4tzliche Hinweise"
+  },
+  {
+   "fieldname": "patient_birthdate",
    "fieldtype": "Data",
    "label": "Geburtsdatum",
    "reqd": 1
   },
   {
-   "fieldname": "age_html",
-   "fieldtype": "HTML",
-   "label": "Alter",
-   "no_copy": 1,
-   "print_hide": 1,
-   "read_only": 1,
-   "report_hide": 1
+   "fieldname": "meldeadresse_column",
+   "fieldtype": "Section Break",
+   "label": "Meldeadresse"
+  },
+  {
+   "fieldname": "aktuelle_adresse_section",
+   "fieldtype": "Section Break",
+   "label": "Aktuelle Adresse"
+  },
+  {
+   "fieldname": "m_patient_street",
+   "fieldtype": "Data",
+   "label": "Stra\u00dfe"
+  },
+  {
+   "fieldname": "m_patient_zipcode",
+   "fieldtype": "Data",
+   "label": "Postleitzahl"
+  },
+  {
+   "fieldname": "m_patient_city",
+   "fieldtype": "Data",
+   "label": "Ort"
+  },
+  {
+   "fieldname": "a_patient_street",
+   "fieldtype": "Data",
+   "label": "Stra\u00dfe"
+  },
+  {
+   "fieldname": "a_patient_residence_station",
+   "fieldtype": "Data",
+   "label": "Zusatz (Abteilung)"
+  },
+  {
+   "fieldname": "a_patient_residence",
+   "fieldtype": "Select",
+   "label": "Art des Aufenthalts",
+   "options": "Privatadresse\nKlinik\nPflegeeinrichtung\nReha\nOhne festen Wohnsitz"
+  },
+  {
+   "fieldname": "a_patient_residence_name",
+   "fieldtype": "Data",
+   "label": "Name der Einrichtung"
+  },
+  {
+   "fieldname": "a_patient_zipcode",
+   "fieldtype": "Data",
+   "label": "Postleitzahl"
+  },
+  {
+   "fieldname": "a_patient_city",
+   "fieldtype": "Data",
+   "label": "Ort"
+  },
+  {
+   "fieldname": "a_patient_residence_phone",
+   "fieldtype": "Data",
+   "label": "Telefon (vor Ort)"
   }
  ],
  "icon": "fa fa-user",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-25 15:35:23.620414",
+ "modified": "2023-05-26 16:38:24.258987",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten Patient",

@@ -16,12 +16,16 @@
   {
    "fieldname": "appraisal_type",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Gutachtenart",
    "unique": 1
   },
   {
    "fieldname": "appraisal_category",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Kategorie"
   },
   {
@@ -32,7 +36,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-25 15:45:13.092978",
+ "modified": "2023-05-26 13:46:12.404155",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachtenarten",
@@ -54,5 +58,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "appraisal_type"
 }
