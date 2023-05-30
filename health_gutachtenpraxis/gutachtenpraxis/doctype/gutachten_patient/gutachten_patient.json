@@ -15,6 +15,11 @@
   "patient_birthdate",
   "patient_phone",
   "patient_additions",
+  "column_break_hkcui",
+  "copy_mainfile",
+  "notes_daylist",
+  "translator",
+  "contact_appointment",
   "adresse_section",
   "meldeadresse_column",
   "m_patient_street",
@@ -28,10 +33,15 @@
   "a_patient_zipcode",
   "a_patient_city",
   "a_patient_residence_phone",
-  "contact",
-  "medical_history",
-  "dolmetscher",
-  "notes_daylist"
+  "beteiligte_personen_tab",
+  "b_patient_function",
+  "b_patient_salutation",
+  "b_patient_first_name",
+  "b_patient_last_name",
+  "b_patient_address",
+  "b_patient_phone",
+  "b_patient_mail",
+  "b_patient_fax"
  ],
  "fields": [
   {
@@ -44,29 +54,6 @@
    "label": "Full Name",
    "read_only": 1,
    "search_index": 1
-  },
-  {
-   "fieldname": "contact",
-   "fieldtype": "Link",
-   "label": "Kontakt",
-   "options": "Contact"
-  },
-  {
-   "fieldname": "medical_history",
-   "fieldtype": "Link",
-   "label": "Anamnesebogen",
-   "options": "Anamnesebogen"
-  },
-  {
-   "default": "0",
-   "fieldname": "dolmetscher",
-   "fieldtype": "Check",
-   "label": "Dolmetscher"
-  },
-  {
-   "fieldname": "notes_daylist",
-   "fieldtype": "Data",
-   "label": "Notizen f\u00fcr Tagesliste"
   },
   {
    "fieldname": "first_name",
@@ -101,7 +88,7 @@
   },
   {
    "fieldname": "patient_additions",
-   "fieldtype": "Text Editor",
+   "fieldtype": "Small Text",
    "label": "Zus\u00e4tzliche Hinweise"
   },
   {
@@ -170,12 +157,83 @@
    "fieldname": "a_patient_residence_phone",
    "fieldtype": "Data",
    "label": "Telefon (vor Ort)"
+  },
+  {
+   "fieldname": "column_break_hkcui",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "copy_mainfile",
+   "fieldtype": "Small Text",
+   "label": "Kopien aus Hauptakte"
+  },
+  {
+   "fieldname": "notes_daylist",
+   "fieldtype": "Small Text",
+   "label": "Notizen f\u00fcr Tagesliste"
+  },
+  {
+   "default": "0",
+   "fieldname": "translator",
+   "fieldtype": "Check",
+   "label": "Dolmetscher vorhanden?"
+  },
+  {
+   "fieldname": "contact_appointment",
+   "fieldtype": "Data",
+   "label": "Kontakt f\u00fcr Terminvereinbarung"
+  },
+  {
+   "fieldname": "beteiligte_personen_tab",
+   "fieldtype": "Tab Break",
+   "label": "Beteiligte Personen"
+  },
+  {
+   "fieldname": "b_patient_function",
+   "fieldtype": "Data",
+   "label": "Funktion"
+  },
+  {
+   "fieldname": "b_patient_salutation",
+   "fieldtype": "Select",
+   "label": "Anrede",
+   "options": "M\u00e4nnlich\nWeiblich\nDivers"
+  },
+  {
+   "fieldname": "b_patient_first_name",
+   "fieldtype": "Data",
+   "label": "Vorname"
+  },
+  {
+   "fieldname": "b_patient_last_name",
+   "fieldtype": "Data",
+   "label": "Nachname"
+  },
+  {
+   "fieldname": "b_patient_address",
+   "fieldtype": "Data",
+   "label": "Adresse"
+  },
+  {
+   "fieldname": "b_patient_phone",
+   "fieldtype": "Data",
+   "label": "Telefon"
+  },
+  {
+   "fieldname": "b_patient_fax",
+   "fieldtype": "Data",
+   "label": "Fax"
+  },
+  {
+   "fieldname": "b_patient_mail",
+   "fieldtype": "Data",
+   "label": "E-Mail"
   }
  ],
  "icon": "fa fa-user",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-26 16:38:24.258987",
+ "modified": "2023-05-30 14:09:41.602345",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten Patient",
