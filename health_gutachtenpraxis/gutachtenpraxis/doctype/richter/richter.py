@@ -5,4 +5,12 @@
 from frappe.model.document import Document
 
 class Richter(Document):
-	pass
+	def validate(self):
+		self.set_full_name()
+		self.flags.is_new_doc = self.is_new()
+
+	def set_full_name(self):
+		if self.last_name:
+			self.judge_name = " ".join(filter(None, [self.first_name, self.last_name]))
+		else:
+			self.judge_name = self.first_name

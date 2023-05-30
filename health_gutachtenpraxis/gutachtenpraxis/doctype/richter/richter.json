@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:RICHTER-{first_name} {last_name}",
  "creation": "2023-05-24 16:31:26.415488",
  "default_view": "List",
  "doctype": "DocType",
@@ -10,6 +11,7 @@
   "salutation",
   "first_name",
   "last_name",
+  "judge_name",
   "court"
  ],
  "fields": [
@@ -34,14 +36,31 @@
    "fieldtype": "Link",
    "label": "Gericht",
    "options": "Gericht"
+  },
+  {
+   "bold": 1,
+   "fieldname": "judge_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Voller Name",
+   "read_only": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2023-05-24 16:31:26.415488",
+ "links": [
+  {
+   "link_doctype": "Gericht",
+   "link_fieldname": "court_name"
+  }
+ ],
+ "modified": "2023-05-30 14:59:43.860603",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Richter",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

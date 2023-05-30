@@ -12,7 +12,8 @@
   "first_name",
   "last_name",
   "patient_name",
-  "patient_birthdate",
+  "dob",
+  "age_html",
   "patient_phone",
   "patient_additions",
   "column_break_hkcui",
@@ -48,6 +49,7 @@
    "bold": 1,
    "fieldname": "patient_name",
    "fieldtype": "Data",
+   "hidden": 1,
    "in_global_search": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
@@ -90,12 +92,6 @@
    "fieldname": "patient_additions",
    "fieldtype": "Small Text",
    "label": "Zus\u00e4tzliche Hinweise"
-  },
-  {
-   "fieldname": "patient_birthdate",
-   "fieldtype": "Data",
-   "label": "Geburtsdatum",
-   "reqd": 1
   },
   {
    "fieldname": "meldeadresse_column",
@@ -228,12 +224,27 @@
    "fieldname": "b_patient_mail",
    "fieldtype": "Data",
    "label": "E-Mail"
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "Geburtsdatum",
+   "reqd": 1
+  },
+  {
+   "fieldname": "age_html",
+   "fieldtype": "HTML",
+   "label": "Alter",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
   }
  ],
  "icon": "fa fa-user",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-30 14:09:41.602345",
+ "modified": "2023-05-30 17:23:35.588481",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten Patient",

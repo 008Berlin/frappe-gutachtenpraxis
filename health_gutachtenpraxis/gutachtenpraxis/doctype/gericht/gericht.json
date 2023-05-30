@@ -1,28 +1,76 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:court_name",
  "creation": "2023-05-24 16:29:22.683567",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "address"
+  "court_name",
+  "judge",
+  "type",
+  "adresse_und_kontakt_section",
+  "fax_number",
+  "street",
+  "zipcode",
+  "city"
  ],
  "fields": [
   {
-   "fieldname": "address",
+   "fieldname": "court_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "judge",
    "fieldtype": "Link",
-   "label": "Adresse",
-   "options": "Address"
+   "label": "Richter",
+   "options": "Richter"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Typ",
+   "options": "Amtsgericht\nLandesgericht"
+  },
+  {
+   "fieldname": "fax_number",
+   "fieldtype": "Data",
+   "label": "Faxnummer"
+  },
+  {
+   "fieldname": "adresse_und_kontakt_section",
+   "fieldtype": "Section Break",
+   "label": "Adresse und Kontakt"
+  },
+  {
+   "fieldname": "street",
+   "fieldtype": "Data",
+   "label": "Stra\u00dfe"
+  },
+  {
+   "fieldname": "zipcode",
+   "fieldtype": "Data",
+   "label": "PLZ"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "Ort"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-24 16:29:22.683567",
+ "modified": "2023-05-30 17:11:10.310672",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gericht",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -38,7 +86,9 @@
    "write": 1
   }
  ],
+ "search_fields": "court_name",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "court_name"
 }
