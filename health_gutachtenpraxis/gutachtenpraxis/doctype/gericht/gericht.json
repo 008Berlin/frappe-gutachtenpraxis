@@ -22,21 +22,21 @@
    "fieldname": "court_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Name",
+   "label": "Standort des Gerichts",
    "reqd": 1,
    "unique": 1
   },
   {
    "fieldname": "judge",
    "fieldtype": "Link",
-   "label": "Richter",
+   "label": "Name Richter/in",
    "options": "Richter"
   },
   {
    "fieldname": "type",
    "fieldtype": "Select",
-   "label": "Typ",
-   "options": "Amtsgericht\nLandesgericht"
+   "label": "Gerichtsart",
+   "options": "Amtsgericht\nLandgericht"
   },
   {
    "fieldname": "fax_number",
@@ -66,7 +66,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-30 17:11:10.310672",
+ "modified": "2023-06-05 10:56:50.601798",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gericht",
