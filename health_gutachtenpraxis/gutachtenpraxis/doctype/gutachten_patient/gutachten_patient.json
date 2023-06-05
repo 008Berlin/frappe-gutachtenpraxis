@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{patient_name}",
  "creation": "2023-05-24 16:25:53.103365",
  "default_view": "List",
  "doctype": "DocType",
@@ -244,10 +245,11 @@
  "icon": "fa fa-user",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-30 17:23:35.588481",
+ "modified": "2023-06-05 12:42:43.079347",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten Patient",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
