@@ -38,9 +38,8 @@
   },
   {
    "fieldname": "judge",
-   "fieldtype": "Link",
-   "label": "RIchter",
-   "options": "Richter"
+   "fieldtype": "Select",
+   "label": "Richter"
   },
   {
    "fieldname": "decision_date",
@@ -62,12 +61,12 @@
   {
    "description": "Wird automatisch bef\u00fcllt",
    "fieldname": "due_date",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "F\u00e4llig am"
   },
   {
    "fieldname": "preliminary_end",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "Vorl\u00e4ufiges Ende"
   },
   {
@@ -96,7 +95,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-05 14:03:11.600427",
+ "modified": "2023-06-05 16:34:54.734585",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten",

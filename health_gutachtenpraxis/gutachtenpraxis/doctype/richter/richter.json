@@ -11,8 +11,7 @@
   "salutation",
   "first_name",
   "last_name",
-  "judge_name",
-  "court"
+  "judge_name"
  ],
  "fields": [
   {
@@ -30,12 +29,6 @@
    "fieldname": "last_name",
    "fieldtype": "Data",
    "label": "Nachname"
-  },
-  {
-   "fieldname": "court",
-   "fieldtype": "Link",
-   "label": "Gericht",
-   "options": "Gericht"
   },
   {
    "bold": 1,
@@ -56,7 +49,7 @@
    "link_fieldname": "court_name"
   }
  ],
- "modified": "2023-05-30 14:59:43.860603",
+ "modified": "2023-06-05 16:08:04.335090",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Richter",
