@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"SonG5lmlVh\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gutachtenpraxis</span>\",\"col\":12}},{\"id\":\"COerA9eLao\",\"type\":\"card\",\"data\":{\"card_name\":\"Gutachten\",\"col\":4}},{\"id\":\"SJ5LHCupzt\",\"type\":\"card\",\"data\":{\"card_name\":\"Patient\",\"col\":4}},{\"id\":\"mDK0fjsdnO\",\"type\":\"card\",\"data\":{\"card_name\":\"Gericht\",\"col\":4}}]",
+ "content": "[{\"id\":\"SonG5lmlVh\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\u00dcbersicht</span>\",\"col\":12}},{\"id\":\"COerA9eLao\",\"type\":\"card\",\"data\":{\"card_name\":\"Gutachten\",\"col\":4}},{\"id\":\"SJ5LHCupzt\",\"type\":\"card\",\"data\":{\"card_name\":\"Patient\",\"col\":4}},{\"id\":\"mDK0fjsdnO\",\"type\":\"card\",\"data\":{\"card_name\":\"Gericht\",\"col\":4}},{\"id\":\"8abF-LJPZo\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Verwaltung</b></span>\",\"col\":12}}]",
  "creation": "2023-05-24 16:34:21.219434",
  "custom_blocks": [],
  "docstatus": 0,
@@ -107,7 +107,7 @@
    "type": "Link"
   }
  ],
- "modified": "2023-05-25 15:47:53.771505",
+ "modified": "2023-06-05 11:01:13.547445",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachtenpraxis",
