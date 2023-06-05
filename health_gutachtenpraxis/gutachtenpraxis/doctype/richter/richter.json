@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:RICHTER-{first_name} {last_name}",
+ "autoname": "format:{first_name} {last_name}",
  "creation": "2023-05-24 16:31:26.415488",
  "default_view": "List",
  "doctype": "DocType",
@@ -49,7 +49,7 @@
    "link_fieldname": "court_name"
   }
  ],
- "modified": "2023-06-05 16:08:04.335090",
+ "modified": "2023-06-05 17:31:36.488589",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Richter",
@@ -71,5 +71,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "judge_name"
 }
