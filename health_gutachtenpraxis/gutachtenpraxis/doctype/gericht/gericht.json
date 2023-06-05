@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:court_name",
+ "autoname": "format:{type} {court_name}",
  "creation": "2023-05-24 16:29:22.683567",
  "default_view": "List",
  "doctype": "DocType",
@@ -9,7 +9,7 @@
  "engine": "InnoDB",
  "field_order": [
   "court_name",
-  "judge",
+  "judges",
   "type",
   "adresse_und_kontakt_section",
   "fax_number",
@@ -25,12 +25,6 @@
    "label": "Standort des Gerichts",
    "reqd": 1,
    "unique": 1
-  },
-  {
-   "fieldname": "judge",
-   "fieldtype": "Link",
-   "label": "Name Richter/in",
-   "options": "Richter"
   },
   {
    "fieldname": "type",
@@ -62,15 +56,21 @@
    "fieldname": "city",
    "fieldtype": "Data",
    "label": "Ort"
+  },
+  {
+   "fieldname": "judges",
+   "fieldtype": "Table",
+   "label": "Richter",
+   "options": "Gericht Richter"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-05 10:56:50.601798",
+ "modified": "2023-06-05 15:38:10.860452",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gericht",
- "naming_rule": "By fieldname",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -86,9 +86,8 @@
    "write": 1
   }
  ],
- "search_fields": "court_name",
+ "search_fields": "court_name, type",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "court_name"
+ "states": []
 }
