@@ -77,11 +77,9 @@
    "options": "Gutachten Patient"
   },
   {
-   "fetch_from": "patient.medical_history",
    "fieldname": "anamnese",
-   "fieldtype": "Link",
-   "label": "Anamnesebogen",
-   "options": "Anamnesebogen"
+   "fieldtype": "Data",
+   "label": "Anamnesebogen"
   },
   {
    "fieldname": "type",
@@ -90,15 +88,15 @@
    "options": "Gutachtenarten"
   },
   {
+   "fetch_from": "type.appraisal_rate",
    "fieldname": "pricing",
-   "fieldtype": "Select",
-   "label": "Berechnungssatz",
-   "options": "Preis 1\nPreis 2\nPreis 3"
+   "fieldtype": "Data",
+   "label": "Berechnungssatz"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-05 11:48:47.951997",
+ "modified": "2023-06-05 14:03:11.600427",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten",
