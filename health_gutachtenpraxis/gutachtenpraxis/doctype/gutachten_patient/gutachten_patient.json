@@ -75,7 +75,7 @@
   {
    "fieldname": "salutation",
    "fieldtype": "Select",
-   "label": "Anrede",
+   "label": "Geschlecht",
    "options": "M\u00e4nnlich\nWeiblich\nDivers",
    "reqd": 1
   },
@@ -245,7 +245,7 @@
  "icon": "fa fa-user",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-05 12:42:43.079347",
+ "modified": "2023-06-05 12:52:14.498143",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten Patient",
