@@ -30,6 +30,7 @@
   "ana_kr_aufenthd",
   "ana_kr_diagnose",
   "ana_art_2",
+  "ana_anam2",
   "ana_drogen",
   "ana_drogen_welche",
   "ana_medikation",
@@ -320,7 +321,7 @@
   {
    "fieldname": "ana_kontakt",
    "fieldtype": "Select",
-   "label": "Konatkt",
+   "label": "Kontakt",
    "options": "gut\nschlecht\nnein"
   },
   {
