@@ -7,6 +7,9 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "patient_gender",
+  "gutachten",
+  "patient",
   "ana_betreu",
   "ana_dauer_betr",
   "untersuchungssituation",
@@ -656,14 +659,33 @@
    "options": "unauff\u00e4llig\ngesteigert\nvermindert"
   },
   {
-   "fieldname": "ana_anam2",
-   "fieldtype": "Small Text",
-   "label": "ANAMNESE"
+   "fetch_from": "gutachten.patient",
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Gutachten Patient"
+  },
+  {
+   "fieldname": "gutachten",
+   "fieldtype": "Link",
+   "label": "Gutachten",
+   "options": "Gutachten"
+  },
+  {
+   "fetch_from": "patient.salutation",
+   "fieldname": "patient_gender",
+   "fieldtype": "Data",
+   "label": "Geschlecht",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
+<<<<<<< HEAD
  "modified": "2023-06-06 12:01:16.369677",
+=======
+ "modified": "2023-06-06 12:18:12.956334",
+>>>>>>> c1a5fe625b2edd214db3a91a28a622a0658c81ab
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Anamnesebogen",
