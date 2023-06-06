@@ -27,6 +27,7 @@
   "ana_kr_aufenthd",
   "ana_kr_diagnose",
   "ana_art_2",
+  "ana_anam2",
   "ana_drogen",
   "ana_drogen_welche",
   "ana_medikation",
@@ -317,7 +318,7 @@
   {
    "fieldname": "ana_kontakt",
    "fieldtype": "Select",
-   "label": "Konatkt",
+   "label": "Kontakt",
    "options": "gut\nschlecht\nnein"
   },
   {
@@ -652,11 +653,16 @@
    "fieldtype": "Select",
    "label": "Antrieb",
    "options": "unauff\u00e4llig\ngesteigert\nvermindert"
+  },
+  {
+   "fieldname": "ana_anam2",
+   "fieldtype": "Small Text",
+   "label": "ANAMNESE"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-05 18:47:18.815952",
+ "modified": "2023-06-06 10:56:23.423353",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Anamnesebogen",
