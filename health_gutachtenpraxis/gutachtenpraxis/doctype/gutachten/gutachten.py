@@ -20,28 +20,26 @@ class Gutachten(Document):
 			frappe.throw("Bitte Eingangsdatum angeben!")
 
 	
-@frappe.whitelist()
+@frappe.whitelist(allow_guest=True)
 def generate_pdf(doctype, name):
-	# Get the default Letter Head
-	options = {
+    # Get the default Letter Head
+    options = {
         "format": "A4",
         "orientation": "Portrait"
     }
 
-	# Generate the HTML for the Print Format
-	html = frappe.get_print(doctype, name, print_format="Anamnesebogen")
+    # Generate the HTML for the Print Format
+    html = frappe.get_print(doctype, name, print_format="Anamnesebogen")
 
-	# Create the PDF
-	pdf = frappe.utils.pdf.get_pdf(html)
+    # Create the PDF
+    pdf = frappe.utils.pdf.get_pdf(html)
 
-	# Save the PDF to a file
-	file = frappe.get_doc({
-		"doctype": "File",
-		"file_name": f"{name}.pdf",  # Add .pdf extension to the file name
-		"content": pdf,
-		"is_private": 1
-	})
-	file.save()
+    # Set the file name
+    filename = "{name}.pdf".format(name=name)
 
-	return file.file_url
+    # Set the response headers for PDF file
+    frappe.local.response.filename = filename
+    frappe.local.response.filecontent = pdf
+    frappe.local.response.type = "download"
+
 

@@ -3,21 +3,18 @@
 
 frappe.ui.form.on("Gutachten", {
   refresh: function (frm) {
-    frm.add_custom_button("Generate PDF", function () {
-      frappe.call({
-        method:
-          "health_gutachtenpraxis.gutachtenpraxis.doctype.gutachten.gutachten.generate_pdf",
-        args: {
-          doctype: frm.doc.doctype,
-          name: frm.doc.name,
-        },
-        callback: function (r) {
-          if (r.message) {
-            // Open the PDF in a new tab
-            window.open(r.message);
-          }
-        },
-      });
+    frm.add_custom_button("Anamnesebogen generieren", function () {
+      var w = window.open(
+        "/api/method/health_gutachtenpraxis.gutachtenpraxis.doctype.gutachten.gutachten.generate_pdf?" +
+          "doctype=" +
+          encodeURIComponent(frm.doc.doctype) +
+          "&name=" +
+          encodeURIComponent(frm.doc.name)
+      );
+      if (!w) {
+        frappe.msgprint(__("Please enable pop-ups"));
+        return;
+      }
     });
   },
   court: function (frm) {

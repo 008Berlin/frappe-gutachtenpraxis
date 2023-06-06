@@ -20,7 +20,8 @@
   "type",
   "pricing",
   "patient",
-  "anamnesebogen"
+  "anamnesebogen",
+  "gutachtentext"
  ],
  "fields": [
   {
@@ -92,6 +93,11 @@
    "fieldname": "anamnesebogen",
    "fieldtype": "Attach",
    "label": "Anamnesebogen"
+  },
+  {
+   "fieldname": "gutachtentext",
+   "fieldtype": "Text Editor",
+   "label": "Gutachtentext"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -101,7 +107,7 @@
    "link_fieldname": "gutachten"
   }
  ],
- "modified": "2023-06-06 12:50:09.214209",
+ "modified": "2023-06-06 17:09:45.184442",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten",
