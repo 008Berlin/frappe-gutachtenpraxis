@@ -136,8 +136,9 @@
    "options": "Ja\nNein"
   },
   {
+   "default": "0",
    "fieldname": "einschr\u00e4nkung",
-   "fieldtype": "Select",
+   "fieldtype": "Check",
    "label": "Einschr\u00e4nkung",
    "options": "Bettl\u00e4gerig\nRollstuhl\nnicht eingeschr\u00e4nkt"
   },
@@ -662,7 +663,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-06 10:56:23.423353",
+ "modified": "2023-06-06 12:01:16.369677",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Anamnesebogen",
