@@ -15,7 +15,6 @@
   "patient_name",
   "dob",
   "age_html",
-  "age_hidden",
   "patient_phone",
   "patient_additions",
   "column_break_hkcui",
@@ -241,18 +240,12 @@
    "print_hide": 1,
    "read_only": 1,
    "report_hide": 1
-  },
-  {
-   "fieldname": "age_hidden",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Alter"
   }
  ],
  "icon": "fa fa-user",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-07 13:02:58.880870",
+ "modified": "2023-06-07 13:37:27.545120",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten Patient",
