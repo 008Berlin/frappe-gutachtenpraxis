@@ -8,17 +8,8 @@ from frappe.model.document import Document
 
 class Gutachten(Document):
 	def validate(self):
-		self.set_due_date()
-
-	def set_due_date(self):
-		if self.receipt_date:
-			print(self.receipt_date)
-			print(type(self.receipt_date))
-			new_date = datetime.strptime(self.receipt_date, "%Y-%m-%d") + timedelta(days=int(self.period))
-			self.due_date = new_date.strftime("%Y-%m-%d")
-		else:
-			frappe.throw("Bitte Eingangsdatum angeben!")
-
+		pass
+    
 	
 @frappe.whitelist(allow_guest=True)
 def generate_pdf(doctype, name):

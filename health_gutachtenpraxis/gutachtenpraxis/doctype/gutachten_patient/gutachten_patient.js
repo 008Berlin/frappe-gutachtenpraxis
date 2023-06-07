@@ -5,7 +5,18 @@ frappe.ui.form.on('Gutachten Patient', {
 
 	onload: function (frm) {
 		if (frm.doc.dob) {
-			$(frm.fields_dict['age_html'].wrapper).html(`${__('Alter')} : ${get_age(frm.doc.dob)}`);
+			let age_str = get_age(frm.doc.dob)
+			$(frm.fields_dict['age_html'].wrapper).html(`${__('Alter')} : ${age_str}`);
+			$(frm.set_value('age_hidden', age_str));
+		} else {
+			$(frm.fields_dict['age_html'].wrapper).html('');
+		}
+	},
+	refresh: function(frm) {
+		if (frm.doc.dob) {
+			let age_str = get_age(frm.doc.dob)
+			$(frm.fields_dict['age_html'].wrapper).html(`${__('Alter')} : ${age_str}`);
+			$(frm.set_value('age_hidden', age_str));
 		} else {
 			$(frm.fields_dict['age_html'].wrapper).html('');
 		}

@@ -48,4 +48,19 @@ frappe.ui.form.on("Gutachten", {
       });
     }
   },
+  receipt_date: function(frm) {
+    if(frm.doc.receipt_date && frm.doc.period) {
+      let receipt_date = frappe.datetime.str_to_obj(frm.doc.receipt_date);
+      let due_date = frappe.datetime.add_days(receipt_date, frm.doc.period);
+      frm.set_value('due_date', frappe.datetime.obj_to_str(due_date));
+    }
+  },
+  // This function runs every time the period field is modified
+  period: function(frm) {
+    if(frm.doc.receipt_date && frm.doc.period) {
+      let receipt_date = frappe.datetime.str_to_obj(frm.doc.receipt_date);
+      let due_date = frappe.datetime.add_days(receipt_date, frm.doc.period);
+      frm.set_value('due_date', frappe.datetime.obj_to_str(due_date));
+    }
+  },
 });
