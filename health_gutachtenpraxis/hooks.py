@@ -1,4 +1,5 @@
 from . import __version__ as app_version
+import frappe
 
 app_name = "health_gutachtenpraxis"
 app_title = "Health Gutachtenpraxis"
@@ -202,3 +203,52 @@ app_license = "MIT"
 fixtures = [
     'Gutachtenarten',
 ]
+
+# In your hooks.py file
+
+def on_update(doc, method):
+    print("on_update called") 
+
+    # Fetch all gutachten where this patient is linked
+    gutachten_list = frappe.get_all('Gutachten', filters={'patient': doc.name})
+    print("Found {} gutachten(s)".format(len(gutachten_list)))  # Debugging print statement
+
+    # Define the fields you want to update
+    fields_to_update = [
+        'salutation',
+        'first_name',
+        'last_name',
+        'dob',
+        'm_patient_street',
+        'm_patient_zipcode',
+        'm_patient_city',
+        'patient_phone',
+        'patient_additions',
+        'copy_mainfile',
+        'a_patient_residence',
+        'a_patient_residence_name',
+        'a_patient_residence_station',
+        'a_patient_street',
+        'a_patient_zipcode',
+        'a_patient_city',
+        'a_patient_residence_phone'
+    ]
+
+    # Update each gutachten
+    for gutachten in gutachten_list:
+        g_doc = frappe.get_doc('Gutachten', gutachten.name)
+
+        # Update each field
+        for field in fields_to_update:
+            g_doc.set('patient_' + field, doc.get(field))
+
+        g_doc.save()
+        print("Updated gutachten {}".format(gutachten.name))  # Debugging print statement
+
+# Define the hook
+doc_events = {
+    "Gutachten Patient": {
+        "on_update": ["health_gutachtenpraxis.hooks.on_update"]
+    }
+}
+
