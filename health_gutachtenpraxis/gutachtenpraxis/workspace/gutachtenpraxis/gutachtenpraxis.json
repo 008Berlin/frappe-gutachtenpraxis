@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"SonG5lmlVh\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\u00dcbersicht</span>\",\"col\":12}},{\"id\":\"COerA9eLao\",\"type\":\"card\",\"data\":{\"card_name\":\"Gutachten\",\"col\":4}},{\"id\":\"SJ5LHCupzt\",\"type\":\"card\",\"data\":{\"card_name\":\"Patient\",\"col\":4}},{\"id\":\"mDK0fjsdnO\",\"type\":\"card\",\"data\":{\"card_name\":\"Gericht\",\"col\":4}},{\"id\":\"8abF-LJPZo\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Verwaltung</b></span>\",\"col\":12}}]",
+ "content": "[{\"id\":\"9HfJIN481p\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\u00dcbersicht</b></span>\",\"col\":12}},{\"id\":\"eREdLZ3kv2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gutachten\",\"col\":3}},{\"id\":\"MTfmgqGC9Z\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"8abF-LJPZo\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Verwaltung</b></span>\",\"col\":12}},{\"id\":\"xYjSOTbZmI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patienten\",\"col\":3}},{\"id\":\"mvM6Ozl_kl\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gerichte\",\"col\":3}},{\"id\":\"Rk_kx9Z8Oa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Richter\",\"col\":3}},{\"id\":\"PIPEpG99jw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gutachtenarten\",\"col\":3}},{\"id\":\"riFOIa2OK5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kontaktpersonen\",\"col\":3}}]",
  "creation": "2023-05-24 16:34:21.219434",
  "custom_blocks": [],
  "docstatus": 0,
@@ -11,93 +11,8 @@
  "idx": 0,
  "is_hidden": 0,
  "label": "Gutachtenpraxis",
- "links": [
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Gericht",
-   "link_count": 2,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Gericht",
-   "link_count": 0,
-   "link_to": "Gericht",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Richter",
-   "link_count": 0,
-   "link_to": "Richter",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Gutachten",
-   "link_count": 2,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Gutachten",
-   "link_count": 0,
-   "link_to": "Gutachten",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Gutachtenarten",
-   "link_count": 0,
-   "link_to": "Gutachtenarten",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Patient",
-   "link_count": 2,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Patienten",
-   "link_count": 0,
-   "link_to": "Gutachten Patient",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Kontakpersonen",
-   "link_count": 0,
-   "link_to": "Contact",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  }
- ],
- "modified": "2023-06-07 09:28:57.526214",
+ "links": [],
+ "modified": "2023-06-15 14:39:42.288592",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachtenpraxis",
@@ -108,6 +23,49 @@
  "quick_lists": [],
  "roles": [],
  "sequence_id": 10.0,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "label": "Patienten",
+   "link_to": "Gutachten Patient",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Gutachtenarten",
+   "link_to": "Gutachtenarten",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Gutachten",
+   "link_to": "Gutachten",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Gerichte",
+   "link_to": "Gericht",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Richter",
+   "link_to": "Richter",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Kontaktpersonen",
+   "link_to": "Contact",
+   "type": "DocType"
+  }
+ ],
  "title": "Gutachtenpraxis"
 }
