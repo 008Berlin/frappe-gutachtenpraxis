@@ -18,7 +18,6 @@
   "patient_phone",
   "patient_additions",
   "column_break_hkcui",
-  "copy_mainfile",
   "notes_daylist",
   "translator",
   "contact_appointment",
@@ -160,11 +159,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "copy_mainfile",
-   "fieldtype": "Small Text",
-   "label": "Kopien aus Hauptakte"
-  },
-  {
    "fieldname": "notes_daylist",
    "fieldtype": "Small Text",
    "label": "Notizen f\u00fcr Tagesliste"
@@ -245,7 +239,7 @@
  "icon": "fa fa-user",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-09 11:58:41.955469",
+ "modified": "2023-06-15 13:41:13.240546",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten Patient",
