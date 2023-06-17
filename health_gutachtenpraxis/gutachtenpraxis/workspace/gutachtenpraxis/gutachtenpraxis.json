@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"9HfJIN481p\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\u00dcbersicht</b></span>\",\"col\":12}},{\"id\":\"eREdLZ3kv2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gutachten\",\"col\":3}},{\"id\":\"MTfmgqGC9Z\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"8abF-LJPZo\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Verwaltung</b></span>\",\"col\":12}},{\"id\":\"xYjSOTbZmI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patienten\",\"col\":3}},{\"id\":\"mvM6Ozl_kl\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gerichte\",\"col\":3}},{\"id\":\"Rk_kx9Z8Oa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Richter\",\"col\":3}},{\"id\":\"PIPEpG99jw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gutachtenarten\",\"col\":3}},{\"id\":\"riFOIa2OK5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kontaktpersonen\",\"col\":3}}]",
+ "content": "[{\"id\":\"9HfJIN481p\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\u00dcbersicht</b></span>\",\"col\":12}},{\"id\":\"eREdLZ3kv2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gutachten\",\"col\":3}},{\"id\":\"pbhRXSKL1A\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Terminierung\",\"col\":3}},{\"id\":\"MTfmgqGC9Z\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"8abF-LJPZo\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Verwaltung</b></span>\",\"col\":12}},{\"id\":\"xYjSOTbZmI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patienten\",\"col\":3}},{\"id\":\"mvM6Ozl_kl\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gerichte\",\"col\":3}},{\"id\":\"Rk_kx9Z8Oa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Richter\",\"col\":3}},{\"id\":\"PIPEpG99jw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gutachtenarten\",\"col\":3}},{\"id\":\"riFOIa2OK5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kontaktpersonen\",\"col\":3}}]",
  "creation": "2023-05-24 16:34:21.219434",
  "custom_blocks": [],
  "docstatus": 0,
@@ -12,7 +12,7 @@
  "is_hidden": 0,
  "label": "Gutachtenpraxis",
  "links": [],
- "modified": "2023-06-15 14:39:42.288592",
+ "modified": "2023-06-16 15:29:44.152336",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachtenpraxis",
@@ -24,6 +24,13 @@
  "roles": [],
  "sequence_id": 10.0,
  "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Terminierung",
+   "link_to": "Terminierung",
+   "type": "DocType"
+  },
   {
    "color": "Red",
    "doc_view": "List",
