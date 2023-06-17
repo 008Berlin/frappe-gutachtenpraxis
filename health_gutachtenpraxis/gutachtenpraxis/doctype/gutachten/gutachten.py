@@ -8,8 +8,7 @@ from frappe.model.document import Document
 
 class Gutachten(Document):
 	def validate(self):
-		pass
-    
+            self.file_name = self.name
 	
 @frappe.whitelist(allow_guest=True)
 def generate_pdf(doctype, name):
@@ -33,4 +32,6 @@ def generate_pdf(doctype, name):
     frappe.local.response.filecontent = pdf
     frappe.local.response.type = "download"
 
-
+def update_kanban(doc, method):
+    # Set the Kanban column to the linked Amtsgericht
+    frappe.db.set_value('Gutachten', doc.name, 'kanban_column', doc.court)

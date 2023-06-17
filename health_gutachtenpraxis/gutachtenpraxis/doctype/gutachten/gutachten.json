@@ -1,5 +1,7 @@
 {
  "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:GN {#####}",
  "creation": "2023-05-24 16:24:06.480953",
@@ -9,8 +11,8 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "stat_heading",
-  "stat_case",
+  "file_name",
+  "status",
   "gutachtendetails",
   "file_number",
   "court",
@@ -255,20 +257,23 @@
    "label": "Kopien aus Hauptakte"
   },
   {
-   "fieldname": "stat_heading",
-   "fieldtype": "Heading",
-   "label": "Status"
-  },
-  {
-   "fieldname": "stat_case",
+   "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status des Falls",
    "options": "Anstehend\nAbgeschlossen\nWiedervorlage\n\u00dcberf\u00e4llig"
+  },
+  {
+   "fieldname": "file_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Gutachtennummer",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-15 15:03:57.606496",
+ "modified": "2023-06-16 18:42:12.555571",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten",
@@ -288,8 +293,10 @@
    "write": 1
   }
  ],
+ "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
+ "title_field": "file_name",
  "track_changes": 1
 }
