@@ -32,7 +32,7 @@
   "patientendetails",
   "patient_salutation",
   "patient_first_name",
-  "patien_last_name",
+  "patient_last_name",
   "patient_dob",
   "meldeadresse_section",
   "patient_m_patient_street",
@@ -154,12 +154,6 @@
    "label": "Vorname"
   },
   {
-   "fetch_from": "patient.last_name",
-   "fieldname": "patien_last_name",
-   "fieldtype": "Data",
-   "label": "Nachname"
-  },
-  {
    "fetch_from": "patient.dob",
    "fieldname": "patient_dob",
    "fieldtype": "Date",
@@ -269,11 +263,22 @@
    "in_list_view": 1,
    "label": "Gutachtennummer",
    "read_only": 1
+  },
+  {
+   "fetch_from": "patient.last_name",
+   "fieldname": "patient_last_name",
+   "fieldtype": "Data",
+   "label": "Nachname"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2023-06-16 18:42:12.555571",
+ "links": [
+  {
+   "link_doctype": "Termin",
+   "link_fieldname": "t_appoint_fn"
+  }
+ ],
+ "modified": "2023-06-17 14:47:29.381611",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten",

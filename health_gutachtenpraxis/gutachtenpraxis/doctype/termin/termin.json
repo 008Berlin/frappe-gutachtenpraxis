@@ -7,23 +7,32 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "t_appoint_fn",
-  "section_break_p2rao"
+  "gutachten",
+  "section_break_p2rao",
+  "last_name_fetch"
  ],
  "fields": [
   {
-   "fieldname": "t_appoint_fn",
-   "fieldtype": "Data",
-   "label": "Termin f\u00fcr Gutachten:"
+   "fetch_from": "gutachten.file_name",
+   "fieldname": "gutachten",
+   "fieldtype": "Link",
+   "label": "Termin f\u00fcr Gutachten:",
+   "options": "Gutachten"
   },
   {
    "fieldname": "section_break_p2rao",
    "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "gutachten.patient_last_name",
+   "fieldname": "last_name_fetch",
+   "fieldtype": "Data",
+   "label": "Patient"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-16 16:11:39.392507",
+ "modified": "2023-06-19 13:31:30.409828",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Termin",
