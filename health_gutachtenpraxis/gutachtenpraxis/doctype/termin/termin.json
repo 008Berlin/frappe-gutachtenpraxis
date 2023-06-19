@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{gutachten} {patient_last_name}",
  "creation": "2023-06-16 15:25:28.162646",
  "default_view": "List",
  "doctype": "DocType",
@@ -8,8 +9,10 @@
  "engine": "InnoDB",
  "field_order": [
   "gutachten",
-  "section_break_p2rao",
-  "last_name_fetch"
+  "column_break_ntzls",
+  "patient_last_name",
+  "column_break_amqtq",
+  "patient_dob"
  ],
  "fields": [
   {
@@ -20,22 +23,32 @@
    "options": "Gutachten"
   },
   {
-   "fieldname": "section_break_p2rao",
-   "fieldtype": "Section Break"
+   "fieldname": "column_break_ntzls",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_amqtq",
+   "fieldtype": "Column Break"
   },
   {
    "fetch_from": "gutachten.patient_last_name",
-   "fieldname": "last_name_fetch",
+   "fieldname": "patient_last_name",
    "fieldtype": "Data",
    "label": "Patient"
+  },
+  {
+   "fieldname": "patient_dob",
+   "fieldtype": "Data",
+   "label": "Geburtsdatum"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-19 13:31:30.409828",
+ "modified": "2023-06-19 14:05:36.058082",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Termin",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
