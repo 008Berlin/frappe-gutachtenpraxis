@@ -4,6 +4,8 @@ def execute():
     # Fetch all Amtsgericht documents
     courts = frappe.get_all('Gericht')
     # Create Kanban Board with each Amtsgericht as a column
+    if frappe.get_doc('Kanban Board', 'Gutachten Board'):
+        return
     kanban_board = frappe.get_doc({
         "doctype": "Kanban Board",
         "kanban_board_name": "Gutachten Board",
