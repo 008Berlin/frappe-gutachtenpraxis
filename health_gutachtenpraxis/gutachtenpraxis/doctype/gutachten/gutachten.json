@@ -275,10 +275,10 @@
  "links": [
   {
    "link_doctype": "Termin",
-   "link_fieldname": "t_appoint_fn"
+   "link_fieldname": "gutachten"
   }
  ],
- "modified": "2023-06-17 14:47:29.381611",
+ "modified": "2023-06-22 11:58:38.715707",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten",

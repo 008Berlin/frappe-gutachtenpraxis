@@ -27,8 +27,8 @@
   "m_patient_zipcode",
   "m_patient_city",
   "aktuelle_adresse_section",
+  "a_patient_residence_type",
   "a_patient_residence",
-  "a_patient_residence_name",
   "a_patient_residence_station",
   "a_patient_street",
   "a_patient_zipcode",
@@ -130,14 +130,9 @@
   },
   {
    "fieldname": "a_patient_residence",
-   "fieldtype": "Select",
-   "label": "Art des Aufenthalts",
-   "options": "Privatadresse\nKlinik\nPflegeeinrichtung\nReha\nOhne festen Wohnsitz"
-  },
-  {
-   "fieldname": "a_patient_residence_name",
-   "fieldtype": "Data",
-   "label": "Name der Einrichtung"
+   "fieldtype": "Link",
+   "label": "Einrichtung",
+   "options": "Einrichtung"
   },
   {
    "fieldname": "a_patient_zipcode",
@@ -234,12 +229,18 @@
    "print_hide": 1,
    "read_only": 1,
    "report_hide": 1
+  },
+  {
+   "fieldname": "a_patient_residence_type",
+   "fieldtype": "Select",
+   "label": "Art des Aufenthalts",
+   "options": "Privatadresse\nKlinik\nPflegeeinrichtung\nReha\nOhne festen Wohnsitz"
   }
  ],
  "icon": "fa fa-user",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-15 15:00:57.547125",
+ "modified": "2023-06-22 12:11:59.989855",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten Patient",
