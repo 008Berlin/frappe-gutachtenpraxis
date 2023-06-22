@@ -40,8 +40,8 @@
   "patient_m_patient_city",
   "patient_patient_phone",
   "aktuelle_adresse",
+  "patient_a_patient_residence_type",
   "patient_a_patient_residence",
-  "patient_a_patient_residence_name",
   "patien_a_patient_residence_station",
   "patient_a_patient_street",
   "patient_a_patient_zipcode",
@@ -194,14 +194,14 @@
    "label": "Aktuelle Adresse"
   },
   {
-   "fetch_from": "patient.a_patient_residence",
-   "fieldname": "patient_a_patient_residence",
+   "fetch_from": "patient.a_patient_residence_type",
+   "fieldname": "patient_a_patient_residence_type",
    "fieldtype": "Data",
    "label": "Art des Aufenthalts"
   },
   {
-   "fetch_from": "patient.a_patient_residence_name",
-   "fieldname": "patient_a_patient_residence_name",
+   "fetch_from": "patient.a_patient_residence",
+   "fieldname": "patient_a_patient_residence",
    "fieldtype": "Data",
    "label": "Name der Einrichtung"
   },
