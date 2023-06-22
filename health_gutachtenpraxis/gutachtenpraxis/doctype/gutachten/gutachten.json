@@ -48,7 +48,8 @@
   "patient_a_patient_city",
   "patient_a_patient_residence_phone",
   "section_break_lofdj",
-  "gutachtentext"
+  "gutachtentext",
+  "geolocation"
  ],
  "fields": [
   {
@@ -102,7 +103,8 @@
    "fieldname": "patient",
    "fieldtype": "Link",
    "label": "Patient",
-   "options": "Gutachten Patient"
+   "options": "Gutachten Patient",
+   "reqd": 1
   },
   {
    "fieldname": "type",
@@ -269,6 +271,11 @@
    "fieldname": "patient_last_name",
    "fieldtype": "Data",
    "label": "Nachname"
+  },
+  {
+   "fieldname": "geolocation",
+   "fieldtype": "Geolocation",
+   "label": "Map"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -278,7 +285,7 @@
    "link_fieldname": "gutachten"
   }
  ],
- "modified": "2023-06-22 11:58:38.715707",
+ "modified": "2023-06-22 17:21:06.836963",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten",
