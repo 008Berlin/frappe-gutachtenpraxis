@@ -256,7 +256,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status des Falls",
-   "options": "Anstehend\nAbgeschlossen\nWiedervorlage\n\u00dcberf\u00e4llig"
+   "options": "Anstehend\nAbgeschlossen\nWiedervorlage\n\u00dcberf\u00e4llig\nin Tagesliste"
   },
   {
    "fieldname": "file_name",
@@ -285,7 +285,7 @@
    "link_fieldname": "gutachten"
   }
  ],
- "modified": "2023-06-22 17:21:06.836963",
+ "modified": "2023-06-23 16:44:08.871428",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten",

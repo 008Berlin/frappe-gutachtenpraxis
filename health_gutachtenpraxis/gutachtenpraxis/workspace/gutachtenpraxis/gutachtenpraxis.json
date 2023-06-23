@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"9HfJIN481p\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\u00dcbersicht</b></span>\",\"col\":12}},{\"id\":\"eREdLZ3kv2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gutachten\",\"col\":3}},{\"id\":\"VF8a-0PDHq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Terminkalender\",\"col\":3}},{\"id\":\"MTfmgqGC9Z\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"8abF-LJPZo\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Verwaltung</b></span>\",\"col\":12}},{\"id\":\"xYjSOTbZmI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patienten\",\"col\":3}},{\"id\":\"mvM6Ozl_kl\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gerichte\",\"col\":3}},{\"id\":\"Rk_kx9Z8Oa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Richter\",\"col\":3}},{\"id\":\"PIPEpG99jw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gutachtenarten\",\"col\":3}},{\"id\":\"riFOIa2OK5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kontaktpersonen\",\"col\":3}}]",
+ "content": "[{\"id\":\"9HfJIN481p\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\u00dcbersicht</b></span>\",\"col\":12}},{\"id\":\"eREdLZ3kv2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gutachten\",\"col\":3}},{\"id\":\"1POxf4FlGA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tagesliste\",\"col\":3}},{\"id\":\"VF8a-0PDHq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Terminkalender\",\"col\":3}},{\"id\":\"MTfmgqGC9Z\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"8abF-LJPZo\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Verwaltung</b></span>\",\"col\":12}},{\"id\":\"xYjSOTbZmI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patienten\",\"col\":3}},{\"id\":\"mvM6Ozl_kl\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gerichte\",\"col\":3}},{\"id\":\"Rk_kx9Z8Oa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Richter\",\"col\":3}},{\"id\":\"PIPEpG99jw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gutachtenarten\",\"col\":3}},{\"id\":\"riFOIa2OK5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kontaktpersonen\",\"col\":3}}]",
  "creation": "2023-05-24 16:34:21.219434",
  "custom_blocks": [],
  "docstatus": 0,
@@ -12,7 +12,7 @@
  "is_hidden": 0,
  "label": "Gutachtenpraxis",
  "links": [],
- "modified": "2023-06-22 13:40:54.003017",
+ "modified": "2023-06-23 18:04:04.779178",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachtenpraxis",
@@ -29,6 +29,13 @@
    "doc_view": "Calendar",
    "label": "Terminkalender",
    "link_to": "Termin",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Tagesliste",
+   "link_to": "Tagesliste",
    "type": "DocType"
   },
   {

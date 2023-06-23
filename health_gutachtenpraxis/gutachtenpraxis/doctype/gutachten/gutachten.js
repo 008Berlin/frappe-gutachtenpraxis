@@ -32,7 +32,8 @@ frappe.ui.form.on("Gutachten", {
       attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
       id: 'openstreetmap'
     }).addTo(map);
-    L.marker([lat, lon]).addTo(map);
+    L.marker([lat, lon]).addTo(map)
+      .bindPopup(frm.doc.name);
   },
   court: function (frm) {
     if (frm.doc.court) {
