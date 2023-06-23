@@ -12,9 +12,7 @@ class Gutachten(Document):
     def validate(self):
         self.file_name = self.name
         self.geolocation = address_to_geojson(self)
-    def onload(self):
-        print(self.geolocation)
-        
+
     def address_string(self):
         if self.patient_a_patient_street:
             return f"{self.patient_a_patient_street}, {self.patient_a_patient_zipcode} {self.patient_a_patient_city}"

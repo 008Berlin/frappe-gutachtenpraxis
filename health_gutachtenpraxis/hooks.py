@@ -14,7 +14,8 @@ app_license = "MIT"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/health_gutachtenpraxis/css/health_gutachtenpraxis.css"
 app_include_js = [
-    "/assets/health_gutachtenpraxis/js/map_defaults.js"
+    "/assets/health_gutachtenpraxis/js/map_defaults.js",
+    "/assets/health_gutachtenpraxis/js/gutachten_kanban.js"
     ]
 
 # include js, css files in header of web template
