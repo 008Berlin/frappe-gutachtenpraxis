@@ -1,307 +1,314 @@
 {
- "actions": [],
- "allow_events_in_timeline": 1,
- "allow_import": 1,
- "allow_rename": 1,
- "autoname": "format:GN {#####}",
- "creation": "2023-05-24 16:24:06.480953",
- "default_view": "List",
- "doctype": "DocType",
- "document_type": "Document",
- "editable_grid": 1,
- "engine": "InnoDB",
- "field_order": [
-  "file_name",
-  "status",
-  "gutachtendetails",
-  "file_number",
-  "court",
-  "judge",
-  "decision_date",
-  "receipt_date",
-  "period",
-  "due_date",
-  "preliminary_end",
-  "type",
-  "pricing",
-  "patient",
-  "copy_mainfile",
-  "patient_patient_additions",
-  "anamnesebogen",
-  "column_break_twyqs",
-  "patientendetails",
-  "patient_salutation",
-  "patient_first_name",
-  "patient_last_name",
-  "patient_dob",
-  "meldeadresse_section",
-  "patient_m_patient_street",
-  "patient_m_patient_zipcode",
-  "patient_m_patient_city",
-  "patient_patient_phone",
-  "aktuelle_adresse",
-  "patient_a_patient_residence_type",
-  "patient_a_patient_residence",
-  "patien_a_patient_residence_station",
-  "patient_a_patient_street",
-  "patient_a_patient_zipcode",
-  "patient_a_patient_city",
-  "patient_a_patient_residence_phone",
-  "section_break_lofdj",
-  "gutachtentext"
- ],
- "fields": [
-  {
-   "fieldname": "file_number",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Aktenzeichen",
-   "reqd": 1
-  },
-  {
-   "fieldname": "court",
-   "fieldtype": "Link",
-   "label": "Amtsgericht",
-   "options": "Gericht"
-  },
-  {
-   "fieldname": "judge",
-   "fieldtype": "Link",
-   "label": "Richter",
-   "options": "Richter"
-  },
-  {
-   "fieldname": "decision_date",
-   "fieldtype": "Date",
-   "label": "Beschlussdatum"
-  },
-  {
-   "fieldname": "receipt_date",
-   "fieldtype": "Date",
-   "label": "Eingangsdatum"
-  },
-  {
-   "description": "in Tagen",
-   "fieldname": "period",
-   "fieldtype": "Select",
-   "label": "Frist",
-   "options": "14\n30\n44\n60"
-  },
-  {
-   "description": "Wird automatisch bef\u00fcllt",
-   "fieldname": "due_date",
-   "fieldtype": "Date",
-   "label": "F\u00e4llig am"
-  },
-  {
-   "fieldname": "preliminary_end",
-   "fieldtype": "Date",
-   "label": "Vorl\u00e4ufiges Ende"
-  },
-  {
-   "fieldname": "patient",
-   "fieldtype": "Link",
-   "label": "Patient",
-   "options": "Gutachten Patient"
-  },
-  {
-   "fieldname": "type",
-   "fieldtype": "Link",
-   "label": "Gutachtenart",
-   "options": "Gutachtenarten"
-  },
-  {
-   "fetch_from": "type.appraisal_rate",
-   "fieldname": "pricing",
-   "fieldtype": "Data",
-   "label": "Berechnungssatz"
-  },
-  {
-   "fieldname": "anamnesebogen",
-   "fieldtype": "Attach",
-   "label": "Anamnesebogen"
-  },
-  {
-   "fieldname": "gutachtentext",
-   "fieldtype": "Text Editor",
-   "label": "Gutachtentext"
-  },
-  {
-   "fieldname": "column_break_twyqs",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fetch_from": "patient.salutation",
-   "fieldname": "patient_salutation",
-   "fieldtype": "Data",
-   "label": "Geschlecht",
-   "read_only": 1
-  },
-  {
-   "fieldname": "patientendetails",
-   "fieldtype": "Heading",
-   "label": "Patientendetails"
-  },
-  {
-   "fieldname": "gutachtendetails",
-   "fieldtype": "Heading",
-   "label": "Gutachtendetails"
-  },
-  {
-   "fetch_from": "patient.first_name",
-   "fieldname": "patient_first_name",
-   "fieldtype": "Data",
-   "label": "Vorname"
-  },
-  {
-   "fetch_from": "patient.dob",
-   "fieldname": "patient_dob",
-   "fieldtype": "Date",
-   "label": "Geburtsdatum"
-  },
-  {
-   "fieldname": "meldeadresse_section",
-   "fieldtype": "Heading",
-   "label": "Meldeadresse"
-  },
-  {
-   "fetch_from": "patient.m_patient_street",
-   "fieldname": "patient_m_patient_street",
-   "fieldtype": "Data",
-   "label": "Stra\u00dfe"
-  },
-  {
-   "fetch_from": "patient.m_patient_city",
-   "fieldname": "patient_m_patient_city",
-   "fieldtype": "Data",
-   "label": "Ort"
-  },
-  {
-   "fetch_from": "patient.patient_additions",
-   "fieldname": "patient_patient_additions",
-   "fieldtype": "Data",
-   "label": "Zus\u00e4tzliche Hinweise"
-  },
-  {
-   "fetch_from": "patient.patient_phone",
-   "fieldname": "patient_patient_phone",
-   "fieldtype": "Data",
-   "label": "Telefon"
-  },
-  {
-   "fieldname": "aktuelle_adresse",
-   "fieldtype": "Heading",
-   "label": "Aktuelle Adresse"
-  },
-  {
-   "fetch_from": "patient.a_patient_residence_type",
-   "fieldname": "patient_a_patient_residence_type",
-   "fieldtype": "Data",
-   "label": "Art des Aufenthalts"
-  },
-  {
-   "fetch_from": "patient.a_patient_residence",
-   "fieldname": "patient_a_patient_residence",
-   "fieldtype": "Data",
-   "label": "Name der Einrichtung"
-  },
-  {
-   "fetch_from": "patient.a_patient_residence_station",
-   "fieldname": "patien_a_patient_residence_station",
-   "fieldtype": "Data",
-   "label": "Zusatz (Abteilung)"
-  },
-  {
-   "fetch_from": "patient.a_patient_street",
-   "fieldname": "patient_a_patient_street",
-   "fieldtype": "Data",
-   "label": "Stra\u00dfe"
-  },
-  {
-   "fetch_from": "patient.a_patient_zipcode",
-   "fieldname": "patient_a_patient_zipcode",
-   "fieldtype": "Data",
-   "label": "Postleitzahl"
-  },
-  {
-   "fetch_from": "patient.a_patient_city",
-   "fieldname": "patient_a_patient_city",
-   "fieldtype": "Data",
-   "label": "Ort"
-  },
-  {
-   "fetch_from": "patient.a_patient_residence_phone",
-   "fieldname": "patient_a_patient_residence_phone",
-   "fieldtype": "Data",
-   "label": "Telefon (vor Ort)"
-  },
-  {
-   "fieldname": "section_break_lofdj",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fetch_from": "patient.m_patient_zipcode",
-   "fieldname": "patient_m_patient_zipcode",
-   "fieldtype": "Data",
-   "label": "Plz"
-  },
-  {
-   "fieldname": "copy_mainfile",
-   "fieldtype": "Small Text",
-   "label": "Kopien aus Hauptakte"
-  },
-  {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status des Falls",
-   "options": "Anstehend\nAbgeschlossen\nWiedervorlage\n\u00dcberf\u00e4llig"
-  },
-  {
-   "fieldname": "file_name",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "in_list_view": 1,
-   "label": "Gutachtennummer",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "patient.last_name",
-   "fieldname": "patient_last_name",
-   "fieldtype": "Data",
-   "label": "Nachname"
-  }
- ],
- "index_web_pages_for_search": 1,
- "links": [
-  {
-   "link_doctype": "Termin",
-   "link_fieldname": "gutachten"
-  }
- ],
- "modified": "2023-06-22 15:11:43.862217",
- "modified_by": "Administrator",
- "module": "Gutachtenpraxis",
- "name": "Gutachten",
- "naming_rule": "Expression",
- "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  }
- ],
- "show_name_in_global_search": 1,
- "sort_field": "modified",
- "sort_order": "DESC",
- "states": [],
- "title_field": "file_name",
- "track_changes": 1
+    "actions": [],
+    "allow_events_in_timeline": 1,
+    "allow_import": 1,
+    "allow_rename": 1,
+    "autoname": "format:GN {#####}",
+    "creation": "2023-05-24 16:24:06.480953",
+    "default_view": "List",
+    "doctype": "DocType",
+    "document_type": "Document",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "file_name",
+        "status",
+        "gutachtendetails",
+        "file_number",
+        "court",
+        "judge",
+        "decision_date",
+        "receipt_date",
+        "period",
+        "due_date",
+        "preliminary_end",
+        "type",
+        "pricing",
+        "patient",
+        "copy_mainfile",
+        "patient_patient_additions",
+        "anamnesebogen",
+        "column_break_twyqs",
+        "patientendetails",
+        "patient_salutation",
+        "patient_first_name",
+        "patient_last_name",
+        "patient_dob",
+        "meldeadresse_section",
+        "patient_m_patient_street",
+        "patient_m_patient_zipcode",
+        "patient_m_patient_city",
+        "patient_patient_phone",
+        "aktuelle_adresse",
+        "patient_a_patient_residence_type",
+        "patient_a_patient_residence",
+        "patien_a_patient_residence_station",
+        "patient_a_patient_street",
+        "patient_a_patient_zipcode",
+        "patient_a_patient_city",
+        "patient_a_patient_residence_phone",
+        "section_break_lofdj",
+        "gutachtentext",
+        "geolocation"
+    ],
+    "fields": [
+        {
+            "fieldname": "file_number",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Aktenzeichen",
+            "reqd": 1
+        },
+        {
+            "fieldname": "court",
+            "fieldtype": "Link",
+            "label": "Amtsgericht",
+            "options": "Gericht"
+        },
+        {
+            "fieldname": "judge",
+            "fieldtype": "Link",
+            "label": "Richter",
+            "options": "Richter"
+        },
+        {
+            "fieldname": "decision_date",
+            "fieldtype": "Date",
+            "label": "Beschlussdatum"
+        },
+        {
+            "fieldname": "receipt_date",
+            "fieldtype": "Date",
+            "label": "Eingangsdatum"
+        },
+        {
+            "description": "in Tagen",
+            "fieldname": "period",
+            "fieldtype": "Select",
+            "label": "Frist",
+            "options": "14\n30\n44\n60"
+        },
+        {
+            "description": "Wird automatisch bef\u00fcllt",
+            "fieldname": "due_date",
+            "fieldtype": "Date",
+            "label": "F\u00e4llig am"
+        },
+        {
+            "fieldname": "preliminary_end",
+            "fieldtype": "Date",
+            "label": "Vorl\u00e4ufiges Ende"
+        },
+        {
+            "fieldname": "patient",
+            "fieldtype": "Link",
+            "label": "Patient",
+            "options": "Gutachten Patient",
+            "reqd": 1
+        },
+        {
+            "fieldname": "type",
+            "fieldtype": "Link",
+            "label": "Gutachtenart",
+            "options": "Gutachtenarten"
+        },
+        {
+            "fetch_from": "type.appraisal_rate",
+            "fieldname": "pricing",
+            "fieldtype": "Data",
+            "label": "Berechnungssatz"
+        },
+        {
+            "fieldname": "anamnesebogen",
+            "fieldtype": "Attach",
+            "label": "Anamnesebogen"
+        },
+        {
+            "fieldname": "gutachtentext",
+            "fieldtype": "Text Editor",
+            "label": "Gutachtentext"
+        },
+        {
+            "fieldname": "column_break_twyqs",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fetch_from": "patient.salutation",
+            "fieldname": "patient_salutation",
+            "fieldtype": "Data",
+            "label": "Geschlecht",
+            "read_only": 1
+        },
+        {
+            "fieldname": "patientendetails",
+            "fieldtype": "Heading",
+            "label": "Patientendetails"
+        },
+        {
+            "fieldname": "gutachtendetails",
+            "fieldtype": "Heading",
+            "label": "Gutachtendetails"
+        },
+        {
+            "fetch_from": "patient.first_name",
+            "fieldname": "patient_first_name",
+            "fieldtype": "Data",
+            "label": "Vorname"
+        },
+        {
+            "fetch_from": "patient.dob",
+            "fieldname": "patient_dob",
+            "fieldtype": "Date",
+            "label": "Geburtsdatum"
+        },
+        {
+            "fieldname": "meldeadresse_section",
+            "fieldtype": "Heading",
+            "label": "Meldeadresse"
+        },
+        {
+            "fetch_from": "patient.m_patient_street",
+            "fieldname": "patient_m_patient_street",
+            "fieldtype": "Data",
+            "label": "Stra\u00dfe"
+        },
+        {
+            "fetch_from": "patient.m_patient_city",
+            "fieldname": "patient_m_patient_city",
+            "fieldtype": "Data",
+            "label": "Ort"
+        },
+        {
+            "fetch_from": "patient.patient_additions",
+            "fieldname": "patient_patient_additions",
+            "fieldtype": "Data",
+            "label": "Zus\u00e4tzliche Hinweise"
+        },
+        {
+            "fetch_from": "patient.patient_phone",
+            "fieldname": "patient_patient_phone",
+            "fieldtype": "Data",
+            "label": "Telefon"
+        },
+        {
+            "fieldname": "aktuelle_adresse",
+            "fieldtype": "Heading",
+            "label": "Aktuelle Adresse"
+        },
+        {
+            "fetch_from": "patient.a_patient_residence_type",
+            "fieldname": "patient_a_patient_residence_type",
+            "fieldtype": "Data",
+            "label": "Art des Aufenthalts"
+        },
+        {
+            "fetch_from": "patient.a_patient_residence",
+            "fieldname": "patient_a_patient_residence",
+            "fieldtype": "Data",
+            "label": "Name der Einrichtung"
+        },
+        {
+            "fetch_from": "patient.a_patient_residence_station",
+            "fieldname": "patien_a_patient_residence_station",
+            "fieldtype": "Data",
+            "label": "Zusatz (Abteilung)"
+        },
+        {
+            "fetch_from": "patient.a_patient_street",
+            "fieldname": "patient_a_patient_street",
+            "fieldtype": "Data",
+            "label": "Stra\u00dfe"
+        },
+        {
+            "fetch_from": "patient.a_patient_zipcode",
+            "fieldname": "patient_a_patient_zipcode",
+            "fieldtype": "Data",
+            "label": "Postleitzahl"
+        },
+        {
+            "fetch_from": "patient.a_patient_city",
+            "fieldname": "patient_a_patient_city",
+            "fieldtype": "Data",
+            "label": "Ort"
+        },
+        {
+            "fetch_from": "patient.a_patient_residence_phone",
+            "fieldname": "patient_a_patient_residence_phone",
+            "fieldtype": "Data",
+            "label": "Telefon (vor Ort)"
+        },
+        {
+            "fieldname": "section_break_lofdj",
+            "fieldtype": "Section Break"
+        },
+        {
+            "fetch_from": "patient.m_patient_zipcode",
+            "fieldname": "patient_m_patient_zipcode",
+            "fieldtype": "Data",
+            "label": "Plz"
+        },
+        {
+            "fieldname": "copy_mainfile",
+            "fieldtype": "Small Text",
+            "label": "Kopien aus Hauptakte"
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "label": "Status des Falls",
+            "options": "Anstehend\nAbgeschlossen\nWiedervorlage\n\u00dcberf\u00e4llig\nin Tagesliste"
+        },
+        {
+            "fieldname": "file_name",
+            "fieldtype": "Data",
+            "hidden": 1,
+            "in_list_view": 1,
+            "label": "Gutachtennummer",
+            "read_only": 1
+        },
+        {
+            "fetch_from": "patient.last_name",
+            "fieldname": "patient_last_name",
+            "fieldtype": "Data",
+            "label": "Nachname"
+        },
+        {
+            "fieldname": "geolocation",
+            "fieldtype": "Geolocation",
+            "label": "Map"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [
+        {
+            "link_doctype": "Termin",
+            "link_fieldname": "gutachten"
+        }
+    ],
+    "modified": "2023-06-23 16:44:08.871428",
+    "modified_by": "Administrator",
+    "module": "Gutachtenpraxis",
+    "name": "Gutachten",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "show_name_in_global_search": 1,
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": [],
+    "title_field": "file_name",
+    "track_changes": 1
 }

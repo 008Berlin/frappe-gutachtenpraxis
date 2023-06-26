@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:TGL-{DD}.{MM}.{YYYY}-{court}",
+ "creation": "2023-06-22 21:07:37.626463",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "gutachten_list",
+  "geolocation",
+  "court",
+  "all_day"
+ ],
+ "fields": [
+  {
+   "fieldname": "gutachten_list",
+   "fieldtype": "Table",
+   "label": "Liste der Gutachten",
+   "options": "Tagesliste Gutachten"
+  },
+  {
+   "fieldname": "geolocation",
+   "fieldtype": "Geolocation",
+   "label": "Karte"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Datum"
+  },
+  {
+   "fieldname": "court",
+   "fieldtype": "Link",
+   "label": "Gericht bzw. Bezirk",
+   "options": "Gericht"
+  },
+  {
+   "default": "true",
+   "fieldname": "all_day",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Ganzt\u00e4gig",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "links": [],
+ "modified": "2023-06-23 18:05:18.071166",
+ "modified_by": "Administrator",
+ "module": "Gutachtenpraxis",
+ "name": "Tagesliste",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

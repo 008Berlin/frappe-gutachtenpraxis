@@ -106,17 +106,20 @@
   {
    "fieldname": "m_patient_street",
    "fieldtype": "Data",
-   "label": "Stra\u00dfe"
+   "label": "Stra\u00dfe",
+   "reqd": 1
   },
   {
    "fieldname": "m_patient_zipcode",
    "fieldtype": "Data",
-   "label": "Postleitzahl"
+   "label": "Postleitzahl",
+   "reqd": 1
   },
   {
    "fieldname": "m_patient_city",
    "fieldtype": "Data",
-   "label": "Ort"
+   "label": "Ort",
+   "reqd": 1
   },
   {
    "fieldname": "a_patient_street",
@@ -240,7 +243,7 @@
  "icon": "fa fa-user",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-22 12:11:59.989855",
+ "modified": "2023-06-22 17:22:22.400130",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten Patient",

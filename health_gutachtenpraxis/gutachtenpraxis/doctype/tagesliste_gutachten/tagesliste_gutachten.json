@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-22 21:06:47.509767",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gutachten"
+ ],
+ "fields": [
+  {
+   "fieldname": "gutachten",
+   "fieldtype": "Link",
+   "label": "Gutachten",
+   "options": "Gutachten"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-22 21:06:47.509767",
+ "modified_by": "Administrator",
+ "module": "Gutachtenpraxis",
+ "name": "Tagesliste Gutachten",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
