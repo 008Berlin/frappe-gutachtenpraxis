@@ -54,22 +54,29 @@ def change_gutachten_status(gutachten, status):
 
 
 def address_to_geojson_feature(gutachten):
-    response = requests.get(
-        "https://nominatim.openstreetmap.org/search",
-        params={"q": gutachten.address_string(), "format": "json"},
-    )
-    data = response.json()
-    if data:
-        geojson = {
-            "type": "Feature",
-            "properties": {"name": gutachten.name},
-            "geometry": {
-                "type": "Point",
-                "coordinates": [data[0]["lon"], data[0]["lat"]],
-            },
-        }
+    if gutachten.lat and gutachten.lon:
+        lat = gutachten.lat
+        lon = gutachten.lon
+    else:
+        response = requests.get(
+            "https://nominatim.openstreetmap.org/search",
+            params={"q": gutachten.address_string(), "format": "json"},
+        )
+        data = response.json()
+        if data:
+            lat = data[0]["lat"]
+            lon = data[0]["lon"]
+    
+    geojson = {
+        "type": "Feature",
+        "properties": {"name": gutachten.name},
+        "geometry": {
+            "type": "Point",
+            "coordinates": [lon, lat],
+        },
+    }
 
-        return geojson
+    return geojson
 
 
 @frappe.whitelist()

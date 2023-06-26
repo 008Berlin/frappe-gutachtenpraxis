@@ -2,30 +2,26 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Tagesliste', {
-	refresh: function (frm) {
-		refreshMap(frm)
-	},
-	after_save: function(frm) {
+    refresh: function (frm) {
+        refreshMap(frm)
+    },
+    after_save: function (frm) {
         location.reload();
     }
 });
 
 function refreshMap(frm) {
-	frappe.call({
-		method: "health_gutachtenpraxis.gutachtenpraxis.doctype.tagesliste.tagesliste.gutachten_list_to_geojson",
-		args: {
-			tagesliste: cur_frm.doc
-		},
-		callback: function (response) {
-			var data = JSON.parse(response.message);
-			console.log(data); // log data to console for testing
-			if(data.features){
-				createMap(data.features);
-			} else {
-				console.log("Features not found in the response");
-			}
-		}
-	});
+    frappe.call({
+        method: "health_gutachtenpraxis.gutachtenpraxis.doctype.tagesliste.tagesliste.gutachten_list_to_geojson",
+        args: {
+            tagesliste: cur_frm.doc
+        },
+        callback: function (response) {
+            var data = JSON.parse(response.message);
+
+            createMap(data.features);
+        }
+    });
 }
 
 function createMap(features) {
@@ -43,7 +39,7 @@ function createMap(features) {
     }).addTo(map);
 
     // Now, create a marker for each feature
-    features.forEach(function(feature) {
+    features.forEach(function (feature) {
         var lat = feature.geometry.coordinates[1];
         var lon = feature.geometry.coordinates[0];
         var name = feature.properties.name;

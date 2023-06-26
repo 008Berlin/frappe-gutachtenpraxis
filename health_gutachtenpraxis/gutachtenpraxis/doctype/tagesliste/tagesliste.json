@@ -10,9 +10,10 @@
  "field_order": [
   "date",
   "gutachten_list",
-  "geolocation",
   "court",
-  "all_day"
+  "all_day",
+  "karte_section",
+  "geolocation"
  ],
  "fields": [
   {
@@ -44,12 +45,17 @@
    "hidden": 1,
    "label": "Ganzt\u00e4gig",
    "read_only": 1
+  },
+  {
+   "fieldname": "karte_section",
+   "fieldtype": "Section Break",
+   "label": "Karte"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2023-06-23 18:05:18.071166",
+ "modified": "2023-06-26 11:24:48.816620",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Tagesliste",

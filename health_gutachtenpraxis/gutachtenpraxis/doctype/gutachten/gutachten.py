@@ -47,12 +47,14 @@ def update_kanban(doc, method):
 
         
 
-def address_to_geojson(doc):
+def address_to_geojson(gutachten):
     response = requests.get(
         "https://nominatim.openstreetmap.org/search",
-        params={"q": doc.address_string(), "format": "json"},
+        params={"q": gutachten.address_string(), "format": "json"},
     )
     data = response.json()
+    gutachten.lat = data[0]['lat']
+    gutachten.lon = data[0]["lon"]
     if data:
         geojson = {
             "type": "FeatureCollection",
