@@ -13,6 +13,10 @@
  "field_order": [
   "file_name",
   "status",
+  "tab_break_fgzle",
+  "patient",
+  "tab_break_hn5rq",
+  "section_break_zvmhs",
   "gutachtendetails",
   "file_number",
   "court",
@@ -24,16 +28,16 @@
   "preliminary_end",
   "type",
   "pricing",
-  "patient",
+  "anamnesebogen",
+  "column_break_grzfd",
   "copy_mainfile",
   "patient_patient_additions",
-  "anamnesebogen",
-  "column_break_twyqs",
   "patientendetails",
   "patient_salutation",
   "patient_first_name",
   "patient_last_name",
   "patient_dob",
+  "column_break_f7blg",
   "meldeadresse_section",
   "patient_m_patient_street",
   "patient_m_patient_zipcode",
@@ -129,10 +133,6 @@
    "fieldname": "gutachtentext",
    "fieldtype": "Text Editor",
    "label": "Gutachtentext"
-  },
-  {
-   "fieldname": "column_break_twyqs",
-   "fieldtype": "Column Break"
   },
   {
    "fetch_from": "patient.salutation",
@@ -258,7 +258,8 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status des Falls",
-   "options": "Anstehend\nAbgeschlossen\nWiedervorlage\n\u00dcberf\u00e4llig\nin Tagesliste"
+   "options": "Anstehend\nAbgeschlossen\nWiedervorlage\n\u00dcberf\u00e4llig\nin Tagesliste",
+   "reqd": 1
   },
   {
    "fieldname": "file_name",
@@ -290,6 +291,26 @@
    "fieldtype": "Data",
    "label": "Longitude",
    "read_only": 1
+  },
+  {
+   "fieldname": "section_break_zvmhs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tab_break_fgzle",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tab_break_hn5rq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_grzfd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_f7blg",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
