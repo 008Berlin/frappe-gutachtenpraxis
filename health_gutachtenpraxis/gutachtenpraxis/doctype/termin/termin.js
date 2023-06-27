@@ -2,7 +2,26 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Termin', {
-    status: function(frm) {
+    refresh: function (frm) {
+        var allowed_statuses = ['Vergebliche Anfahrt', 'Gutachten abgebrochen', 'Zutritt verweigert', 'Von Praxis abgesagt', 'Von Betroffenen abgesagt', 'Verschoben', 'Im Krankenhaus', 'Nicht erschienen', 'Standort gewechselt/ umgezogen', 'Verstorben'];
+        if (allowed_statuses.includes(frm.doc.status)) {
+            frm.add_custom_button(__('Neuer Termin'), function () {
+                frappe.model.with_doctype('Termin', function () {
+                    var new_doc = frappe.model.get_new_doc('Termin');
+                    new_doc.gutachten = frm.doc.gutachten;
+                    new_doc.date = frm.doc.date;
+                    new_doc.last_name = frm.doc.last_name;
+                    frappe.set_route('Form', 'Termin', new_doc.name);
+                });
+
+            });
+        } else {
+            frm.add_custom_button(__('Neuer Termin'), function () {
+                frappe.msgprint(__('Bitte den Status des Termins auf einen der folgenden setzen:\n {0}', [allowed_statuses.join(', ')]));
+            }).addClass('disabled');
+        }
+    },
+    status: function (frm) {
         var color = getStatusColor(frm.doc.status);
         frm.set_value('color', color);
     }

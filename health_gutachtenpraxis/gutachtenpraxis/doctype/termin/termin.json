@@ -17,8 +17,8 @@
   "all_day",
   "column_break_ntzls",
   "patient_last_name",
-  "column_break_amqtq",
   "patient_dob",
+  "weitere_informationen_section",
   "weitere_informationen"
  ],
  "fields": [
@@ -33,10 +33,6 @@
   },
   {
    "fieldname": "column_break_ntzls",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_amqtq",
    "fieldtype": "Column Break"
   },
   {
@@ -92,12 +88,17 @@
    "fieldname": "weitere_informationen",
    "fieldtype": "Text",
    "label": "Weitere Informationen"
+  },
+  {
+   "fieldname": "weitere_informationen_section",
+   "fieldtype": "Section Break",
+   "label": "Weitere Informationen"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2023-06-26 14:05:29.278426",
+ "modified": "2023-06-26 16:28:50.920049",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Termin",
