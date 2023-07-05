@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-05 13:16:13.295809",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "rechnungspositionen_section",
+  "zeitaufwand",
+  "gutachtenart",
+  "auslageen_und_aufwendungsersatz"
+ ],
+ "fields": [
+  {
+   "fieldname": "rechnungspositionen_section",
+   "fieldtype": "Section Break",
+   "label": "Rechnungspositionen"
+  },
+  {
+   "fieldname": "zeitaufwand",
+   "fieldtype": "Table",
+   "label": "Zeitaufwand",
+   "options": "Tagesliste Gutachten"
+  },
+  {
+   "fieldname": "gutachtenart",
+   "fieldtype": "Table",
+   "label": "Gutachtenart",
+   "options": "Tagesliste Gutachten"
+  },
+  {
+   "fieldname": "auslageen_und_aufwendungsersatz",
+   "fieldtype": "Table",
+   "label": "Auslageen und Aufwendungsersatz",
+   "options": "Tagesliste Gutachten"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-05 13:16:13.295809",
+ "modified_by": "Administrator",
+ "module": "Gutachtenpraxis",
+ "name": "Gutachten Rechnung",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

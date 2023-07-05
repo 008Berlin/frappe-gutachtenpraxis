@@ -9,11 +9,11 @@ def get_data():
         },
         'transactions': [
             {
-                'label': _('Related Tagesliste'),
+                'label': _('Verbundene Tagesliste'),
                 'items': ['Tagesliste']
             },
             {
-                'label': _('Related Termin'),
+                'label': _('Verbundene Termine'),
                 'items': ['Termin']
             },
         ]

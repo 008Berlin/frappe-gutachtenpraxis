@@ -17,22 +17,23 @@
   "patient",
   "tab_break_hn5rq",
   "section_break_zvmhs",
-  "gutachtendetails",
+  "gutachtendetails_section",
   "file_number",
   "court",
   "judge",
+  "type",
+  "pricing",
+  "column_break_rvh0l",
   "decision_date",
   "receipt_date",
   "period",
   "due_date",
   "preliminary_end",
-  "type",
-  "pricing",
-  "anamnesebogen",
   "column_break_grzfd",
   "copy_mainfile",
   "patient_patient_additions",
-  "patientendetails",
+  "anamnesebogen",
+  "patientendetails_section",
   "patient_salutation",
   "patient_first_name",
   "patient_last_name",
@@ -142,16 +143,6 @@
    "read_only": 1
   },
   {
-   "fieldname": "patientendetails",
-   "fieldtype": "Heading",
-   "label": "Patientendetails"
-  },
-  {
-   "fieldname": "gutachtendetails",
-   "fieldtype": "Heading",
-   "label": "Gutachtendetails"
-  },
-  {
    "fetch_from": "patient.first_name",
    "fieldname": "patient_first_name",
    "fieldtype": "Data",
@@ -193,47 +184,55 @@
    "label": "Telefon"
   },
   {
+   "depends_on": "eval:doc.patient_a_patient_street!=null && doc.patient_a_patient_street!=''",
    "fieldname": "aktuelle_adresse",
    "fieldtype": "Heading",
    "label": "Aktuelle Adresse"
   },
   {
+   "depends_on": "eval:doc.patient_a_patient_street!=null && doc.patient_a_patient_street!=''",
    "fetch_from": "patient.a_patient_residence_type",
    "fieldname": "patient_a_patient_residence_type",
    "fieldtype": "Data",
    "label": "Art des Aufenthalts"
   },
   {
+   "depends_on": "eval:doc.patient_a_patient_street!=null && doc.patient_a_patient_street!=''",
    "fetch_from": "patient.a_patient_residence",
    "fieldname": "patient_a_patient_residence",
    "fieldtype": "Data",
    "label": "Name der Einrichtung"
   },
   {
+   "depends_on": "eval:doc.patient_a_patient_street!=null && doc.patient_a_patient_street!=''",
    "fetch_from": "patient.a_patient_residence_station",
    "fieldname": "patien_a_patient_residence_station",
    "fieldtype": "Data",
    "label": "Zusatz (Abteilung)"
   },
   {
+   "depends_on": "eval:doc.patient_a_patient_street!=null && doc.patient_a_patient_street!=''",
    "fetch_from": "patient.a_patient_street",
    "fieldname": "patient_a_patient_street",
    "fieldtype": "Data",
    "label": "Stra\u00dfe"
   },
   {
+   "depends_on": "eval:doc.patient_a_patient_street!=null && doc.patient_a_patient_street!=''",
    "fetch_from": "patient.a_patient_zipcode",
    "fieldname": "patient_a_patient_zipcode",
    "fieldtype": "Data",
    "label": "Postleitzahl"
   },
   {
+   "depends_on": "eval:doc.patient_a_patient_street!=null && doc.patient_a_patient_street!=''",
    "fetch_from": "patient.a_patient_city",
    "fieldname": "patient_a_patient_city",
    "fieldtype": "Data",
    "label": "Ort"
   },
   {
+   "depends_on": "eval:doc.patient_a_patient_street!=null && doc.patient_a_patient_street!=''",
    "fetch_from": "patient.a_patient_residence_phone",
    "fieldname": "patient_a_patient_residence_phone",
    "fieldtype": "Data",
@@ -311,11 +310,26 @@
   {
    "fieldname": "column_break_f7blg",
    "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "patientendetails_section",
+   "fieldtype": "Section Break",
+   "label": "Patientendetails"
+  },
+  {
+   "fieldname": "column_break_rvh0l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gutachtendetails_section",
+   "fieldtype": "Section Break",
+   "label": "Gutachtendetails"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-26 20:34:09.220792",
+ "modified": "2023-07-05 13:40:20.703455",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten",

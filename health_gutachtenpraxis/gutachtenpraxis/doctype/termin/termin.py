@@ -17,6 +17,11 @@ class Termin(Document):
             comment_text = f"Ein neuer Termin <a href='/app/termin/{self.name}'>{self.name}</a> has been created by {frappe.session.user}."
             gutachten = frappe.get_doc('Gutachten', self.gutachten)
             gutachten.add_comment("Edit", comment_text)
+
+        if self.start_time and self.end_time:
+            if self.end_time < self.start_time:
+                frappe.throw("Der Start muss vor dem Ende liegen!")
+
         
 
     def autoname(self):
