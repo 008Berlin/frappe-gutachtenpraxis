@@ -10,6 +10,7 @@
  "field_order": [
   "date",
   "gutachten_list",
+  "optimize_route",
   "court",
   "all_day",
   "karte_section",
@@ -50,12 +51,17 @@
    "fieldname": "karte_section",
    "fieldtype": "Section Break",
    "label": "Karte"
+  },
+  {
+   "fieldname": "optimize_route",
+   "fieldtype": "Button",
+   "label": "Route Optimieren"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2023-06-26 11:24:48.816620",
+ "modified": "2023-07-07 12:27:11.141708",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Tagesliste",

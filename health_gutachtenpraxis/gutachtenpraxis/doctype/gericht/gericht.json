@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:{type} {court_name}",
  "creation": "2023-05-24 16:29:22.683567",
@@ -66,7 +67,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-05 15:38:10.860452",
+ "modified": "2023-07-06 14:39:46.824321",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gericht",

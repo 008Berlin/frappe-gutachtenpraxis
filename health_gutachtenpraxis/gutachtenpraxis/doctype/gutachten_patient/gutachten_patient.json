@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:{first_name} {last_name}, {dob}",
  "creation": "2023-05-24 16:25:53.103365",
@@ -243,7 +244,7 @@
  "icon": "fa fa-user",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-22 17:22:22.400130",
+ "modified": "2023-07-06 14:39:37.067389",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten Patient",

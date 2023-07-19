@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_events_in_timeline": 1,
  "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:GN {#####}",
@@ -282,12 +281,14 @@
   {
    "fieldname": "lat",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Latitude",
    "read_only": 1
   },
   {
    "fieldname": "lon",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Longitude",
    "read_only": 1
   },
@@ -329,7 +330,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-05 13:40:20.703455",
+ "modified": "2023-07-06 14:40:53.775970",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten",

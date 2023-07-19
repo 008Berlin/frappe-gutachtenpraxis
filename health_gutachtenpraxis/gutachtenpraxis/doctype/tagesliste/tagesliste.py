@@ -5,6 +5,8 @@ import frappe
 import requests
 import json
 from frappe.model.document import Document
+import googlemaps
+from datetime import datetime
 
 
 class Tagesliste(Document):
@@ -117,3 +119,62 @@ def create_tagesliste(court):
     tagesliste.save(ignore_permissions=True)
 
     return tagesliste.name
+
+@frappe.whitelist()
+def optimize_route(tagesliste_name):
+    tagesliste = frappe.get_doc('Tagesliste', tagesliste_name)
+    api_key = frappe.db.get_single_value("Google Settings", "api_key")
+    client = googlemaps.Client(key=api_key)
+        
+    # Get company address as the origin
+    company_address = get_company_address()
+    
+    # Extract lat, lon from gutachten_list
+    locations = ["{0},{1}".format(gutachten.lat, gutachten.lon) for gutachten in tagesliste.get_gutachtens()]
+        
+    # Request optimized route from Google Maps
+    result = client.directions(
+        origin=company_address,
+        destination=company_address,
+        waypoints=locations,
+        optimize_waypoints=True,
+        mode="driving",
+        departure_time=datetime.now()
+    )
+    
+    print(result[0]['waypoint_order'])
+    
+    # Get the optimized waypoint order
+    waypoint_order = result[0]['waypoint_order']
+    
+    # Reorder gutachten_list based on the optimized order
+    gutachten_order = []
+    for new_idx, old_idx in enumerate(waypoint_order, 1):
+        tagesliste.gutachten_list[old_idx].idx = new_idx
+        gutachten_order.append(tagesliste.gutachten_list[old_idx])
+    
+    # Replace the gutachten_list with the reordered list
+    tagesliste.gutachten_list = gutachten_order
+    
+    # Save the updated document
+    tagesliste.save()
+    frappe.db.commit()
+
+    return True
+
+@frappe.whitelist()
+def get_company_address():
+    default_company = frappe.get_single('Global Defaults').default_company
+
+    # Fetch the address of the default company
+    address = frappe.get_value('Dynamic Link', {
+        'link_doctype': 'Company',
+        'link_name': default_company,
+        'parenttype': 'Address'
+    }, 'parent')
+
+    if address:
+        company_address = frappe.get_value('Address', address, ['address_line1', 'city', 'pincode'])
+        return company_address[0] + ", " + company_address[2] + " " + company_address[1]
+
+    return None

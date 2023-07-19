@@ -5,7 +5,7 @@
    "label": "Gutachten \u00dcbersicht"
   }
  ],
- "content": "[{\"id\":\"44vrInngTt\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Gutachten \u00dcbersicht\",\"col\":12}},{\"id\":\"9HfJIN481p\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\u00dcbersicht</b></span>\",\"col\":12}},{\"id\":\"eREdLZ3kv2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gutachten\",\"col\":3}},{\"id\":\"1POxf4FlGA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tagesliste\",\"col\":3}},{\"id\":\"VF8a-0PDHq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Terminkalender\",\"col\":3}},{\"id\":\"oKG2nx3z0r\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Einrichtungen\",\"col\":3}},{\"id\":\"MTfmgqGC9Z\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"8abF-LJPZo\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Verwaltung</b></span>\",\"col\":12}},{\"id\":\"xYjSOTbZmI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patienten\",\"col\":3}},{\"id\":\"mvM6Ozl_kl\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gerichte\",\"col\":3}},{\"id\":\"Rk_kx9Z8Oa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Richter\",\"col\":3}},{\"id\":\"PIPEpG99jw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gutachtenarten\",\"col\":3}},{\"id\":\"riFOIa2OK5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kontaktpersonen\",\"col\":3}}]",
+ "content": "[{\"id\":\"44vrInngTt\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Gutachten \u00dcbersicht\",\"col\":12}},{\"id\":\"iQdTHXCwrs\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Tagesliste dieser Woche\",\"col\":4}},{\"id\":\"9HfJIN481p\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\u00dcbersicht</b></span>\",\"col\":12}},{\"id\":\"eREdLZ3kv2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gutachten\",\"col\":3}},{\"id\":\"1POxf4FlGA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tagesliste\",\"col\":3}},{\"id\":\"VF8a-0PDHq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Terminkalender\",\"col\":3}},{\"id\":\"oKG2nx3z0r\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Einrichtungen\",\"col\":3}},{\"id\":\"MTfmgqGC9Z\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"8abF-LJPZo\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Verwaltung</b></span>\",\"col\":12}},{\"id\":\"xYjSOTbZmI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patienten\",\"col\":3}},{\"id\":\"mvM6Ozl_kl\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gerichte\",\"col\":3}},{\"id\":\"Rk_kx9Z8Oa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Richter\",\"col\":3}},{\"id\":\"PIPEpG99jw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gutachtenarten\",\"col\":3}},{\"id\":\"riFOIa2OK5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kontaktpersonen\",\"col\":3}}]",
  "creation": "2023-05-24 16:34:21.219434",
  "custom_blocks": [],
  "docstatus": 0,
@@ -17,7 +17,7 @@
  "is_hidden": 0,
  "label": "Gutachtenpraxis",
  "links": [],
- "modified": "2023-06-26 14:30:06.911507",
+ "modified": "2023-07-07 11:08:09.872470",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachtenpraxis",
@@ -25,7 +25,13 @@
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
- "quick_lists": [],
+ "quick_lists": [
+  {
+   "document_type": "Tagesliste",
+   "label": "Tagesliste dieser Woche",
+   "quick_list_filter": "{\"date\":[\"Timespan\",\"this week\"]}"
+  }
+ ],
  "roles": [],
  "sequence_id": 10.0,
  "shortcuts": [
