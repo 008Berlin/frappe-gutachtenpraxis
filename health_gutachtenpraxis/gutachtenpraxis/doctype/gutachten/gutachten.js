@@ -26,14 +26,19 @@ frappe.ui.form.on("Gutachten", {
 
     $(frm.fields_dict.geolocation.wrapper).html('<div id="map" style="height: 400px;"></div>');
 
-    var map = L.map('map').setView([lat, lon], 15);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-      id: 'openstreetmap'
-    }).addTo(map);
-    L.marker([lat, lon]).addTo(map)
-      .bindPopup(frm.doc.name);
+    var checkExist = setInterval(function () {
+      if (typeof L !== "undefined") {
+        clearInterval(checkExist);
+        var map = L.map('map').setView([lat, lon], 15);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+          id: 'openstreetmap'
+        }).addTo(map);
+        L.marker([lat, lon]).addTo(map)
+          .bindPopup(frm.doc.name);
+      }
+    }, 100); // check every 100ms
   },
   court: function (frm) {
     if (frm.doc.court) {
