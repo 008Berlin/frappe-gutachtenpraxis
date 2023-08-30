@@ -1,1 +1,1 @@
-health_gutachtenpraxis.patches.02_setup_kanban_board
+health_gutachtenpraxis.patches.01_setup_kanban_board
