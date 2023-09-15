@@ -684,11 +684,100 @@
   "docstatus": 0,
   "doctype": "Gericht",
   "fax_number": "493534112130",
-  "judges": [],
-  "modified": "2023-09-15 11:24:37.011048",
+  "judges": [
+   {
+    "judge": "Uwe Oldenburg",
+    "parent": "Amtsgericht Bad Liebenwerda",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Astrid Eulitz",
+    "parent": "Amtsgericht Bad Liebenwerda",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Marion Seidel",
+    "parent": "Amtsgericht Bad Liebenwerda",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-15 12:20:26.504775",
   "name": "Amtsgericht Bad Liebenwerda",
   "street": "Burgplatz 5",
   "type": "Amtsgericht",
   "zipcode": "04924"
+ },
+ {
+  "city": "Bernau",
+  "court_name": "Bernau",
+  "docstatus": 0,
+  "doctype": "Gericht",
+  "fax_number": "033387080143",
+  "judges": [
+   {
+    "judge": "Sacha Roche",
+    "parent": "Amtsgericht Bernau",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Heike L\u00fcdtke",
+    "parent": "Amtsgericht Bernau",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Katrin Singert",
+    "parent": "Amtsgericht Bernau",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Kerstin Teitge-Wunder",
+    "parent": "Amtsgericht Bernau",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-15 12:49:38.562549",
+  "name": "Amtsgericht Bernau",
+  "street": "Breitscheidstra\u00dfe 50",
+  "type": "Amtsgericht",
+  "zipcode": "16321"
+ },
+ {
+  "city": "Brandenburg an der Havel",
+  "court_name": "Brandenburg an der Havel",
+  "docstatus": 0,
+  "doctype": "Gericht",
+  "fax_number": "03381398555",
+  "judges": [
+   {
+    "judge": "Christian Tsch\u00f6pe",
+    "parent": "Amtsgericht Brandenburg an der Havel",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Martina Klaes",
+    "parent": "Amtsgericht Brandenburg an der Havel",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Ingrid Pelzer",
+    "parent": "Amtsgericht Brandenburg an der Havel",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-15 13:10:07.012390",
+  "name": "Amtsgericht Brandenburg an der Havel",
+  "street": "Magdeburger Stra\u00dfe 47",
+  "type": "Amtsgericht",
+  "zipcode": "14770"
  }
 ]
