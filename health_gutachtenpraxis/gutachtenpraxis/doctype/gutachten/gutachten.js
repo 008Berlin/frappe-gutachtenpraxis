@@ -2,6 +2,14 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on("Gutachten", {
+  onload: function (frm) {
+    // Ensure there's a container to render the map
+    $(frm.fields_dict.map_display.wrapper).html('<div id="custom_map" style="height: 400px;"></div>');
+
+    if (frm.doc.lat && frm.doc.lon) {
+      renderMap(frm, frm.doc.lat, frm.doc.lon, frm.doc.name);
+    }
+  },
 
   refresh: function (frm) {
     frm.add_custom_button("Anamnesebogen generieren", function () {
@@ -17,28 +25,6 @@ frappe.ui.form.on("Gutachten", {
         return;
       }
     });
-    // Add your map initialization code here.
-    if (!frm.doc.geolocation) return;
-
-    var geojson = JSON.parse(frm.doc.geolocation);
-    var lat = geojson.features[0].geometry.coordinates[1];
-    var lon = geojson.features[0].geometry.coordinates[0];
-
-    $(frm.fields_dict.geolocation.wrapper).html('<div id="map" style="height: 400px;"></div>');
-
-    var checkExist = setInterval(function () {
-      if (typeof L !== "undefined") {
-        clearInterval(checkExist);
-        var map = L.map('map').setView([lat, lon], 15);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          maxZoom: 19,
-          attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-          id: 'openstreetmap'
-        }).addTo(map);
-        L.marker([lat, lon]).addTo(map)
-          .bindPopup(frm.doc.name);
-      }
-    }, 100); // check every 100ms
   },
   court: function (frm) {
     if (frm.doc.court) {
@@ -87,4 +73,16 @@ frappe.ui.form.on("Gutachten", {
     }
   },
 });
-
+function renderMap(frm, lat, lon, popupText) {
+  // Create the map with 'custom_map' ID
+  var map = L.map('custom_map').setView([lat, lon], 15);
+  
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+    id: 'openstreetmap'
+  }).addTo(map);
+  
+  // Add a marker with the popup
+  L.marker([lat, lon]).addTo(map).bindPopup(popupText).openPopup();
+}

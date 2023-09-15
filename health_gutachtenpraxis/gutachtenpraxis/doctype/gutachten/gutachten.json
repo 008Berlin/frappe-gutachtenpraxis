@@ -53,9 +53,9 @@
   "patient_a_patient_residence_phone",
   "section_break_lofdj",
   "gutachtentext",
-  "geolocation",
   "lat",
-  "lon"
+  "lon",
+  "map_display"
  ],
  "fields": [
   {
@@ -274,21 +274,14 @@
    "label": "Nachname"
   },
   {
-   "fieldname": "geolocation",
-   "fieldtype": "Geolocation",
-   "label": "Map"
-  },
-  {
    "fieldname": "lat",
    "fieldtype": "Data",
-   "hidden": 1,
    "label": "Latitude",
    "read_only": 1
   },
   {
    "fieldname": "lon",
    "fieldtype": "Data",
-   "hidden": 1,
    "label": "Longitude",
    "read_only": 1
   },
@@ -326,11 +319,16 @@
    "fieldname": "gutachtendetails_section",
    "fieldtype": "Section Break",
    "label": "Gutachtendetails"
+  },
+  {
+   "fieldname": "map_display",
+   "fieldtype": "HTML",
+   "label": "Map-Display"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-06 14:40:53.775970",
+ "modified": "2023-09-10 17:37:15.866427",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten",

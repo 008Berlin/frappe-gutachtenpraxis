@@ -131,6 +131,8 @@ def optimize_route(tagesliste_name):
     
     # Extract lat, lon from gutachten_list
     locations = ["{0},{1}".format(gutachten.lat, gutachten.lon) for gutachten in tagesliste.get_gutachtens()]
+
+    print(locations)
         
     # Request optimized route from Google Maps
     result = client.directions(

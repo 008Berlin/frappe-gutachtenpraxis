@@ -1,6 +1,8 @@
 frappe.ui.form.on('Tagesliste', {
-    refresh: function (frm) {
+    onload: function (frm) {
         refreshMap(frm, createMap);
+    },
+    refresh: function (frm) {
         frm.add_custom_button(__('View Route'), function () {
             // Use the GeoJSON data to create the route
             if (frm.geojson_data) {
@@ -62,7 +64,7 @@ function createMap(features) {
         var lon = feature.geometry.coordinates[0];
         var name = feature.properties.name;
         L.marker([lat, lon]).addTo(map)
-            .bindPopup(name);
+            .bindPopup(name).openPopup();
     });
 }
 
