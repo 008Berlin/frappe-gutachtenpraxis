@@ -4,9 +4,28 @@
   "court_name": "Charlottenburg",
   "docstatus": 0,
   "doctype": "Gericht",
-  "fax_number": "(030) 90177-447",
-  "judges": [],
-  "modified": "2023-08-30 18:51:49.138271",
+  "fax_number": "03090177447",
+  "judges": [
+   {
+    "judge": "Wolfgang He\u00dfe",
+    "parent": "Amtsgericht Charlottenburg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Hennigs-Nowak",
+    "parent": "Amtsgericht Charlottenburg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Wendenburg",
+    "parent": "Amtsgericht Charlottenburg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-15 10:44:25.886865",
   "name": "Amtsgericht Charlottenburg",
   "street": "Amtsgerichtsplatz 1",
   "type": "Amtsgericht",
@@ -17,9 +36,52 @@
   "court_name": "K\u00f6penick",
   "docstatus": 0,
   "doctype": "Gericht",
-  "fax_number": "(030) 90247-200",
-  "judges": [],
-  "modified": "2023-08-30 18:54:03.578877",
+  "fax_number": "03090247200",
+  "judges": [
+   {
+    "judge": "Marek R\u00f6der",
+    "parent": "Amtsgericht K\u00f6penick",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Andreas  Molter",
+    "parent": "Amtsgericht K\u00f6penick",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Maria Mammeri-Latzel",
+    "parent": "Amtsgericht K\u00f6penick",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Patrizia Engel",
+    "parent": "Amtsgericht K\u00f6penick",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Birgit H\u00f6ning",
+    "parent": "Amtsgericht K\u00f6penick",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Barbara Reiser",
+    "parent": "Amtsgericht K\u00f6penick",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Rieger",
+    "parent": "Amtsgericht K\u00f6penick",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-15 10:46:08.994124",
   "name": "Amtsgericht K\u00f6penick",
   "street": "Mandrellaplatz 6",
   "type": "Amtsgericht",
@@ -30,9 +92,118 @@
   "court_name": "Lichtenberg",
   "docstatus": 0,
   "doctype": "Gericht",
-  "fax_number": "(030) 90253 \u2013 300",
-  "judges": [],
-  "modified": "2023-08-30 18:54:33.591798",
+  "fax_number": "03090253300",
+  "judges": [
+   {
+    "judge": "Torsten Harms",
+    "parent": "Amtsgericht Lichtenberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Hahn",
+    "parent": "Amtsgericht Lichtenberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Andras Hartig",
+    "parent": "Amtsgericht Lichtenberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Philipp Hofmann",
+    "parent": "Amtsgericht Lichtenberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Uwe Kett",
+    "parent": "Amtsgericht Lichtenberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Holger Lubig",
+    "parent": "Amtsgericht Lichtenberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Hartwig Schulz",
+    "parent": "Amtsgericht Lichtenberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Dirk Siemon",
+    "parent": "Amtsgericht Lichtenberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Stephan",
+    "parent": "Amtsgericht Lichtenberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Warneck",
+    "parent": "Amtsgericht Lichtenberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Werner",
+    "parent": "Amtsgericht Lichtenberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Wittich",
+    "parent": "Amtsgericht Lichtenberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Dr. Gotham",
+    "parent": "Amtsgericht Lichtenberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Kentrup",
+    "parent": "Amtsgericht Lichtenberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Lehmann",
+    "parent": "Amtsgericht Lichtenberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Lemmel",
+    "parent": "Amtsgericht Lichtenberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Pfl\u00fcger",
+    "parent": "Amtsgericht Lichtenberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "W\u00f6stenfeld",
+    "parent": "Amtsgericht Lichtenberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-15 10:43:57.473568",
   "name": "Amtsgericht Lichtenberg",
   "street": "Roedeliusplatz 1",
   "type": "Amtsgericht",
@@ -43,9 +214,34 @@
   "court_name": "Mitte",
   "docstatus": 0,
   "doctype": "Gericht",
-  "fax_number": "(030) 9023 \u2013 2223",
-  "judges": [],
-  "modified": "2023-08-30 18:50:43.260353",
+  "fax_number": "03090232223",
+  "judges": [
+   {
+    "judge": "Dr. Frauke Wernecke",
+    "parent": "Amtsgericht Mitte",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Heike Sander",
+    "parent": "Amtsgericht Mitte",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Sandra Schumann",
+    "parent": "Amtsgericht Mitte",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Ta-Som Yun",
+    "parent": "Amtsgericht Mitte",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-15 10:44:59.630375",
   "name": "Amtsgericht Mitte",
   "street": "Littenstra\u00dfe 12-17",
   "type": "Amtsgericht",
@@ -56,9 +252,46 @@
   "court_name": "Neuk\u00f6lln",
   "docstatus": 0,
   "doctype": "Gericht",
-  "fax_number": "(030) 90191 \u2013 122",
-  "judges": [],
-  "modified": "2023-08-30 18:54:52.486147",
+  "fax_number": "03090191122",
+  "judges": [
+   {
+    "judge": "Ulrich B\u00fcschelmann",
+    "parent": "Amtsgericht Neuk\u00f6lln",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Dr. Wimmer-Soest",
+    "parent": "Amtsgericht Neuk\u00f6lln",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Frank Gutowski",
+    "parent": "Amtsgericht Neuk\u00f6lln",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Uwe Jaspert",
+    "parent": "Amtsgericht Neuk\u00f6lln",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Koch",
+    "parent": "Amtsgericht Neuk\u00f6lln",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Mundinger",
+    "parent": "Amtsgericht Neuk\u00f6lln",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-15 10:44:12.459129",
   "name": "Amtsgericht Neuk\u00f6lln",
   "street": "Karl-Marx-Stra\u00dfe 78",
   "type": "Amtsgericht",
@@ -69,9 +302,52 @@
   "court_name": "Pankow",
   "docstatus": 0,
   "doctype": "Gericht",
-  "fax_number": "(030) 90245 \u2013 400",
-  "judges": [],
-  "modified": "2023-08-30 18:56:22.443373",
+  "fax_number": "03090245400",
+  "judges": [
+   {
+    "judge": "Nastke",
+    "parent": "Amtsgericht Pankow/Wei\u00dfensee",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Nils Rojahn",
+    "parent": "Amtsgericht Pankow/Wei\u00dfensee",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Steffen Wei\u00df",
+    "parent": "Amtsgericht Pankow/Wei\u00dfensee",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Barbara Behm",
+    "parent": "Amtsgericht Pankow/Wei\u00dfensee",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Dr. Decker",
+    "parent": "Amtsgericht Pankow/Wei\u00dfensee",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Konstantinou",
+    "parent": "Amtsgericht Pankow/Wei\u00dfensee",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "L\u00fche",
+    "parent": "Amtsgericht Pankow/Wei\u00dfensee",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-15 10:44:48.493730",
   "name": "Amtsgericht Pankow/Wei\u00dfensee",
   "street": "Parkstra\u00dfe 71",
   "type": "Amtsgericht",
@@ -82,9 +358,112 @@
   "court_name": "Sch\u00f6neberg",
   "docstatus": 0,
   "doctype": "Gericht",
-  "fax_number": "030 / 90159 429",
-  "judges": [],
-  "modified": "2023-08-30 18:56:56.735363",
+  "fax_number": "03090159429",
+  "judges": [
+   {
+    "judge": "Diehl",
+    "parent": "Amtsgericht Sch\u00f6neberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Niemz",
+    "parent": "Amtsgericht Sch\u00f6neberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Stephan Lomb",
+    "parent": "Amtsgericht Sch\u00f6neberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Salomon",
+    "parent": "Amtsgericht Sch\u00f6neberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Zeid",
+    "parent": "Amtsgericht Sch\u00f6neberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Al Nader",
+    "parent": "Amtsgericht Sch\u00f6neberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Aschenbach",
+    "parent": "Amtsgericht Sch\u00f6neberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Anke Bode",
+    "parent": "Amtsgericht Sch\u00f6neberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Dr. Masuhr",
+    "parent": "Amtsgericht Sch\u00f6neberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Britta Irgang",
+    "parent": "Amtsgericht Sch\u00f6neberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Klippel",
+    "parent": "Amtsgericht Sch\u00f6neberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Kn\u00f6ller",
+    "parent": "Amtsgericht Sch\u00f6neberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Marks",
+    "parent": "Amtsgericht Sch\u00f6neberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Christina Schulze",
+    "parent": "Amtsgericht Sch\u00f6neberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Stru\u00df",
+    "parent": "Amtsgericht Sch\u00f6neberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Sylvia van Dieken",
+    "parent": "Amtsgericht Sch\u00f6neberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Heike Wolff",
+    "parent": "Amtsgericht Sch\u00f6neberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-15 10:45:29.094443",
   "name": "Amtsgericht Sch\u00f6neberg",
   "street": "Grunewaldstra\u00dfe 66-67",
   "type": "Amtsgericht",
@@ -95,9 +474,16 @@
   "court_name": "Spandau",
   "docstatus": 0,
   "doctype": "Gericht",
-  "fax_number": "(030) 90157 \u2013 444",
-  "judges": [],
-  "modified": "2023-08-30 18:59:04.495751",
+  "fax_number": "03090157444",
+  "judges": [
+   {
+    "judge": "Ursula Anders",
+    "parent": "Amtsgericht Spandau",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-15 10:44:37.093219",
   "name": "Amtsgericht Spandau",
   "street": "Altst\u00e4dter Ring 7",
   "type": "Amtsgericht",
@@ -108,9 +494,46 @@
   "court_name": "Kreuzberg",
   "docstatus": 0,
   "doctype": "Gericht",
-  "fax_number": "(030) 90 175 \u2013 211",
-  "judges": [],
-  "modified": "2023-08-30 18:59:52.523670",
+  "fax_number": "03090175211",
+  "judges": [
+   {
+    "judge": "Thomas Laube",
+    "parent": "Amtsgericht Tempelhof-Kreuzberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Dr. Norbert Mansees",
+    "parent": "Amtsgericht Tempelhof-Kreuzberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Gauger",
+    "parent": "Amtsgericht Tempelhof-Kreuzberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Ariane Kloth",
+    "parent": "Amtsgericht Tempelhof-Kreuzberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Kerstin M\u00fchlbauer",
+    "parent": "Amtsgericht Tempelhof-Kreuzberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Ulrike Schnurrer-Blum",
+    "parent": "Amtsgericht Tempelhof-Kreuzberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-15 10:43:44.567454",
   "name": "Amtsgericht Tempelhof-Kreuzberg",
   "street": "M\u00f6ckernstra\u00dfe 130",
   "type": "Amtsgericht",
@@ -121,12 +544,151 @@
   "court_name": "Wedding",
   "docstatus": 0,
   "doctype": "Gericht",
-  "fax_number": "(030) 90156 \u2013 664",
-  "judges": [],
-  "modified": "2023-08-30 18:45:23.147471",
+  "fax_number": "03090156664",
+  "judges": [
+   {
+    "judge": "Benjamin Ghadban",
+    "parent": "Amtsgericht Wedding",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Kupferschmidt",
+    "parent": "Amtsgericht Wedding",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Schwenkel",
+    "parent": "Amtsgericht Wedding",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Adrian Seidenspinner",
+    "parent": "Amtsgericht Wedding",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Grunst",
+    "parent": "Amtsgericht Wedding",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Markmann",
+    "parent": "Amtsgericht Wedding",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Morato",
+    "parent": "Amtsgericht Wedding",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Sabine Normann-Scheerer",
+    "parent": "Amtsgericht Wedding",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Pfl\u00fcger",
+    "parent": "Amtsgericht Wedding",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Marita Ripplinger",
+    "parent": "Amtsgericht Wedding",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "St\u00e4ding",
+    "parent": "Amtsgericht Wedding",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Th\u00fcrling",
+    "parent": "Amtsgericht Wedding",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-15 10:45:18.054692",
   "name": "Amtsgericht Wedding",
   "street": "Brunnenplatz 1",
   "type": "Amtsgericht",
   "zipcode": "13357"
+ },
+ {
+  "city": "Berlin",
+  "court_name": "Tiergarten",
+  "docstatus": 0,
+  "doctype": "Gericht",
+  "fax_number": "03090142010",
+  "judges": [
+   {
+    "judge": "Gabriele Henke-Vollmer",
+    "parent": "Amtsgericht Tiergarten",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-14 16:34:13.207105",
+  "name": "Amtsgericht Tiergarten",
+  "street": "Turmstra\u00dfe 91",
+  "type": "Amtsgericht",
+  "zipcode": "10559"
+ },
+ {
+  "city": "Potsdam",
+  "court_name": "Potsdam",
+  "docstatus": 0,
+  "doctype": "Gericht",
+  "fax_number": "033120172960",
+  "judges": [],
+  "modified": "2023-09-15 10:42:25.843712",
+  "name": "Amtsgericht Potsdam",
+  "street": "Hegelallee 8",
+  "type": "Amtsgericht",
+  "zipcode": "14467"
+ },
+ {
+  "city": "Bad Freienwalde (Oder)",
+  "court_name": "Bad Freienwalde (Oder)",
+  "docstatus": 0,
+  "doctype": "Gericht",
+  "fax_number": "49334447259",
+  "judges": [
+   {
+    "judge": "Uta Sarge",
+    "parent": "Amtsgericht Bad Freienwalde (Oder)",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-15 11:21:33.658771",
+  "name": "Amtsgericht Bad Freienwalde (Oder)",
+  "street": "Victor-Bl\u00fcthgen-Stra\u00dfe 9",
+  "type": "Amtsgericht",
+  "zipcode": "16259"
+ },
+ {
+  "city": "Bad Liebenwerda",
+  "court_name": "Bad Liebenwerda",
+  "docstatus": 0,
+  "doctype": "Gericht",
+  "fax_number": "493534112130",
+  "judges": [],
+  "modified": "2023-09-15 11:24:37.011048",
+  "name": "Amtsgericht Bad Liebenwerda",
+  "street": "Burgplatz 5",
+  "type": "Amtsgericht",
+  "zipcode": "04924"
  }
 ]
