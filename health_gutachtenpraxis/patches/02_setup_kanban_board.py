@@ -1,3 +1,5 @@
+import frappe
+
 def execute():
     # Fetch all Amtsgericht documents
     courts = frappe.get_all('Gericht')

@@ -7,4 +7,4 @@ const map_settings = frappe.provide("frappe.utils.map_defaults");
 // New default location (middle of germany).
 map_settings.center = [52.498, 13.348];
 // new zoomlevel: see the whole country, not just a single city
-map_settings.zoom = 10;
+map_settings.zoom = 15;

@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:TGL-{DD}.{MM}.{YYYY}-{court}",
+ "autoname": "format:TGL-{#####}-{court}",
  "creation": "2023-06-22 21:07:37.626463",
  "default_view": "List",
  "doctype": "DocType",
@@ -25,12 +25,14 @@
   },
   {
    "fieldname": "geolocation",
-   "fieldtype": "Geolocation",
+   "fieldtype": "HTML",
    "label": "Karte"
   },
   {
    "fieldname": "date",
    "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Datum"
   },
   {
@@ -61,7 +63,7 @@
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2023-07-07 12:27:11.141708",
+ "modified": "2023-09-10 18:29:05.711159",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Tagesliste",
