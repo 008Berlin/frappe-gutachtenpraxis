@@ -651,8 +651,15 @@
   "docstatus": 0,
   "doctype": "Gericht",
   "fax_number": "033120172960",
-  "judges": [],
-  "modified": "2023-09-15 10:42:25.843712",
+  "judges": [
+   {
+    "judge": "Andrea Schilling",
+    "parent": "Amtsgericht Potsdam",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-20 19:11:05.163105",
   "name": "Amtsgericht Potsdam",
   "street": "Hegelallee 8",
   "type": "Amtsgericht",
@@ -779,5 +786,440 @@
   "street": "Magdeburger Stra\u00dfe 47",
   "type": "Amtsgericht",
   "zipcode": "14770"
+ },
+ {
+  "city": "Cottbus",
+  "court_name": "Cottbus",
+  "docstatus": 0,
+  "doctype": "Gericht",
+  "fax_number": "03556372200",
+  "judges": [
+   {
+    "judge": "Peter Jentsch",
+    "parent": "Amtsgericht Cottbus",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Kerstin Fellmann",
+    "parent": "Amtsgericht Cottbus",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Gudrun Kirsch",
+    "parent": "Amtsgericht Cottbus",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Kerstin Sahlmann",
+    "parent": "Amtsgericht Cottbus",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-19 14:27:21.930723",
+  "name": "Amtsgericht Cottbus",
+  "street": "Gerichtsplatz 2",
+  "type": "Amtsgericht",
+  "zipcode": "03046"
+ },
+ {
+  "city": "Eberswalde",
+  "court_name": "Eberswalde",
+  "docstatus": 0,
+  "doctype": "Gericht",
+  "fax_number": "033342054416",
+  "judges": [
+   {
+    "judge": "Johannes Wolfs",
+    "parent": "Amtsgericht Eberswalde",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Klaus Neumann",
+    "parent": "Amtsgericht Eberswalde",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Roswitha Borchert",
+    "parent": "Amtsgericht Eberswalde",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Irina Lammek",
+    "parent": "Amtsgericht Eberswalde",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Claudia Stutenb\u00e4umer",
+    "parent": "Amtsgericht Eberswalde",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-19 14:35:32.204406",
+  "name": "Amtsgericht Eberswalde",
+  "street": "Breite Stra\u00dfe 62",
+  "type": "Amtsgericht",
+  "zipcode": "16225"
+ },
+ {
+  "city": "Eisenh\u00fcttenstadt",
+  "court_name": "Eisenh\u00fcttenstadt",
+  "docstatus": 0,
+  "doctype": "Gericht",
+  "fax_number": "03364405038",
+  "judges": [
+   {
+    "judge": "J\u00f6rg-Dieter B\u00f6hlendorf",
+    "parent": "Amtsgericht Eisenh\u00fcttenstadt",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-20 17:35:45.107093",
+  "name": "Amtsgericht Eisenh\u00fcttenstadt",
+  "street": "Diehloer Stra\u00dfe 62",
+  "type": "Amtsgericht",
+  "zipcode": "15890"
+ },
+ {
+  "city": "Frankfurt (Oder)",
+  "court_name": "Frankfurt (Oder)",
+  "docstatus": 0,
+  "doctype": "Gericht",
+  "fax_number": "03353661259",
+  "judges": [
+   {
+    "judge": "Sophie Kyrieleis",
+    "parent": "Amtsgericht Frankfurt (Oder)",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Mayra Herzberg",
+    "parent": "Amtsgericht Frankfurt (Oder)",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Ilona Labitzke",
+    "parent": "Amtsgericht Frankfurt (Oder)",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-20 17:55:25.675585",
+  "name": "Amtsgericht Frankfurt (Oder)",
+  "street": "M\u00fcllroser Chaussee 55",
+  "type": "Amtsgericht",
+  "zipcode": "15236"
+ },
+ {
+  "city": "F\u00fcrstenwalde/Spree",
+  "court_name": "F\u00fcrstenwalde/Spree",
+  "docstatus": 0,
+  "doctype": "Gericht",
+  "fax_number": "03361509830",
+  "judges": [
+   {
+    "judge": "Dr. Markus Fritsch",
+    "parent": "Amtsgericht F\u00fcrstenwalde/Spree",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Birgit Hohrmann",
+    "parent": "Amtsgericht F\u00fcrstenwalde/Spree",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-20 18:00:55.753204",
+  "name": "Amtsgericht F\u00fcrstenwalde/Spree",
+  "street": "Eisenbahnstra\u00dfe 8",
+  "type": "Amtsgericht",
+  "zipcode": "15517"
+ },
+ {
+  "city": "Guben",
+  "court_name": "Cottbus/Guben",
+  "docstatus": 0,
+  "doctype": "Gericht",
+  "fax_number": "03561408200",
+  "judges": [
+   {
+    "judge": "Gudrun Kirsch",
+    "parent": "Amtsgericht Cottbus/Guben",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-20 18:04:01.181393",
+  "name": "Amtsgericht Cottbus/Guben",
+  "street": "Alte Poststra\u00dfe 66",
+  "type": "Amtsgericht",
+  "zipcode": "03172"
+ },
+ {
+  "city": "K\u00f6nigs Wusterhausen",
+  "court_name": "K\u00f6nigs Wusterhausen",
+  "docstatus": 0,
+  "doctype": "Gericht",
+  "fax_number": "03375271111",
+  "judges": [
+   {
+    "judge": "Hansmann",
+    "parent": "Amtsgericht K\u00f6nigs Wusterhausen",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-20 18:07:12.460875",
+  "name": "Amtsgericht K\u00f6nigs Wusterhausen",
+  "street": "Schlossplatz 4",
+  "type": "Amtsgericht",
+  "zipcode": "15711"
+ },
+ {
+  "city": "Luckenwalde",
+  "court_name": "Luckenwalde",
+  "docstatus": 0,
+  "doctype": "Gericht",
+  "fax_number": "03371601103",
+  "judges": [],
+  "modified": "2023-09-20 18:08:57.918802",
+  "name": "Amtsgericht Luckenwalde",
+  "street": "Lindenallee 16",
+  "type": "Amtsgericht",
+  "zipcode": "14943"
+ },
+ {
+  "city": "Nauen",
+  "court_name": "Nauen",
+  "docstatus": 0,
+  "doctype": "Gericht",
+  "fax_number": "03321455347",
+  "judges": [
+   {
+    "judge": "Torsten Kaab",
+    "parent": "Amtsgericht Nauen",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Ramona Passerini",
+    "parent": "Amtsgericht Nauen",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Lisa Pf\u00fctzner",
+    "parent": "Amtsgericht Nauen",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-20 18:15:03.236450",
+  "name": "Amtsgericht Nauen",
+  "street": "Paul-Jerchel-Stra\u00dfe 9",
+  "type": "Amtsgericht",
+  "zipcode": "14641"
+ },
+ {
+  "city": "Neuruppin",
+  "court_name": "Neuruppin",
+  "docstatus": 0,
+  "doctype": "Gericht",
+  "fax_number": "03391395102",
+  "judges": [
+   {
+    "judge": "Heidemarie Rambow",
+    "parent": "Amtsgericht Neuruppin",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-20 18:17:22.096097",
+  "name": "Amtsgericht Neuruppin",
+  "street": "Karl-Marx-Stra\u00dfe 18a",
+  "type": "Amtsgericht",
+  "zipcode": "16816"
+ },
+ {
+  "city": "Oranienburg",
+  "court_name": "Oranienburg",
+  "docstatus": 0,
+  "doctype": "Gericht",
+  "fax_number": "033015739300",
+  "judges": [
+   {
+    "judge": "Cyszke",
+    "parent": "Amtsgericht Oranienburg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Sascha Stark",
+    "parent": "Amtsgericht Oranienburg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Henriette Vollers",
+    "parent": "Amtsgericht Oranienburg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Petra Werth",
+    "parent": "Amtsgericht Oranienburg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-20 18:27:37.982028",
+  "name": "Amtsgericht Oranienburg",
+  "street": "Berliner Stra\u00dfe 38",
+  "type": "Amtsgericht",
+  "zipcode": "16515"
+ },
+ {
+  "city": "Perleberg",
+  "court_name": "Perleberg",
+  "docstatus": 0,
+  "doctype": "Gericht",
+  "fax_number": "03876717199",
+  "judges": [
+   {
+    "judge": "Heinz G\u00fcnter K\u00f6ster",
+    "parent": "Amtsgericht Perleberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Hardy Nastke",
+    "parent": "Amtsgericht Perleberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Karsten Sprigode",
+    "parent": "Amtsgericht Perleberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Uwe Werner",
+    "parent": "Amtsgericht Perleberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-20 19:07:03.318358",
+  "name": "Amtsgericht Perleberg",
+  "street": "Lindenstra\u00dfe 12",
+  "type": "Amtsgericht",
+  "zipcode": "19348"
+ },
+ {
+  "city": "Strausberg",
+  "court_name": "Strausberg",
+  "docstatus": 0,
+  "doctype": "Gericht",
+  "fax_number": "033413312190",
+  "judges": [
+   {
+    "judge": "Frank Schuberth",
+    "parent": "Amtsgericht Strausberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Dr. Frank Kluth",
+    "parent": "Amtsgericht Strausberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Gabriele B\u00fcrgel",
+    "parent": "Amtsgericht Strausberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Jaqueline Heimann",
+    "parent": "Amtsgericht Strausberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Karsten Seider",
+    "parent": "Amtsgericht Strausberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Undine Witte",
+    "parent": "Amtsgericht Strausberg",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-20 19:20:56.804329",
+  "name": "Amtsgericht Strausberg",
+  "street": "Klosterstra\u00dfe 13",
+  "type": "Amtsgericht",
+  "zipcode": "15344"
+ },
+ {
+  "city": "Zossen",
+  "court_name": "Zossen",
+  "docstatus": 0,
+  "doctype": "Gericht",
+  "fax_number": "03377307100",
+  "judges": [
+   {
+    "judge": "Frank Ahlborn",
+    "parent": "Amtsgericht Zossen",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Behnert",
+    "parent": "Amtsgericht Zossen",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Iris Grund",
+    "parent": "Amtsgericht Zossen",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Renate Neuhaus",
+    "parent": "Amtsgericht Zossen",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   },
+   {
+    "judge": "Ulrike Severin",
+    "parent": "Amtsgericht Zossen",
+    "parentfield": "judges",
+    "parenttype": "Gericht"
+   }
+  ],
+  "modified": "2023-09-20 19:26:51.174345",
+  "name": "Amtsgericht Zossen",
+  "street": "Gerichtstra\u00dfe 10",
+  "type": "Amtsgericht",
+  "zipcode": "15806"
  }
 ]
