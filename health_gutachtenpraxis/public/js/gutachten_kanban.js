@@ -1,4 +1,5 @@
 // Your main function to add the custom button
+// TODO: FIXIT for chrome
 function addCustomButton() {
     $('.kanban-column:not(.add-new-column)').each(function () {
         var $column = $(this);
@@ -63,6 +64,6 @@ frappe.router.on('change', () => {
         console.log("We're on the right page!");
 
         // Delay to ensure the Kanban board is fully loaded
-        setTimeout(addCustomButton, 2000);  // Adjust the delay time if necessary
+        setTimeout(addCustomButton, 5000);  // Adjust the delay time if necessary
     }
 });

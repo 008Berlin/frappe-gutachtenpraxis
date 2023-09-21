@@ -2,7 +2,6 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "format:{type} {court_name}",
  "creation": "2023-05-24 16:29:22.683567",
  "default_view": "List",
  "doctype": "DocType",
@@ -67,11 +66,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-06 14:39:46.824321",
+ "modified": "2023-09-21 13:35:19.026770",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gericht",
- "naming_rule": "Expression",
+ "naming_rule": "By script",
  "owner": "Administrator",
  "permissions": [
   {

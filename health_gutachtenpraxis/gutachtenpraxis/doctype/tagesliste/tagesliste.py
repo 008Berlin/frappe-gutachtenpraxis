@@ -143,7 +143,7 @@ def optimize_route(tagesliste_name):
         mode="driving",
         departure_time=datetime.now()
     )
-    
+    print(result)
     print(result[0]['waypoint_order'])
     
     # Get the optimized waypoint order

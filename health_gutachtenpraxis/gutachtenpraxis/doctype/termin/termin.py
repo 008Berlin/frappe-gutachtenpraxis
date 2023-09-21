@@ -32,17 +32,24 @@ class Termin(Document):
     def validate(self):
         gutachten = frappe.get_doc('Gutachten', self.gutachten)
         if self.docstatus == 0 and self.is_new():
-            comment_text = f"Ein neuer Termin <a href='/app/termin/{self.name}'>{self.name}</a> has been created by {frappe.session.user}."
+            # Entry on Gutachten timeline 
+            comment_text = f"Ein neuer Termin <a href='/app/termin/{self.name}'>{self.name}</a> wurde erstellt von: {frappe.session.user}."
             gutachten.add_comment("Edit", comment_text)
 
+        # Validates times
         if self.start_time and self.end_time:
             if self.end_time < self.start_time:
                 frappe.throw("Der Start muss vor dem Ende liegen!")
 
-        if self.get_value("status") != self._original_values.get("status"):
+        try: 
+            og_value = self._original_values.get("status")
+        except:
+            og_value = None
+        if self.get_value("status") != og_value:
         # Check if the new value is "#E6B0AA"
             if self.get_value("status") == "#E6B0AA":
                 gutachten.status == "Wiedervorlage"
+        # TODO: fixen
 
 
         

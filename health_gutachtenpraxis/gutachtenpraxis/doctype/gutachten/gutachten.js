@@ -12,6 +12,7 @@ frappe.ui.form.on("Gutachten", {
   },
 
   refresh: function (frm) {
+    // Add Custom button for Anamnesebogen pdf
     frm.add_custom_button("Anamnesebogen generieren", function () {
       var w = window.open(
         "/api/method/health_gutachtenpraxis.gutachtenpraxis.doctype.gutachten.gutachten.generate_pdf?" +
@@ -57,6 +58,7 @@ frappe.ui.form.on("Gutachten", {
       });
     }
   },
+  // Change to receipt date results in due date
   receipt_date: function (frm) {
     if (frm.doc.receipt_date && frm.doc.period) {
       let receipt_date = frappe.datetime.str_to_obj(frm.doc.receipt_date);

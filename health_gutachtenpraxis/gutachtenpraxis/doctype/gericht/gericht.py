@@ -5,6 +5,9 @@ import frappe
 from frappe.model.document import Document
 
 class Gericht(Document):
+	def autoname(self):
+		self.name = self.type + " " + self.court_name
+
 	def after_insert(self):
 		try:
 			kanban_board = frappe.get_doc('Kanban Board', 'Gutachten Board')
