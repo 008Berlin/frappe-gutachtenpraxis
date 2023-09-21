@@ -53,9 +53,9 @@
   "patient_a_patient_residence_phone",
   "section_break_lofdj",
   "gutachtentext",
+  "geolocation",
   "lat",
-  "lon",
-  "map_display"
+  "lon"
  ],
  "fields": [
   {
@@ -256,7 +256,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status des Falls",
-   "options": "Anstehend\nAbgeschlossen\nWiedervorlage\n\u00dcberf\u00e4llig\nin Tagesliste",
+   "options": "Anstehend\nAbgeschlossen\nWiedervorlage\n\u00dcberf\u00e4llig\nin Tagesliste\nBegutachtet\nVergebliche Anfahrt\nGutachten abgebrochen\nZutritt verweigert\nBegutachtung nicht m\u00f6glich\nVon Praxis abgesagt\nKurzfristig abgesagt\nVon Betroffenen abgesagt\nNicht angetroffen\nNicht best\u00e4tigt\nKeine Info\nIm Krankenhaus\nNicht erschienen\nStandort gewechselt/ umgezogen\nVerstorben\nTour abgesagt/ verschoben\nUm Entbindung gebeten\nKrankenhausaufenthalt",
    "reqd": 1
   },
   {
@@ -276,12 +276,14 @@
   {
    "fieldname": "lat",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Latitude",
    "read_only": 1
   },
   {
    "fieldname": "lon",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Longitude",
    "read_only": 1
   },
@@ -321,14 +323,14 @@
    "label": "Gutachtendetails"
   },
   {
-   "fieldname": "map_display",
-   "fieldtype": "HTML",
-   "label": "Map-Display"
+   "fieldname": "geolocation",
+   "fieldtype": "Geolocation",
+   "label": "Map"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-10 17:37:15.866427",
+ "modified": "2023-09-21 11:27:09.392477",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten",
