@@ -206,6 +206,7 @@ app_include_js = [
 fixtures = [
     'Gutachtenarten',
     'Gericht',
+    'Richter',
 ]
 
 # In your hooks.py file
