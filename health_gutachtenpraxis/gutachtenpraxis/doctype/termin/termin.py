@@ -33,7 +33,7 @@ class Termin(Document):
         gutachten = frappe.get_doc('Gutachten', self.gutachten)
         if self.docstatus == 0 and self.is_new():
             # Entry on Gutachten timeline 
-            comment_text = f"Ein neuer Termin <a href='/app/termin/{self.name}'>{self.name}</a> wurde erstellt von: {frappe.session.user}."
+            comment_text = f"Ein neuer Termin <a href='/app/termin/{self.name}'>{self.name}</a> wurde erstellt"
             gutachten.add_comment("Edit", comment_text)
 
         # Validates times

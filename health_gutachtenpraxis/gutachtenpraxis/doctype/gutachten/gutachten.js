@@ -27,6 +27,7 @@ frappe.ui.form.on("Gutachten", {
       }
     });
   },
+
   court: function (frm) {
     if (frm.doc.court) {
       frappe.call({
@@ -78,13 +79,13 @@ frappe.ui.form.on("Gutachten", {
 function renderMap(frm, lat, lon, popupText) {
   // Create the map with 'custom_map' ID
   var map = L.map('custom_map').setView([lat, lon], 15);
-  
+
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
     id: 'openstreetmap'
   }).addTo(map);
-  
+
   // Add a marker with the popup
   L.marker([lat, lon]).addTo(map).bindPopup(popupText).openPopup();
 }

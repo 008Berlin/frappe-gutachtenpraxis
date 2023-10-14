@@ -27,7 +27,8 @@
   {
    "fieldname": "type",
    "fieldtype": "Select",
-   "label": "Typ"
+   "label": "Typ",
+   "options": "Klinik\nPflegeeinrichtung\nReha\nOhne festen Wohnsitz"
   },
   {
    "fieldname": "street",
@@ -57,7 +58,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-06 14:39:23.595714",
+ "modified": "2023-09-26 14:44:06.341110",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Einrichtung",
