@@ -141,7 +141,7 @@ bench --site health.localhost install-app healthcare
 
 To install gutachten app
 ```shell
-bench get-app https://github.com/aronjanosch/frappe-gutachtenpraxis.git
+bench get-app https://github.com/d0rianw/frappe-gutachtenpraxis.git
 bench --site health.localhost install-app health_gutachtenpraxis
 ```
 
