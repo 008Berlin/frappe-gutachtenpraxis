@@ -18,6 +18,9 @@
   "column_break_ntzls",
   "patient_last_name",
   "patient_dob",
+  "patient_m_address_t",
+  "patient_m_zip_t",
+  "patient_a_adress_t",
   "weitere_informationen_section",
   "weitere_informationen"
  ],
@@ -93,12 +96,29 @@
    "fieldname": "weitere_informationen_section",
    "fieldtype": "Section Break",
    "label": "Weitere Informationen"
+  },
+  {
+   "fetch_from": "gutachten.patient_m_patient_street",
+   "fieldname": "patient_m_address_t",
+   "fieldtype": "Data",
+   "label": "Meldedresse"
+  },
+  {
+   "fetch_from": "gutachten.patient_m_patient_street",
+   "fieldname": "patient_a_adress_t",
+   "fieldtype": "Data",
+   "label": "Aktuelle Adresse"
+  },
+  {
+   "fetch_from": "gutachten.patient_m_patient_zipcode",
+   "fieldname": "patient_m_zip_t",
+   "fieldtype": "Data"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2023-07-05 13:45:45.657853",
+ "modified": "2023-10-27 14:28:52.886844",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Termin",

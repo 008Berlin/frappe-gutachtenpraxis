@@ -6,6 +6,7 @@ import requests
 import json
 from datetime import datetime, timedelta
 from frappe.model.document import Document
+from frappe import _
 
 
 class Gutachten(Document):
@@ -45,28 +46,29 @@ def update_kanban(doc, method):
     frappe.db.set_value("Gutachten", doc.name, "kanban_column", doc.court)
 
 
-        
-
 def address_to_geojson(gutachten):
-    response = requests.get(
-        "https://nominatim.openstreetmap.org/search",
-        params={"q": gutachten.address_string(), "format": "json"},
-    )
-    data = response.json()
-    gutachten.lat = data[0]['lat']
-    gutachten.lon = data[0]["lon"]
-    if data:
-        geojson = {
-            "type": "FeatureCollection",
-            "features": [
-                {
-                    "type": "Feature",
-                    "properties": {"name": "Adresse"},
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [data[0]["lon"], data[0]["lat"]],
-                    },
-                }
-            ],
-        }
-        return json.dumps(geojson)
+    try:
+        response = requests.get(
+            "https://nominatim.openstreetmap.org/search",
+            params={"q": gutachten.address_string(), "format": "json"},
+        )
+        data = response.json()
+        gutachten.lat = data[0]["lat"]
+        gutachten.lon = data[0]["lon"]
+        if data:
+            geojson = {
+                "type": "FeatureCollection",
+                "features": [
+                    {
+                        "type": "Feature",
+                        "properties": {"name": "Adresse"},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [data[0]["lon"], data[0]["lat"]],
+                        },
+                    }
+                ],
+            }
+            return json.dumps(geojson)
+    except IndexError:
+        frappe.msgprint(_("Fehler: Bitte Adresse überprüfen"))
