@@ -34,7 +34,7 @@ frappe.ui.form.on('Gutachten Patient', {
 					frm.set_value('a_patient_city', einrichtung.city);
 					frm.set_value('a_patient_residence_station', einrichtung.zusatz);
 					frm.set_value('a_patient_residence_phone', einrichtung.tel_number);
-					
+
 				}
 			});
 		}

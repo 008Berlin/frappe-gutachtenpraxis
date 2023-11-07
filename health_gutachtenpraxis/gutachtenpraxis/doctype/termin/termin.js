@@ -47,3 +47,16 @@ function getStatusColor(status) {
 
     return statusColorMapping[status];
 }
+
+frappe.ui.form.on('Termin', {
+    onload: function (frm) {
+        var street = frm.doc.street_fetched;
+        var zip = frm.doc.zipcode_fetched;
+        var city = frm.doc.city_fetched;
+
+        var addr_combined = street + ', ' + zip + ' ' + city;
+
+        frm.set_value('addresse_kombiniert', addr_combined);
+        ;
+    }
+});

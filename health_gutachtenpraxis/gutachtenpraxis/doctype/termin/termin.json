@@ -17,12 +17,13 @@
   "all_day",
   "column_break_ntzls",
   "patient_last_name",
+  "addresse_kombiniert",
   "patient_dob",
-  "patient_m_address_t",
-  "patient_m_zip_t",
-  "patient_a_adress_t",
   "weitere_informationen_section",
-  "weitere_informationen"
+  "weitere_informationen",
+  "street_fetched",
+  "zipcode_fetched",
+  "city_fetched"
  ],
  "fields": [
   {
@@ -99,26 +100,35 @@
   },
   {
    "fetch_from": "gutachten.patient_m_patient_street",
-   "fieldname": "patient_m_address_t",
+   "fieldname": "street_fetched",
    "fieldtype": "Data",
-   "label": "Meldedresse"
-  },
-  {
-   "fetch_from": "gutachten.patient_m_patient_street",
-   "fieldname": "patient_a_adress_t",
-   "fieldtype": "Data",
-   "label": "Aktuelle Adresse"
+   "hidden": 1,
+   "label": "Stra\u00dfe fetch"
   },
   {
    "fetch_from": "gutachten.patient_m_patient_zipcode",
-   "fieldname": "patient_m_zip_t",
-   "fieldtype": "Data"
+   "fieldname": "zipcode_fetched",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Plz fetch"
+  },
+  {
+   "fetch_from": "gutachten.patient_m_patient_city",
+   "fieldname": "city_fetched",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Stadt fetch"
+  },
+  {
+   "fieldname": "addresse_kombiniert",
+   "fieldtype": "Data",
+   "label": "Adresse"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2023-10-27 14:28:52.886844",
+ "modified": "2023-11-07 11:10:10.137985",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Termin",
