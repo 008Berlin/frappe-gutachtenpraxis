@@ -43,8 +43,7 @@
   "b_patient_address",
   "b_patient_phone",
   "b_patient_mail",
-  "b_patient_fax",
-  "zusammengefasst"
+  "b_patient_fax"
  ],
  "fields": [
   {
@@ -240,17 +239,12 @@
    "fieldtype": "Select",
    "label": "Art des Aufenthalts",
    "options": "Privatadresse\nKlinik\nPflegeeinrichtung\nReha\nOhne festen Wohnsitz"
-  },
-  {
-   "fieldname": "zusammengefasst",
-   "fieldtype": "Data",
-   "label": "Adresse ZSM"
   }
  ],
  "icon": "fa fa-user",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-07 10:52:38.631192",
+ "modified": "2023-11-08 10:33:16.491935",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten Patient",

@@ -60,3 +60,4 @@ frappe.ui.form.on('Termin', {
         ;
     }
 });
+

@@ -1,5 +1,6 @@
 import frappe
 
+
 @frappe.whitelist()
 def get_judges(court):
     court_doc = frappe.get_doc("Gericht", court)
@@ -14,5 +15,3 @@ def get_judges(court):
         }
         judges.append(judge)
     return judges
-
-

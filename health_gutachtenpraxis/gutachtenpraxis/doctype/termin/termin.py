@@ -4,6 +4,7 @@
 import frappe
 from frappe.model.document import Document
 from frappe import db
+from frappe.model.document import Document
 
 status_color_mapping = {
     "Nicht terminiert": "#FAD7A0",
@@ -19,7 +20,7 @@ status_color_mapping = {
     "Im Krankenhaus": "#E6B0AA",
     "Nicht erschienen": "#E6B0AA",
     "Standort gewechselt/ umgezogen": "#E6B0AA",
-    "Verstorben": "#D7DBDD"
+    "Verstorben": "#D7DBDD",
 }
 
 
@@ -30,9 +31,9 @@ class Termin(Document):
         )
 
     def validate(self):
-        gutachten = frappe.get_doc('Gutachten', self.gutachten)
+        gutachten = frappe.get_doc("Gutachten", self.gutachten)
         if self.docstatus == 0 and self.is_new():
-            # Entry on Gutachten timeline 
+            # Entry on Gutachten timeline
             comment_text = f"Ein neuer Termin <a href='/app/termin/{self.name}'>{self.name}</a> wurde erstellt"
             gutachten.add_comment("Edit", comment_text)
 
@@ -41,18 +42,15 @@ class Termin(Document):
             if self.end_time < self.start_time:
                 frappe.throw("Der Start muss vor dem Ende liegen!")
 
-        try: 
+        try:
             og_value = self._original_values.get("status")
         except:
             og_value = None
         if self.get_value("status") != og_value:
-        # Check if the new value is "#E6B0AA"
+            # Check if the new value is "#E6B0AA"
             if self.get_value("status") == "#E6B0AA":
                 gutachten.status == "Wiedervorlage"
         # TODO: fixen
-
-
-        
 
     def autoname(self):
         # Count existing Termin documents for this Gutachten
@@ -70,5 +68,6 @@ class Termin(Document):
 #     new_termin.gutachten = termin.gutachten
 #     new_termin.patient_last_name = termin.patient_last_name
 #     new_termin.insert(ignore_permissions=True)
+
 
 #     return new_termin.name
