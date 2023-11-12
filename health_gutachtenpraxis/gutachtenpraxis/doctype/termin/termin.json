@@ -102,18 +102,21 @@
    "fetch_from": "gutachten.patient_m_patient_street",
    "fieldname": "street_fetched",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Stra\u00dfe fetch"
   },
   {
    "fetch_from": "gutachten.patient_m_patient_zipcode",
    "fieldname": "zipcode_fetched",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Plz fetch"
   },
   {
    "fetch_from": "gutachten.patient_m_patient_city",
    "fieldname": "city_fetched",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Stadt fetch"
   },
   {
@@ -125,7 +128,7 @@
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2023-11-08 10:49:49.987313",
+ "modified": "2023-11-09 16:13:17.082199",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Termin",

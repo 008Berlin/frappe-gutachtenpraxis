@@ -31,6 +31,7 @@
   "column_break_grzfd",
   "copy_mainfile",
   "patient_patient_additions",
+  "contact_phone",
   "anamnesebogen",
   "patientendetails_section",
   "patient_salutation",
@@ -326,11 +327,17 @@
    "fieldname": "geolocation",
    "fieldtype": "Geolocation",
    "label": "Map"
+  },
+  {
+   "description": "Kontakt f\u00fcr Terminvereinbarung, falls Telefon des Patienten abweicht",
+   "fieldname": "contact_phone",
+   "fieldtype": "Data",
+   "label": "Telefon"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-23 18:03:40.094228",
+ "modified": "2023-11-09 15:27:01.999999",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten",
