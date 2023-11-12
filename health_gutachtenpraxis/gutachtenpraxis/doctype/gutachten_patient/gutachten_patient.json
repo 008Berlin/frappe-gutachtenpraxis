@@ -27,6 +27,8 @@
   "m_patient_street",
   "m_patient_zipcode",
   "m_patient_city",
+  "c_break_m",
+  "m_add_status",
   "aktuelle_adresse_section",
   "a_patient_residence_type",
   "a_patient_residence",
@@ -35,6 +37,8 @@
   "a_patient_zipcode",
   "a_patient_city",
   "a_patient_residence_phone",
+  "c_break_a",
+  "a_add_status",
   "beteiligte_personen_tab",
   "b_patient_function",
   "b_patient_salutation",
@@ -239,12 +243,34 @@
    "fieldtype": "Select",
    "label": "Art des Aufenthalts",
    "options": "Privatadresse\nKlinik\nPflegeeinrichtung\nReha\nOhne festen Wohnsitz"
+  },
+  {
+   "fieldname": "c_break_m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Ja",
+   "fieldname": "m_add_status",
+   "fieldtype": "Select",
+   "label": "Adresse noch aktuell?",
+   "options": "Ja\nNein"
+  },
+  {
+   "fieldname": "c_break_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Ja",
+   "fieldname": "a_add_status",
+   "fieldtype": "Select",
+   "label": "Adresse noch aktuell?",
+   "options": "Ja\nNein"
   }
  ],
  "icon": "fa fa-user",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-08 10:33:16.491935",
+ "modified": "2023-11-12 13:48:33.436400",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten Patient",
