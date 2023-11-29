@@ -21,9 +21,16 @@
   "patient_dob",
   "weitere_informationen_section",
   "weitere_informationen",
-  "street_fetched",
-  "zipcode_fetched",
-  "city_fetched"
+  "t_m_patient_street",
+  "t_m_patient_zipcode",
+  "t_m_patient_city",
+  "t_patient_salutation",
+  "t_patient_first_name",
+  "t_patient_last_name",
+  "t_a_patient_residence",
+  "t_a_patient_street",
+  "t_a_patient_zipcode",
+  "t_a_patient_city"
  ],
  "fields": [
   {
@@ -99,36 +106,75 @@
    "label": "Weitere Informationen"
   },
   {
-   "fetch_from": "gutachten.patient_m_patient_street",
-   "fieldname": "street_fetched",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Stra\u00dfe fetch"
-  },
-  {
-   "fetch_from": "gutachten.patient_m_patient_zipcode",
-   "fieldname": "zipcode_fetched",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Plz fetch"
-  },
-  {
-   "fetch_from": "gutachten.patient_m_patient_city",
-   "fieldname": "city_fetched",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Stadt fetch"
-  },
-  {
    "fieldname": "addresse_kombiniert",
    "fieldtype": "Data",
    "label": "Adresse"
+  },
+  {
+   "fetch_from": "gutachten.patient_salutation",
+   "fieldname": "t_patient_salutation",
+   "fieldtype": "Data",
+   "label": "Anrede fetch"
+  },
+  {
+   "fetch_from": "gutachten.patient_first_name",
+   "fieldname": "t_patient_first_name",
+   "fieldtype": "Data",
+   "label": "Vorname fetch"
+  },
+  {
+   "fetch_from": "gutachten.patient_last_name",
+   "fieldname": "t_patient_last_name",
+   "fieldtype": "Data",
+   "label": "Nachname fetch"
+  },
+  {
+   "fetch_from": "gutachten.patient_a_patient_residence",
+   "fieldname": "t_a_patient_residence",
+   "fieldtype": "Data",
+   "label": "A Einrichtung fetch"
+  },
+  {
+   "fetch_from": "gutachten.patient_m_patient_street",
+   "fieldname": "t_a_patient_street",
+   "fieldtype": "Data",
+   "label": "A Stra\u00dfe fetch"
+  },
+  {
+   "fetch_from": "gutachten.patient_a_patient_zipcode",
+   "fieldname": "t_a_patient_zipcode",
+   "fieldtype": "Data",
+   "label": "A Plz fetch"
+  },
+  {
+   "fetch_from": "gutachten.patient_m_patient_city",
+   "fieldname": "t_a_patient_city",
+   "fieldtype": "Data",
+   "label": "A Stadt fetch"
+  },
+  {
+   "fetch_from": "gutachten.patient_m_patient_street",
+   "fieldname": "t_m_patient_street",
+   "fieldtype": "Data",
+   "label": "M Stra\u00dfe fetch"
+  },
+  {
+   "fetch_from": "gutachten.patient_m_patient_zipcode",
+   "fieldname": "t_m_patient_zipcode",
+   "fieldtype": "Data",
+   "label": "M Plz fetch"
+  },
+  {
+   "fetch_from": "gutachten.patient_m_patient_city",
+   "fieldname": "t_m_patient_city",
+   "fieldtype": "Data",
+   "label": "M Stadt fetch"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2023-11-09 16:13:17.082199",
+ "modified": "2023-11-29 11:53:15.858022",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Termin",

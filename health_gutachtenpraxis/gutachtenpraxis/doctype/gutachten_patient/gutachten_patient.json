@@ -22,6 +22,7 @@
   "notes_daylist",
   "translator",
   "contact_appointment",
+  "linked_apr",
   "adresse_section",
   "meldeadresse_column",
   "m_patient_street",
@@ -265,12 +266,23 @@
    "fieldtype": "Select",
    "label": "Adresse noch aktuell?",
    "options": "Ja\nNein"
+  },
+  {
+   "fieldname": "linked_apr",
+   "fieldtype": "Link",
+   "label": "Gutachten",
+   "options": "Gutachten"
   }
  ],
  "icon": "fa fa-user",
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2023-11-12 13:48:33.436400",
+ "links": [
+  {
+   "link_doctype": "Gutachten",
+   "link_fieldname": "file_name"
+  }
+ ],
+ "modified": "2023-11-12 18:56:18.740542",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten Patient",

@@ -50,9 +50,9 @@ function getStatusColor(status) {
 
 frappe.ui.form.on('Termin', {
     onload: function (frm) {
-        var street = frm.doc.street_fetched;
-        var zip = frm.doc.zipcode_fetched;
-        var city = frm.doc.city_fetched;
+        var street = frm.doc.t_m_patient_street;
+        var zip = frm.doc.t_m_patient_zipcode;
+        var city = frm.doc.t_m_patient_city;
 
         var addr_combined = street + ', ' + zip + ' ' + city;
 
