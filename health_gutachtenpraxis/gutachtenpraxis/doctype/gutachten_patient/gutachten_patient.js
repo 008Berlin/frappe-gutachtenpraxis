@@ -2,7 +2,6 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Gutachten Patient', {
-
 	onload: function (frm) {
 		if (frm.doc.dob) {
 			let age_str = get_age(frm.doc.dob)

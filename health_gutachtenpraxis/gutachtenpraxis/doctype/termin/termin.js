@@ -50,14 +50,25 @@ function getStatusColor(status) {
 
 frappe.ui.form.on('Termin', {
     onload: function (frm) {
-        var street = frm.doc.t_m_patient_street;
-        var zip = frm.doc.t_m_patient_zipcode;
-        var city = frm.doc.t_m_patient_city;
+        //frm.doc schaut auf dem aktuellen dokument (Termin) nach dem Feld gutachten und legt auf variable gutachten (.then(gutachten))
+        frappe.db.get_doc("Gutachten", frm.doc.gutachten)
+            .then(gutachten => {
+                if (gutachten && gutachten.patient) {
+                    return frappe.db.get_doc("Gutachten Patient", gutachten.patient);
+                } else {
+                    throw new Error("Es existiert kein Patient auf dem Gutachten");
+                }
+            })
+            .then(patient => {
+                if (patient) {
+                    frm.set_value('addresse_kombiniert', patient.m_patient_street + ', ' + patient.m_patient_zipcode + ' ' + patient.m_patient_city);
 
-        var addr_combined = street + ', ' + zip + ' ' + city;
-
-        frm.set_value('addresse_kombiniert', addr_combined);
-        ;
+                    var dateStr = patient.dob;
+                    var date = new Date(dateStr);
+                    var formattedDate = date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear();
+                    frm.set_value('t_patientendaten_kombiniert', patient.first_name + ' ' + patient.last_name + ', ' + formattedDate);
+                }
+            })
     }
 });
 
