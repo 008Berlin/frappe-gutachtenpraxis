@@ -1,48 +1,201 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:RN {r_gn}",
  "creation": "2023-07-05 13:16:13.295809",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "rechnungspositionen_section",
-  "zeitaufwand",
-  "gutachtenart",
-  "auslageen_und_aufwendungsersatz"
+  "r_heading_zeitaufwand",
+  "r_vorbereitende_arbeiten",
+  "r_aktenstudium",
+  "r_exploration",
+  "r_entwurf",
+  "r_ueberarbeitung",
+  "r_fahrzeit",
+  "r_zusammensetzung",
+  "r_heading_1",
+  "r_sum_zeitaufwand",
+  "r_aufgerundet_std",
+  "r_stundensatz",
+  "r_b_column",
+  "r_heading_auslagen",
+  "r_reisekosten",
+  "r_schreibkosten",
+  "r_heading_2",
+  "r_auslagen_gesamt",
+  "r_heading_zusammenfassung",
+  "r_zsm_zeitaufwand",
+  "r_zsm_aufwendungsersatz",
+  "r_heading_3",
+  "r_nettobetrag",
+  "r_heading_4",
+  "r_mwst",
+  "r_rechnungssummer",
+  "r_section_1",
+  "r_gutschriftsdatum",
+  "r_gutschrift"
  ],
  "fields": [
   {
-   "fieldname": "rechnungspositionen_section",
+   "fieldname": "r_heading_zeitaufwand",
+   "fieldtype": "Heading",
+   "label": "A. Zeitaufwand (8.9)"
+  },
+  {
+   "fieldname": "r_vorbereitende_arbeiten",
+   "fieldtype": "Data",
+   "label": "Vorbereitende Arbeiten, Telefonate, Schriftverkehr"
+  },
+  {
+   "fieldname": "r_aktenstudium",
+   "fieldtype": "Data",
+   "label": "Aktenstudium"
+  },
+  {
+   "fieldname": "r_exploration",
+   "fieldtype": "Data",
+   "label": "Exploration, Anamnese, testung, Fremdanamnese"
+  },
+  {
+   "fieldname": "r_entwurf",
+   "fieldtype": "Data",
+   "label": "Entwurf/Ausarbeitung/Diktat des Gutachtens"
+  },
+  {
+   "fieldname": "r_ueberarbeitung",
+   "fieldtype": "Data",
+   "label": "\u00dcberarbeitung/Durchsicht der Reinschrift"
+  },
+  {
+   "description": "x0,0166",
+   "fieldname": "r_fahrzeit",
+   "fieldtype": "Data",
+   "label": "Fahrzeit (Hin- und R\u00fcckfahrt)"
+  },
+  {
+   "fieldname": "r_zusammensetzung",
+   "fieldtype": "Data",
+   "label": "Fahrzeitenzusammensetzung"
+  },
+  {
+   "fieldname": "r_aufgerundet_std",
+   "fieldtype": "Data",
+   "label": "Aufgerundet nach 8 Abs. 2 S. 1"
+  },
+  {
+   "fieldname": "r_stundensatz",
+   "fieldtype": "Currency",
+   "label": "Stundensatz"
+  },
+  {
+   "fieldname": "r_b_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "r_heading_auslagen",
+   "fieldtype": "Heading",
+   "label": "B. Auslagen- und Aufwendungsersatz (5-7.9)"
+  },
+  {
+   "description": "x0,42\u20ac/km",
+   "fieldname": "r_reisekosten",
+   "fieldtype": "Data",
+   "label": "Reisekosten (Kilometeranzahl Hin- und R\u00fcckfahrt)"
+  },
+  {
+   "description": "Anschl\u00e4ge/1000 x 1,50\u20ac",
+   "fieldname": "r_schreibkosten",
+   "fieldtype": "Data",
+   "label": "Schreibkosten f\u00fcr Reinschrift des Gutachtens"
+  },
+  {
+   "fieldname": "r_heading_1",
+   "fieldtype": "Heading",
+   "label": "______________________________________________________"
+  },
+  {
+   "fieldname": "r_heading_2",
+   "fieldtype": "Heading",
+   "label": "______________________________________________________"
+  },
+  {
+   "fieldname": "r_auslagen_gesamt",
+   "fieldtype": "Currency",
+   "label": "Auslagen gesamt",
+   "read_only": 1
+  },
+  {
+   "fieldname": "r_heading_zusammenfassung",
+   "fieldtype": "Heading",
+   "label": "B. Zusammenfassung"
+  },
+  {
+   "fieldname": "r_zsm_zeitaufwand",
+   "fieldtype": "Currency",
+   "label": "A. Zeitaufwand"
+  },
+  {
+   "fieldname": "r_zsm_aufwendungsersatz",
+   "fieldtype": "Currency",
+   "label": "B. Auslagen- und Aufwendungsersatz"
+  },
+  {
+   "fieldname": "r_heading_3",
+   "fieldtype": "Heading",
+   "label": "______________________________________________________"
+  },
+  {
+   "fieldname": "r_nettobetrag",
+   "fieldtype": "Currency",
+   "label": "Nettobetrag"
+  },
+  {
+   "fieldname": "r_heading_4",
+   "fieldtype": "Heading",
+   "label": "______________________________________________________"
+  },
+  {
+   "fieldname": "r_mwst",
+   "fieldtype": "Currency",
+   "label": "MwSt. 19% (gem. 12 Abs. 1 S. 2 Nr. 4)"
+  },
+  {
+   "bold": 1,
+   "fieldname": "r_rechnungssummer",
+   "fieldtype": "Currency",
+   "label": "Rechnungssumme"
+  },
+  {
+   "fieldname": "r_section_1",
    "fieldtype": "Section Break",
-   "label": "Rechnungspositionen"
+   "label": " "
   },
   {
-   "fieldname": "zeitaufwand",
-   "fieldtype": "Table",
-   "label": "Zeitaufwand",
-   "options": "Tagesliste Gutachten"
+   "fieldname": "r_gutschriftsdatum",
+   "fieldtype": "Date",
+   "label": "Gutschriftsdatum"
   },
   {
-   "fieldname": "gutachtenart",
-   "fieldtype": "Table",
-   "label": "Gutachtenart",
-   "options": "Tagesliste Gutachten"
+   "fieldname": "r_gutschrift",
+   "fieldtype": "Currency",
+   "label": "Gutschrift"
   },
   {
-   "fieldname": "auslageen_und_aufwendungsersatz",
-   "fieldtype": "Table",
-   "label": "Auslageen und Aufwendungsersatz",
-   "options": "Tagesliste Gutachten"
+   "fieldname": "r_sum_zeitaufwand",
+   "fieldtype": "Data",
+   "label": "Gesamtzahl der Stunden"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-05 13:16:13.295809",
+ "modified": "2023-12-06 15:29:57.638561",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten Rechnung",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
