@@ -18,22 +18,19 @@
   "r_zusammensetzung",
   "r_heading_1",
   "r_sum_zeitaufwand",
-  "r_aufgerundet_std",
+  "r_sum_zeitaufwand_round",
   "r_stundensatz",
   "r_b_column",
   "r_heading_auslagen",
   "r_reisekosten",
   "r_schreibkosten",
-  "r_heading_2",
-  "r_auslagen_gesamt",
   "r_heading_zusammenfassung",
-  "r_zsm_zeitaufwand",
-  "r_zsm_aufwendungsersatz",
+  "r_stundensatz_sum",
+  "r_auslagen_gesamt",
   "r_heading_3",
   "r_nettobetrag",
-  "r_heading_4",
   "r_mwst",
-  "r_rechnungssummer",
+  "r_rechnungssumme",
   "r_section_1",
   "r_gutschriftsdatum",
   "r_gutschrift"
@@ -81,11 +78,6 @@
    "label": "Fahrzeitenzusammensetzung"
   },
   {
-   "fieldname": "r_aufgerundet_std",
-   "fieldtype": "Data",
-   "label": "Aufgerundet nach 8 Abs. 2 S. 1"
-  },
-  {
    "fieldname": "r_stundensatz",
    "fieldtype": "Currency",
    "label": "Stundensatz"
@@ -117,30 +109,15 @@
    "label": "______________________________________________________"
   },
   {
-   "fieldname": "r_heading_2",
-   "fieldtype": "Heading",
-   "label": "______________________________________________________"
-  },
-  {
    "fieldname": "r_auslagen_gesamt",
    "fieldtype": "Currency",
-   "label": "Auslagen gesamt",
+   "label": "B. Auslagen- und Aufwendungsersatz",
    "read_only": 1
   },
   {
    "fieldname": "r_heading_zusammenfassung",
    "fieldtype": "Heading",
    "label": "B. Zusammenfassung"
-  },
-  {
-   "fieldname": "r_zsm_zeitaufwand",
-   "fieldtype": "Currency",
-   "label": "A. Zeitaufwand"
-  },
-  {
-   "fieldname": "r_zsm_aufwendungsersatz",
-   "fieldtype": "Currency",
-   "label": "B. Auslagen- und Aufwendungsersatz"
   },
   {
    "fieldname": "r_heading_3",
@@ -150,23 +127,14 @@
   {
    "fieldname": "r_nettobetrag",
    "fieldtype": "Currency",
-   "label": "Nettobetrag"
-  },
-  {
-   "fieldname": "r_heading_4",
-   "fieldtype": "Heading",
-   "label": "______________________________________________________"
+   "label": "Nettobetrag",
+   "read_only": 1
   },
   {
    "fieldname": "r_mwst",
-   "fieldtype": "Currency",
-   "label": "MwSt. 19% (gem. 12 Abs. 1 S. 2 Nr. 4)"
-  },
-  {
-   "bold": 1,
-   "fieldname": "r_rechnungssummer",
-   "fieldtype": "Currency",
-   "label": "Rechnungssumme"
+   "fieldtype": "Select",
+   "label": "MwSt. 19% (gem. 12 Abs. 1 S. 2 Nr. 4)",
+   "options": "Ja\nNein"
   },
   {
    "fieldname": "r_section_1",
@@ -187,11 +155,29 @@
    "fieldname": "r_sum_zeitaufwand",
    "fieldtype": "Data",
    "label": "Gesamtzahl der Stunden"
+  },
+  {
+   "fieldname": "r_sum_zeitaufwand_round",
+   "fieldtype": "Data",
+   "label": "Aufgerundet nach 8 Abs. 2 S. 1"
+  },
+  {
+   "fieldname": "r_stundensatz_sum",
+   "fieldtype": "Currency",
+   "label": "A. Zeitaufwand",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "r_rechnungssumme",
+   "fieldtype": "Currency",
+   "label": "Rechnungssumme",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-06 15:29:57.638561",
+ "modified": "2023-12-07 15:18:35.496217",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten Rechnung",
