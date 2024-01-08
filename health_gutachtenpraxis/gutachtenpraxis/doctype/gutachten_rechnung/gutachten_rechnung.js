@@ -10,34 +10,46 @@ frappe.ui.form.on('Gutachten Rechnung', {
 
 function zeitaufwand(frm) {
 	//A. Zeitaufwand
-	let r_vorbereitende_arbeiten = Number(frm.doc.r_vorbereitende_arbeiten);
-	let r_aktenstudium = Number(frm.doc.r_aktenstudium);
-	let r_exploration = Number(frm.doc.r_exploration);
-	let r_entwurf = Number(frm.doc.r_entwurf);
-	let r_ueberarbeitung = Number(frm.doc.r_ueberarbeitung);
-	let r_fahrzeit_sum = Number((frm.doc.r_fahrzeit * 0.0166).toFixed(2));
+	var r_vorbereitende_arbeiten = Number(frm.doc.r_vorbereitende_arbeiten);
+	var r_aktenstudium = Number(frm.doc.r_aktenstudium);
+	var r_exploration = Number(frm.doc.r_exploration);
+	var r_entwurf = Number(frm.doc.r_entwurf);
+	var r_ueberarbeitung = Number(frm.doc.r_ueberarbeitung);
+	var r_fahrzeit_sum = Number((frm.doc.r_fahrzeit * 0.0166).toFixed(2));
 
 	//A. Zeitaufwand: Gesamtzahl der Stunden
-	let r_sum_zeitaufwand = (r_vorbereitende_arbeiten + r_aktenstudium + r_exploration + r_entwurf + r_ueberarbeitung + r_fahrzeit_sum).toFixed(2);
+	var r_sum_zeitaufwand = (r_vorbereitende_arbeiten + r_aktenstudium + r_exploration + r_entwurf + r_ueberarbeitung + r_fahrzeit_sum).toFixed(2);
 	frm.set_value('r_sum_zeitaufwand', r_sum_zeitaufwand);
 
 	//A. Zeitaufwand: Jede angefangene 30min werden aufgerundet (§8 Justizvergütungs- und entschädigungsgesetz)
-	let r_sum_zeitaufwand_round = (Math.ceil(r_sum_zeitaufwand * 2) / 2).toFixed(2);
+	var r_sum_zeitaufwand_round = (Math.ceil(r_sum_zeitaufwand * 2) / 2).toFixed(2);
 	frm.set_value('r_sum_zeitaufwand_round', r_sum_zeitaufwand_round);
 
 	//B. Zusammenfassung: Zeitaufwand
-	let r_stundensatz = frm.doc.r_stundensatz;
-	let r_stundensatz_sum = r_sum_zeitaufwand_round * r_stundensatz;
+	var r_stundensatz = frm.doc.r_stundensatz;
+	var r_stundensatz_sum = r_sum_zeitaufwand_round * r_stundensatz;
 	frm.set_value('r_stundensatz_sum', r_stundensatz_sum);
 
 	//B. Zusammenfassung: Auslagen- und Aufwendungsersatz
-	let r_reisekosten_sum = Number((frm.doc.r_reisekosten * 0.42).toFixed(2));
-	let r_schreibkosten_sum = Number((frm.doc.r_schreibkosten / 1000 * 1.50).toFixed(2));
-	let r_auslagen_sum = r_reisekosten_sum + r_schreibkosten_sum;
+	var r_reisekosten_sum = Number((frm.doc.r_reisekosten * 0.42).toFixed(2));
+	var r_schreibkosten_sum = Number((frm.doc.r_schreibkosten / 1000 * 1.50).toFixed(2));
+	var r_auslagen_sum = r_reisekosten_sum + r_schreibkosten_sum;
 	frm.set_value('r_auslagen_gesamt', r_auslagen_sum);
 
 	//B. Zusammenfassung: Nettobetrag
-	let r_netto_sum = r_stundensatz_sum + r_auslagen_sum;
+	var r_netto_sum = r_stundensatz_sum + r_auslagen_sum;
 	frm.set_value('r_nettobetrag', r_netto_sum);
 
+	//B. Zusammenfassung: Bruttobetrag
+	var r_mwst_answer = frm.doc.r_mwst;
+
+	if (r_mwst_answer === 'Ja') {
+		// Bruttobetrag mit 19% Mehrwertsteuer berechnen
+		var r_brutto = r_netto_sum * 1.19;
+		frm.set_value('r_rechnungssumme', r_brutto);
+	} else if (r_mwst_answer === 'Nein') {
+		frm.set_value('r_rechnungssumme', r_netto_sum);
+	}
 }
+
+
