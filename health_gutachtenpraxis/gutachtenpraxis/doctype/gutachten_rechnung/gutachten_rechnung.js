@@ -15,7 +15,9 @@ function zeitaufwand(frm) {
 	var r_exploration = Number(frm.doc.r_exploration);
 	var r_entwurf = Number(frm.doc.r_entwurf);
 	var r_ueberarbeitung = Number(frm.doc.r_ueberarbeitung);
+
 	var r_fahrzeit_sum = Number((frm.doc.r_fahrzeit * 0.0166).toFixed(2));
+	frm.set_value('r_fahrzeit_sum', r_fahrzeit_sum);
 
 	//A. Zeitaufwand: Gesamtzahl der Stunden
 	var r_sum_zeitaufwand = (r_vorbereitende_arbeiten + r_aktenstudium + r_exploration + r_entwurf + r_ueberarbeitung + r_fahrzeit_sum).toFixed(2);
@@ -44,12 +46,16 @@ function zeitaufwand(frm) {
 	var r_mwst_answer = frm.doc.r_mwst;
 
 	if (r_mwst_answer === 'Ja') {
-		// Bruttobetrag mit 19% Mehrwertsteuer berechnen
-		var r_brutto = r_netto_sum * 1.19;
+		var r_brutto = Number((r_netto_sum * 1.19).toFixed(2));
 		frm.set_value('r_rechnungssumme', r_brutto);
+		var r_mwst_betrag = Number((r_brutto - r_netto_sum).toFixed(2));
+		frm.set_value('r_mwst_betrag', r_mwst_betrag);
 	} else if (r_mwst_answer === 'Nein') {
 		frm.set_value('r_rechnungssumme', r_netto_sum);
+		frm.set_value('r_mwst_betrag', 0);
 	}
+
+
 }
 
 

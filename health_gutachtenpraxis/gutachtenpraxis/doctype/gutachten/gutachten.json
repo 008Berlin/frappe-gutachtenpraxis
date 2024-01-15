@@ -15,6 +15,7 @@
   "tab_break_fgzle",
   "patient",
   "tab_break_hn5rq",
+  "invoice",
   "section_break_zvmhs",
   "gutachtendetails_section",
   "file_number",
@@ -333,11 +334,17 @@
    "fieldname": "contact_phone",
    "fieldtype": "Data",
    "label": "Telefon"
+  },
+  {
+   "fieldname": "invoice",
+   "fieldtype": "Link",
+   "label": "Rechnung",
+   "options": "Gutachten Rechnung"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-29 10:33:02.196741",
+ "modified": "2024-01-10 13:18:21.544823",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten",

@@ -8,6 +8,8 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "r_hinweise",
+  "r_section_1",
   "r_heading_zeitaufwand",
   "r_vorbereitende_arbeiten",
   "r_aktenstudium",
@@ -15,7 +17,7 @@
   "r_entwurf",
   "r_ueberarbeitung",
   "r_fahrzeit",
-  "r_zusammensetzung",
+  "r_fahrzeit_sum",
   "r_heading_1",
   "r_sum_zeitaufwand",
   "r_sum_zeitaufwand_round",
@@ -30,8 +32,9 @@
   "r_heading_3",
   "r_nettobetrag",
   "r_mwst",
+  "r_mwst_betrag",
   "r_rechnungssumme",
-  "r_section_1",
+  "r_section_2",
   "r_gutschriftsdatum",
   "r_gutschrift"
  ],
@@ -71,11 +74,6 @@
    "fieldname": "r_fahrzeit",
    "fieldtype": "Data",
    "label": "Fahrzeit (Hin- und R\u00fcckfahrt)"
-  },
-  {
-   "fieldname": "r_zusammensetzung",
-   "fieldtype": "Data",
-   "label": "Fahrzeitenzusammensetzung"
   },
   {
    "fieldname": "r_stundensatz",
@@ -139,8 +137,7 @@
   },
   {
    "fieldname": "r_section_1",
-   "fieldtype": "Section Break",
-   "label": " "
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "r_gutschriftsdatum",
@@ -173,11 +170,32 @@
    "fieldtype": "Currency",
    "label": "Rechnungssumme",
    "read_only": 1
+  },
+  {
+   "fieldname": "r_hinweise",
+   "fieldtype": "Heading",
+   "label": "Bitte Komma durch Punkt ersetzen. Um Ergebnisse anzeigen zu lassen, speichern und Seite neu laden."
+  },
+  {
+   "fieldname": "r_section_2",
+   "fieldtype": "Section Break",
+   "label": " "
+  },
+  {
+   "fieldname": "r_fahrzeit_sum",
+   "fieldtype": "Data",
+   "label": "Fahrzeit gesamt"
+  },
+  {
+   "fieldname": "r_mwst_betrag",
+   "fieldtype": "Currency",
+   "label": "Mehrwertsteuer Betrag",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-08 17:40:26.295343",
+ "modified": "2024-01-10 12:39:00.803674",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten Rechnung",
