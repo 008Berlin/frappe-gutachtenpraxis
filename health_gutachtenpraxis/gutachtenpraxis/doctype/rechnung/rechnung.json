@@ -148,7 +148,8 @@
   {
    "fieldname": "r_gutschrift",
    "fieldtype": "Currency",
-   "label": "Gutschrift"
+   "label": "Gutschrift",
+   "read_only": 1
   },
   {
    "fieldname": "r_sum_zeitaufwand",
@@ -202,7 +203,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-15 19:45:24.981680",
+ "modified": "2024-01-16 13:33:00.342742",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Rechnung",

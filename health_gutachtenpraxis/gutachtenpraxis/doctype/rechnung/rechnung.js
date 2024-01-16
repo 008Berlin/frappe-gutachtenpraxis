@@ -48,11 +48,13 @@ function zeitaufwand(frm) {
 	if (r_mwst_answer === 'Ja') {
 		var r_brutto = Number((r_netto_sum * 1.19).toFixed(2));
 		frm.set_value('r_rechnungssumme', r_brutto);
+		frm.set_value('r_gutschrift', r_brutto);
 		var r_mwst_betrag = Number((r_brutto - r_netto_sum).toFixed(2));
 		frm.set_value('r_mwst_betrag', r_mwst_betrag);
 	} else if (r_mwst_answer === 'Nein') {
 		frm.set_value('r_rechnungssumme', r_netto_sum);
 		frm.set_value('r_mwst_betrag', 0);
+		frm.set_value('r_gutschrift', r_netto_sum);
 	}
 }
 
