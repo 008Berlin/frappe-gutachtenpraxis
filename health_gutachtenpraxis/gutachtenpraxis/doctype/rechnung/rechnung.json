@@ -9,6 +9,7 @@
  "engine": "InnoDB",
  "field_order": [
   "r_hinweise",
+  "gutachten",
   "r_section_1",
   "r_heading_zeitaufwand",
   "r_vorbereitende_arbeiten",
@@ -191,14 +192,20 @@
    "fieldtype": "Currency",
    "label": "Mehrwertsteuer Betrag",
    "read_only": 1
+  },
+  {
+   "fieldname": "gutachten",
+   "fieldtype": "Link",
+   "label": "Gutachten",
+   "options": "Gutachten"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-10 12:39:00.803674",
+ "modified": "2024-01-15 19:45:24.981680",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
- "name": "Gutachten Rechnung",
+ "name": "Rechnung",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

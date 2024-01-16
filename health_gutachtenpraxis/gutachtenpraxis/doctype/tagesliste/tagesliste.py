@@ -128,6 +128,7 @@ def optimize_route(tagesliste_name):
         
     # Get company address as the origin
     company_address = get_company_address()
+    print(company_address)
     
     # Extract lat, lon from gutachten_list
     locations = ["{0},{1}".format(gutachten.lat, gutachten.lon) for gutachten in tagesliste.get_gutachtens()]

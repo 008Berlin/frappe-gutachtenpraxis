@@ -17,7 +17,7 @@
  "is_hidden": 0,
  "label": "Gutachtenpraxis",
  "links": [],
- "modified": "2023-12-05 15:52:08.441837",
+ "modified": "2024-01-15 19:39:53.698517",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachtenpraxis",
@@ -51,7 +51,7 @@
    "color": "Grey",
    "doc_view": "List",
    "label": "Rechnungen",
-   "link_to": "Gutachten Rechnung",
+   "link_to": "Rechnung",
    "type": "DocType"
   },
   {

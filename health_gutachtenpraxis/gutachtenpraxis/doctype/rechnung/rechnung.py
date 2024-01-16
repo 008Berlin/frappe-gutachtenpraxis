@@ -4,5 +4,6 @@
 # import frappe
 from frappe.model.document import Document
 
-class GutachtenRechnung(Document):
-	pass
+class Rechnung(Document):
+	def autoname(self):
+		self.name = "RN " + self.gutachten[3:]

@@ -6,6 +6,7 @@ def get_data():
         'non_standard_fieldnames': {
             'Tagesliste': 'gutachten',
             'Termin': 'gutachten',
+            'Rechnung': 'gutachten',
         },
         'transactions': [
             {
@@ -15,6 +16,10 @@ def get_data():
             {
                 'label': _('Verbundene Termine'),
                 'items': ['Termin']
+            },
+            {
+                'label': _('Verbundene Rechnung'),
+                'items': ['Rechnung']
             },
         ]
     }

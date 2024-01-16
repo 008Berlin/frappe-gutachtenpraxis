@@ -4,10 +4,10 @@
 frappe.ui.form.on("Gutachten", {
   onload: function (frm) {
     // Ensure there's a container to render the map
-    $(frm.fields_dict.map_display.wrapper).html('<div id="custom_map" style="height: 400px;"></div>');
-
+    //$(frm.fields_dict.map_display.wrapper).html('<div id="custom_map" style="height: 400px;"></div>');
+    refreshMapGeo(frm);
     if (frm.doc.lat && frm.doc.lon) {
-      renderMap(frm, frm.doc.lat, frm.doc.lon, frm.doc.name);
+      createMap(frm);
     }
   },
 
@@ -76,16 +76,29 @@ frappe.ui.form.on("Gutachten", {
     }
   },
 });
-function renderMap(frm, lat, lon, popupText) {
-  // Create the map with 'custom_map' ID
-  var map = L.map('custom_map').setView([lat, lon], 15);
 
+function createMap(frm) {
+  // We'll use the first feature to set the initial map view
+  var lat = frm.doc.lat;
+  var lon = frm.doc.lon;
+
+  $(cur_frm.fields_dict.geolocation_html.wrapper).html('<div id="map_html" style="height: 600px;"></div>');
+
+  var map = L.map('map_html').setView([lat, lon], 12);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
     id: 'openstreetmap'
   }).addTo(map);
 
-  // Add a marker with the popup
-  L.marker([lat, lon]).addTo(map).bindPopup(popupText).openPopup();
+  L.marker([lat, lon]).addTo(map)
+}
+
+function refreshMapGeo(frm) {
+  frappe.call({
+    method: "health_gutachtenpraxis.gutachtenpraxis.doctype.gutachten.gutachten.address_to_geojson",
+    args: {
+      gutachten: frm.doc
+    }
+  });
 }

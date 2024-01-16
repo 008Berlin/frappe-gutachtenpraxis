@@ -1,7 +1,7 @@
 // Copyright (c) 2023, Aron Wiederkehr and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on('Gutachten Rechnung', {
+frappe.ui.form.on('Rechnung', {
 	onload: function (frm) {
 		//alert('Komma bitte durch einen Punkt ersetzen!')
 		zeitaufwand(frm);
@@ -54,8 +54,6 @@ function zeitaufwand(frm) {
 		frm.set_value('r_rechnungssumme', r_netto_sum);
 		frm.set_value('r_mwst_betrag', 0);
 	}
-
-
 }
 
 

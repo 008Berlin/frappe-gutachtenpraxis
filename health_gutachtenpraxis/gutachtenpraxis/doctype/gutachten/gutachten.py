@@ -45,8 +45,12 @@ def update_kanban(doc, method):
     # Set the Kanban column to the linked Amtsgericht
     frappe.db.set_value("Gutachten", doc.name, "kanban_column", doc.court)
 
-
+@frappe.whitelist(allow_guest=True)
 def address_to_geojson(gutachten):
+    #print(gutachten)
+    if (type(gutachten)==str):
+        gutachten = frappe.get_doc(json.loads(gutachten))
+        
     try:
         response = requests.get(
             "https://nominatim.openstreetmap.org/search",
