@@ -71,10 +71,10 @@ To setup frappe framework version 14 bench set `PYENV_VERSION` environment varia
 
 ```shell
 # Use default environments
-bench init --skip-redis-config-generation --frappe-branch version-14 frappe-bench
+bench init --skip-redis-config-generation --frappe-branch version-15 frappe-bench
 # Or set environment versions explicitly
-nvm use v16
-PYENV_VERSION=3.10.5 bench init --skip-redis-config-generation --frappe-branch version-14 frappe-bench
+nvm use v18
+PYENV_VERSION=3.10.5 bench init --skip-redis-config-generation --frappe-branch version-15 frappe-bench
 # Switch directory
 cd frappe-bench
 ```
@@ -129,7 +129,7 @@ You can check [VSCode container remote extension documentation](https://code.vis
 
 To install erpnext app
 ```shell
-bench get-app --branch version-14 --resolve-deps erpnext
+bench get-app --branch version-15 --resolve-deps erpnext
 bench --site health.localhost install-app erpnext
 ```
 
