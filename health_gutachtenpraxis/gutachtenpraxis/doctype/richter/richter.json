@@ -2,14 +2,14 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "format:{first_name} {last_name}",
+ "autoname": "format: {judge_name}",
  "creation": "2023-05-24 16:31:26.415488",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "salutation",
+  "judge_salutation",
   "first_name",
   "last_name",
   "judge_name",
@@ -17,12 +17,6 @@
   "link_court"
  ],
  "fields": [
-  {
-   "fieldname": "salutation",
-   "fieldtype": "Select",
-   "label": "Anrede",
-   "options": "Richter\nRichterin\nDirektor\nDirektorin"
-  },
   {
    "bold": 1,
    "fieldname": "judge_name",
@@ -40,9 +34,10 @@
    "label": "Faxnummer"
   },
   {
-   "fieldname": "last_name",
-   "fieldtype": "Data",
-   "label": "Nachname"
+   "fieldname": "link_court",
+   "fieldtype": "Link",
+   "label": "Gericht",
+   "options": "Gericht"
   },
   {
    "fieldname": "first_name",
@@ -50,10 +45,15 @@
    "label": "Vorname"
   },
   {
-   "fieldname": "link_court",
-   "fieldtype": "Link",
-   "label": "Gericht",
-   "options": "Gericht"
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Nachname"
+  },
+  {
+   "fieldname": "judge_salutation",
+   "fieldtype": "Select",
+   "label": "Anrede",
+   "options": "Richter\nRichterin\nDirektor\nDirektorin"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -63,7 +63,7 @@
    "link_fieldname": "court_name"
   }
  ],
- "modified": "2023-09-15 11:23:04.623255",
+ "modified": "2024-04-02 13:34:37.291777",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Richter",

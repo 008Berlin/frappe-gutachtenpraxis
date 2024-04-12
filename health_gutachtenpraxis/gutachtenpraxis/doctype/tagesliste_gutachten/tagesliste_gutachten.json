@@ -6,7 +6,9 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "gutachten"
+  "gutachten",
+  "adresse_kombiniert",
+  "info_f\u00fcr_tagesliste"
  ],
  "fields": [
   {
@@ -14,12 +16,24 @@
    "fieldtype": "Link",
    "label": "Gutachten",
    "options": "Gutachten"
+  },
+  {
+   "fetch_from": "gutachten.infos_tl",
+   "fieldname": "adresse_kombiniert",
+   "fieldtype": "Data",
+   "label": "Adresse"
+  },
+  {
+   "fetch_from": "gutachten.infos_tl",
+   "fieldname": "info_f\u00fcr_tagesliste",
+   "fieldtype": "Small Text",
+   "label": "Informationen f\u00fcr die Tagesliste"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-06-22 21:06:47.509767",
+ "modified": "2024-04-09 11:32:41.662673",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Tagesliste Gutachten",

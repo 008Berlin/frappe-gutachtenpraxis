@@ -39,10 +39,8 @@ frappe.ui.form.on("Gutachten", {
           if (r.message) {
             // Store the judge names in a separate variable
             let judgeNames = r.message.map((judge) => judge.name);
-
             // Set the "options" property to "Richter"
             frm.set_df_property("judge", "options", "Richter");
-
             // Filter the options that are displayed to the user
             frm.set_query("judge", function () {
               return {
@@ -59,6 +57,7 @@ frappe.ui.form.on("Gutachten", {
       });
     }
   },
+
   // Change to receipt date results in due date
   receipt_date: function (frm) {
     if (frm.doc.receipt_date && frm.doc.period) {
@@ -102,3 +101,29 @@ function refreshMapGeo(frm) {
     }
   });
 }
+
+frappe.ui.form.on('Gutachten', {
+  onload: function (frm) {
+    if (frm.doc.patient) {
+      frappe.call({
+        method: "frappe.client.get",
+        args: {
+          doctype: "Gutachten Patient",
+          name: frm.doc.patient
+        },
+        callback: function (r) {
+          if (r.message) {
+            var patientData = r.message;
+            if (patientData.a_patient_street) {
+              frm.set_value('infos_tl', patientData.patient_a_patient_residence + ',' + ',' + patientData.patien_a_patient_residence_station + ',' + patientData.a_patient_street + ', ' + patientData.a_patient_zipcode + ' ' + patientData.a_patient_city + ', Tel: ' + patientData.patient_a_patient_residence_phone);
+            } else {
+              frm.set_value('infos_tl', patientData.m_patient_street + ', ' + patientData.m_patient_zipcode + ' ' + patientData.m_patient_city);
+            }
+          } else {
+            console.error("Es existiert kein Patient für dieses Gutachten");
+          }
+        }
+      });
+    }
+  }
+});

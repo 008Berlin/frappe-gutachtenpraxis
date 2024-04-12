@@ -50,25 +50,31 @@ function getStatusColor(status) {
 
 frappe.ui.form.on('Termin', {
     onload: function (frm) {
-        //frm.doc schaut auf dem aktuellen dokument (Termin) nach dem Feld gutachten und legt auf variable gutachten (.then(gutachten))
-        frappe.db.get_doc("Gutachten", frm.doc.gutachten)
-            .then(gutachten => {
-                if (gutachten && gutachten.patient) {
-                    return frappe.db.get_doc("Gutachten Patient", gutachten.patient);
+        frappe.call({
+            method: "frappe.client.get",
+            args: {
+                doctype: "Gutachten",
+                name: frm.doc.gutachten
+            },
+            callback: function (r) {
+                if (r.message && r.message.patient) {
+                    frappe.call({
+                        method: "frappe.client.get",
+                        args: {
+                            doctype: "Gutachten Patient",
+                            name: r.message.patient
+                        },
+                        callback: function (patient) {
+                            if (patient.message) {
+                                var patientData = patient.message;
+                                frm.set_value('infos_tl', patientData.m_patient_street + ', ' + patientData.m_patient_zipcode + ' ' + patientData.m_patient_city);
+                            }
+                        }
+                    });
                 } else {
-                    throw new Error("Es existiert kein Patient auf dem Gutachten");
+                    console.error("Es existiert kein Patient auf dem Gutachten");
                 }
-            })
-            .then(patient => {
-                if (patient) {
-                    frm.set_value('addresse_kombiniert', patient.m_patient_street + ', ' + patient.m_patient_zipcode + ' ' + patient.m_patient_city);
-
-                    var dateStr = patient.dob;
-                    var date = new Date(dateStr);
-                    var formattedDate = date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear();
-                    frm.set_value('t_patientendaten_kombiniert', patient.first_name + ' ' + patient.last_name + ', ' + formattedDate);
-                }
-            })
+            }
+        });
     }
 });
-

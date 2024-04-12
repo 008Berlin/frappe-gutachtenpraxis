@@ -57,5 +57,3 @@ function zeitaufwand(frm) {
 		frm.set_value('r_gutschrift', r_netto_sum);
 	}
 }
-
-

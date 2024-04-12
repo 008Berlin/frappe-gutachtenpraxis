@@ -23,13 +23,13 @@
   "translator",
   "contact_appointment",
   "linked_apr",
-  "adresse_section",
   "meldeadresse_column",
+  "m_patient_residence",
   "m_patient_street",
   "m_patient_zipcode",
   "m_patient_city",
   "c_break_m",
-  "m_add_status",
+  "m_patient_address_status",
   "aktuelle_adresse_section",
   "a_patient_residence_type",
   "a_patient_residence",
@@ -40,7 +40,7 @@
   "a_patient_residence_phone",
   "c_break_a",
   "a_add_status",
-  "beteiligte_personen_tab",
+  "beteiligte_personen_section",
   "b_patient_function",
   "b_patient_salutation",
   "b_patient_first_name",
@@ -83,11 +83,6 @@
    "label": "Geschlecht",
    "options": "M\u00e4nnlich\nWeiblich\nDivers",
    "reqd": 1
-  },
-  {
-   "fieldname": "adresse_section",
-   "fieldtype": "Tab Break",
-   "label": "Adresse"
   },
   {
    "fieldname": "patient_phone",
@@ -179,11 +174,6 @@
    "label": "Kontakt f\u00fcr Terminvereinbarung"
   },
   {
-   "fieldname": "beteiligte_personen_tab",
-   "fieldtype": "Tab Break",
-   "label": "Beteiligte Personen"
-  },
-  {
    "fieldname": "b_patient_function",
    "fieldtype": "Data",
    "label": "Funktion"
@@ -250,13 +240,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "default": "Ja",
-   "fieldname": "m_add_status",
-   "fieldtype": "Select",
-   "label": "Adresse noch aktuell?",
-   "options": "Ja\nNein"
-  },
-  {
    "fieldname": "c_break_a",
    "fieldtype": "Column Break"
   },
@@ -272,6 +255,23 @@
    "fieldtype": "Link",
    "label": "Gutachten",
    "options": "Gutachten"
+  },
+  {
+   "default": "Ja",
+   "fieldname": "m_patient_address_status",
+   "fieldtype": "Select",
+   "label": "Adresse noch aktuell?",
+   "options": "Ja\nNein"
+  },
+  {
+   "fieldname": "m_patient_residence",
+   "fieldtype": "Data",
+   "label": "Einrichtungsname"
+  },
+  {
+   "fieldname": "beteiligte_personen_section",
+   "fieldtype": "Section Break",
+   "label": "Beteiligte Personen"
   }
  ],
  "icon": "fa fa-user",
@@ -282,7 +282,7 @@
    "link_fieldname": "file_name"
   }
  ],
- "modified": "2023-11-12 18:56:18.740542",
+ "modified": "2024-04-05 11:24:18.399675",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten Patient",

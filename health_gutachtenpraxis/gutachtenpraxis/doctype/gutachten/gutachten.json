@@ -2,7 +2,7 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "format:GN {#####}",
+ "autoname": "format:GN {#####} {list_patientname}",
  "creation": "2023-05-24 16:24:06.480953",
  "default_view": "List",
  "doctype": "DocType",
@@ -16,22 +16,25 @@
   "patient",
   "tab_break_hn5rq",
   "invoice",
-  "section_break_zvmhs",
   "gutachtendetails_section",
   "file_number",
   "court",
   "judge",
+  "fax_court",
   "type",
   "pricing",
+  "list_court_place",
+  "list_patientname",
   "column_break_rvh0l",
   "decision_date",
   "receipt_date",
   "period",
   "due_date",
   "preliminary_end",
+  "patient_patient_additions",
   "column_break_grzfd",
   "copy_mainfile",
-  "patient_patient_additions",
+  "patient_notes_dailylist",
   "contact_phone",
   "anamnesebogen",
   "patientendetails_section",
@@ -39,12 +42,13 @@
   "patient_first_name",
   "patient_last_name",
   "patient_dob",
-  "column_break_f7blg",
   "meldeadresse_section",
+  "patient_m_patient_residence",
   "patient_m_patient_street",
   "patient_m_patient_zipcode",
   "patient_m_patient_city",
   "patient_patient_phone",
+  "column_break_f7blg",
   "aktuelle_adresse",
   "patient_a_patient_residence_type",
   "patient_a_patient_residence",
@@ -53,11 +57,12 @@
   "patient_a_patient_zipcode",
   "patient_a_patient_city",
   "patient_a_patient_residence_phone",
+  "infos_tl",
   "section_break_lofdj",
-  "gutachtentext",
   "geolocation_html",
   "lat",
-  "lon"
+  "lon",
+  "gutachtentext"
  ],
  "fields": [
   {
@@ -70,7 +75,7 @@
   {
    "fieldname": "court",
    "fieldtype": "Link",
-   "label": "Amtsgericht",
+   "label": "Gericht",
    "options": "Gericht"
   },
   {
@@ -173,9 +178,8 @@
    "label": "Ort"
   },
   {
-   "fetch_from": "patient.patient_additions",
    "fieldname": "patient_patient_additions",
-   "fieldtype": "Data",
+   "fieldtype": "Text",
    "label": "Zus\u00e4tzliche Hinweise"
   },
   {
@@ -251,7 +255,7 @@
   },
   {
    "fieldname": "copy_mainfile",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text",
    "label": "Kopien aus Hauptakte"
   },
   {
@@ -290,10 +294,6 @@
    "read_only": 1
   },
   {
-   "fieldname": "section_break_zvmhs",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "tab_break_fgzle",
    "fieldtype": "Column Break"
   },
@@ -310,7 +310,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "collapsible": 1,
    "fieldname": "patientendetails_section",
    "fieldtype": "Section Break",
    "label": "Patientendetails"
@@ -340,11 +339,47 @@
    "fieldname": "geolocation_html",
    "fieldtype": "HTML",
    "label": "Map"
+  },
+  {
+   "fieldname": "patient_notes_dailylist",
+   "fieldtype": "Text",
+   "label": "Hinweise f\u00fcr Tagesliste"
+  },
+  {
+   "fetch_from": "court.court_name",
+   "fieldname": "list_court_place",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Standort Gericht"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "list_patientname",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Patientenname"
+  },
+  {
+   "fetch_from": "court.fax_number",
+   "fieldname": "fax_court",
+   "fieldtype": "Data",
+   "label": "Fax des Gerichts"
+  },
+  {
+   "fetch_from": "patient.m_patient_residence",
+   "fieldname": "patient_m_patient_residence",
+   "fieldtype": "Data",
+   "label": "Einrichtungsname"
+  },
+  {
+   "fieldname": "infos_tl",
+   "fieldtype": "Data",
+   "label": "Infos f\u00fcr Tagesliste"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-15 19:39:01.250844",
+ "modified": "2024-04-05 15:03:28.856338",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten",
