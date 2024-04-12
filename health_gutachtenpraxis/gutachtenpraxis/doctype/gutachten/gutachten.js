@@ -119,11 +119,10 @@ frappe.ui.form.on('Gutachten', {
             } else {
               frm.set_value('infos_tl', patientData.m_patient_street + ', ' + patientData.m_patient_zipcode + ' ' + patientData.m_patient_city);
             }
-          } else {
-            console.error("Es existiert kein Patient für dieses Gutachten");
           }
         }
       });
     }
   }
 });
+
