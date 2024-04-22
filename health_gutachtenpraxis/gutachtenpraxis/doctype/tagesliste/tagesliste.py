@@ -17,7 +17,7 @@ class Tagesliste(Document):
     def on_trash(self):
         current_gutachten_set = set([d.gutachten for d in self.gutachten_list])
         for g in current_gutachten_set:
-            frappe.db.set_value("Gutachten", g, "status", 'Anstehend')
+            frappe.db.set_value("Gutachten", g, "status", 'Nicht terminiert')
 
     def update_gutachten_status(self):
         old_gutachten_set = set([d.gutachten for d in self.get_old_gutachten_list()])
@@ -30,7 +30,7 @@ class Tagesliste(Document):
             frappe.db.set_value("Gutachten", g, "status", 'in Tagesliste')
 
         for g in removed_gutachten:
-            frappe.db.set_value("Gutachten", g, "status", 'Anstehend')
+            frappe.db.set_value("Gutachten", g, "status", 'Nicht terminiert')
 
     def get_old_gutachten_list(self):
         if self.is_new():
@@ -102,7 +102,7 @@ def gutachten_list_to_geojson(tagesliste):
 def create_tagesliste(court):
     # Fetch Gutachten linked to the court
     gutachten_list = frappe.get_all(
-        "Gutachten", filters={"court": court, "status": "Anstehend"}, fields=["name"]
+        "Gutachten", filters={"court": court, "status": "Nicht terminiert"}, fields=["name"]
     )
 
     # Create a new Tagesliste

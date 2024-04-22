@@ -2,7 +2,7 @@ frappe.listview_settings['Gutachten'] = {
 	get_indicator: function (doc) {
 		var colors = {
 			"Abgeschlossen": "green",
-			"Anstehend": "yellow",
+			"Nicht terminiert": "yellow",
 			"Wiedervorlage": "orange",
 			"Überfällig": "red",
 			"in Tagesliste": "blue"

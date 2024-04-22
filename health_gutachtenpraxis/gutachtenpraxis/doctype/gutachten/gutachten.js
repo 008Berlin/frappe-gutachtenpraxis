@@ -102,6 +102,7 @@ function refreshMapGeo(frm) {
   });
 }
 
+//Adresse für die Tagesliste
 frappe.ui.form.on('Gutachten', {
   onload: function (frm) {
     if (frm.doc.patient) {
@@ -115,7 +116,7 @@ frappe.ui.form.on('Gutachten', {
           if (r.message) {
             var patientData = r.message;
             if (patientData.a_patient_street) {
-              frm.set_value('infos_tl', patientData.patient_a_patient_residence + ',' + ',' + patientData.patien_a_patient_residence_station + ',' + patientData.a_patient_street + ', ' + patientData.a_patient_zipcode + ' ' + patientData.a_patient_city + ', Tel: ' + patientData.patient_a_patient_residence_phone);
+              frm.set_value('infos_tl', patientData.a_patient_street + ', ' + patientData.a_patient_zipcode + ' ' + patientData.a_patient_city);
             } else {
               frm.set_value('infos_tl', patientData.m_patient_street + ', ' + patientData.m_patient_zipcode + ' ' + patientData.m_patient_city);
             }

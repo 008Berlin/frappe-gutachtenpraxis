@@ -262,7 +262,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status des Falls",
-   "options": "Anstehend\nAbgeschlossen\nWiedervorlage\n\u00dcberf\u00e4llig\nin Tagesliste\nBegutachtet\nVergebliche Anfahrt\nGutachten abgebrochen\nZutritt verweigert\nBegutachtung nicht m\u00f6glich\nVon Praxis abgesagt\nKurzfristig abgesagt\nVon Betroffenen abgesagt\nNicht angetroffen\nNicht best\u00e4tigt\nKeine Info\nIm Krankenhaus\nNicht erschienen\nStandort gewechselt/ umgezogen\nVerstorben\nTour abgesagt/ verschoben\nUm Entbindung gebeten\nKrankenhausaufenthalt",
+   "options": "Nicht terminiert\nAbgeschlossen\nWiedervorlage\n\u00dcberf\u00e4llig\nin Tagesliste\nBegutachtet\nVergebliche Anfahrt\nGutachten abgebrochen\nZutritt verweigert\nBegutachtung nicht m\u00f6glich\nVon Praxis abgesagt\nKurzfristig abgesagt\nVon Betroffenen abgesagt\nNicht angetroffen\nNicht best\u00e4tigt\nKeine Info\nIm Krankenhaus\nNicht erschienen\nStandort gewechselt/ umgezogen\nVerstorben\nTour abgesagt/ verschoben\nUm Entbindung gebeten\nKrankenhausaufenthalt",
    "reqd": 1
   },
   {
@@ -374,12 +374,13 @@
   {
    "fieldname": "infos_tl",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Infos f\u00fcr Tagesliste"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-05 15:03:28.856338",
+ "modified": "2024-04-18 17:49:02.966310",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten",

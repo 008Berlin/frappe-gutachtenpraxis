@@ -1,115 +1,115 @@
 {
- "charts": [
-  {
-   "chart_name": "Gutachten \u00dcbersicht",
-   "label": "Gutachten \u00dcbersicht"
-  }
- ],
- "content": "[{\"id\":\"44vrInngTt\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Gutachten \u00dcbersicht\",\"col\":12}},{\"id\":\"bjA7vlKPIZ\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Gutachten\",\"col\":4}},{\"id\":\"iQdTHXCwrs\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Tagesliste dieser Woche\",\"col\":4}},{\"id\":\"9HfJIN481p\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\u00dcbersicht</b></span>\",\"col\":12}},{\"id\":\"eREdLZ3kv2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gutachten\",\"col\":3}},{\"id\":\"1POxf4FlGA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tagesliste\",\"col\":3}},{\"id\":\"VF8a-0PDHq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Terminkalender\",\"col\":3}},{\"id\":\"oKG2nx3z0r\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Einrichtungen\",\"col\":3}},{\"id\":\"MTfmgqGC9Z\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"8abF-LJPZo\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Verwaltung</b></span>\",\"col\":12}},{\"id\":\"xYjSOTbZmI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patienten\",\"col\":3}},{\"id\":\"mvM6Ozl_kl\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gerichte\",\"col\":3}},{\"id\":\"Rk_kx9Z8Oa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Richter\",\"col\":3}},{\"id\":\"PIPEpG99jw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gutachtenarten\",\"col\":3}},{\"id\":\"riFOIa2OK5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kontaktpersonen\",\"col\":3}},{\"id\":\"Biu8E1pIXE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rechnungen\",\"col\":3}}]",
- "creation": "2023-05-24 16:34:21.219434",
- "custom_blocks": [],
- "docstatus": 0,
- "doctype": "Workspace",
- "for_user": "",
- "hide_custom": 0,
- "icon": "heart-active",
- "idx": 0,
- "is_hidden": 0,
- "label": "Gutachtenpraxis",
- "links": [],
- "modified": "2024-01-15 19:39:53.698517",
- "modified_by": "Administrator",
- "module": "Gutachtenpraxis",
- "name": "Gutachtenpraxis",
- "number_cards": [],
- "owner": "Administrator",
- "parent_page": "",
- "public": 1,
- "quick_lists": [
-  {
-   "document_type": "Tagesliste",
-   "label": "Tagesliste dieser Woche",
-   "quick_list_filter": "{\"date\":[\"Timespan\",\"this week\"]}"
-  },
-  {
-   "document_type": "Gutachten",
-   "label": "Gutachten",
-   "quick_list_filter": "{\"status\":[\"=\",\"Anstehend\"]}"
-  }
- ],
- "roles": [],
- "sequence_id": 10.0,
- "shortcuts": [
-  {
-   "color": "Grey",
-   "doc_view": "Calendar",
-   "label": "Terminkalender",
-   "link_to": "Termin",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Rechnungen",
-   "link_to": "Rechnung",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Tagesliste",
-   "link_to": "Tagesliste",
-   "type": "DocType"
-  },
-  {
-   "color": "Red",
-   "doc_view": "List",
-   "label": "Patienten",
-   "link_to": "Gutachten Patient",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Einrichtungen",
-   "link_to": "Einrichtung",
-   "type": "DocType"
-  },
-  {
-   "color": "Green",
-   "doc_view": "List",
-   "label": "Gutachtenarten",
-   "link_to": "Gutachtenarten",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Gutachten",
-   "link_to": "Gutachten",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Gerichte",
-   "link_to": "Gericht",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Richter",
-   "link_to": "Richter",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Kontaktpersonen",
-   "link_to": "Contact",
-   "type": "DocType"
-  }
- ],
- "title": "Gutachtenpraxis"
+    "charts": [
+        {
+            "chart_name": "Gutachten \u00dcbersicht",
+            "label": "Gutachten \u00dcbersicht"
+        }
+    ],
+    "content": "[{\"id\":\"44vrInngTt\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Gutachten \u00dcbersicht\",\"col\":12}},{\"id\":\"bjA7vlKPIZ\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Gutachten\",\"col\":4}},{\"id\":\"iQdTHXCwrs\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Tagesliste dieser Woche\",\"col\":4}},{\"id\":\"9HfJIN481p\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\u00dcbersicht</b></span>\",\"col\":12}},{\"id\":\"eREdLZ3kv2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gutachten\",\"col\":3}},{\"id\":\"1POxf4FlGA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tagesliste\",\"col\":3}},{\"id\":\"VF8a-0PDHq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Terminkalender\",\"col\":3}},{\"id\":\"oKG2nx3z0r\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Einrichtungen\",\"col\":3}},{\"id\":\"MTfmgqGC9Z\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"8abF-LJPZo\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Verwaltung</b></span>\",\"col\":12}},{\"id\":\"xYjSOTbZmI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patienten\",\"col\":3}},{\"id\":\"mvM6Ozl_kl\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gerichte\",\"col\":3}},{\"id\":\"Rk_kx9Z8Oa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Richter\",\"col\":3}},{\"id\":\"PIPEpG99jw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gutachtenarten\",\"col\":3}},{\"id\":\"riFOIa2OK5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Kontaktpersonen\",\"col\":3}},{\"id\":\"Biu8E1pIXE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rechnungen\",\"col\":3}}]",
+    "creation": "2023-05-24 16:34:21.219434",
+    "custom_blocks": [],
+    "docstatus": 0,
+    "doctype": "Workspace",
+    "for_user": "",
+    "hide_custom": 0,
+    "icon": "heart-active",
+    "idx": 0,
+    "is_hidden": 0,
+    "label": "Gutachtenpraxis",
+    "links": [],
+    "modified": "2024-01-15 19:39:53.698517",
+    "modified_by": "Administrator",
+    "module": "Gutachtenpraxis",
+    "name": "Gutachtenpraxis",
+    "number_cards": [],
+    "owner": "Administrator",
+    "parent_page": "",
+    "public": 1,
+    "quick_lists": [
+        {
+            "document_type": "Tagesliste",
+            "label": "Tagesliste dieser Woche",
+            "quick_list_filter": "{\"date\":[\"Timespan\",\"this week\"]}"
+        },
+        {
+            "document_type": "Gutachten",
+            "label": "Gutachten",
+            "quick_list_filter": "{\"status\":[\"=\",\"Nicht terminiert\"]}"
+        }
+    ],
+    "roles": [],
+    "sequence_id": 10.0,
+    "shortcuts": [
+        {
+            "color": "Grey",
+            "doc_view": "Calendar",
+            "label": "Terminkalender",
+            "link_to": "Termin",
+            "type": "DocType"
+        },
+        {
+            "color": "Grey",
+            "doc_view": "List",
+            "label": "Rechnungen",
+            "link_to": "Rechnung",
+            "type": "DocType"
+        },
+        {
+            "color": "Grey",
+            "doc_view": "List",
+            "label": "Tagesliste",
+            "link_to": "Tagesliste",
+            "type": "DocType"
+        },
+        {
+            "color": "Red",
+            "doc_view": "List",
+            "label": "Patienten",
+            "link_to": "Gutachten Patient",
+            "type": "DocType"
+        },
+        {
+            "color": "Grey",
+            "doc_view": "List",
+            "label": "Einrichtungen",
+            "link_to": "Einrichtung",
+            "type": "DocType"
+        },
+        {
+            "color": "Green",
+            "doc_view": "List",
+            "label": "Gutachtenarten",
+            "link_to": "Gutachtenarten",
+            "type": "DocType"
+        },
+        {
+            "color": "Grey",
+            "doc_view": "List",
+            "label": "Gutachten",
+            "link_to": "Gutachten",
+            "type": "DocType"
+        },
+        {
+            "color": "Grey",
+            "doc_view": "List",
+            "label": "Gerichte",
+            "link_to": "Gericht",
+            "type": "DocType"
+        },
+        {
+            "color": "Grey",
+            "doc_view": "List",
+            "label": "Richter",
+            "link_to": "Richter",
+            "type": "DocType"
+        },
+        {
+            "color": "Grey",
+            "doc_view": "List",
+            "label": "Kontaktpersonen",
+            "link_to": "Contact",
+            "type": "DocType"
+        }
+    ],
+    "title": "Gutachtenpraxis"
 }

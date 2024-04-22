@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{gutachten} {patient_last_name} - {####}",
+ "autoname": "format:{gutachten} - {####}",
  "creation": "2023-06-16 15:25:28.162646",
  "default_view": "List",
  "doctype": "DocType",
@@ -17,7 +17,6 @@
   "all_day",
   "column_break_ntzls",
   "t_patientendaten_kombiniert",
-  "addresse_kombiniert",
   "weitere_informationen_section",
   "weitere_informationen",
   "patient_last_name"
@@ -84,11 +83,6 @@
    "label": "Weitere Informationen"
   },
   {
-   "fieldname": "addresse_kombiniert",
-   "fieldtype": "Data",
-   "label": "Adresse"
-  },
-  {
    "fetch_from": "gutachten.patient",
    "fieldname": "t_patientendaten_kombiniert",
    "fieldtype": "Data",
@@ -105,7 +99,7 @@
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2024-04-04 16:00:48.543858",
+ "modified": "2024-04-18 16:14:24.099231",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Termin",

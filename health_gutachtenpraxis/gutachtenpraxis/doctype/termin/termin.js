@@ -48,6 +48,7 @@ function getStatusColor(status) {
     return statusColorMapping[status];
 }
 
+/*
 frappe.ui.form.on('Termin', {
     onload: function (frm) {
         frappe.call({
@@ -78,3 +79,4 @@ frappe.ui.form.on('Termin', {
         });
     }
 });
+*/
