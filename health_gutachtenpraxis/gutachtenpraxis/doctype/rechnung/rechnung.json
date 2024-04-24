@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:RN {#####}",
+ "autoname": "format:RN.{#####}",
  "creation": "2023-07-05 13:16:13.295809",
  "default_view": "List",
  "doctype": "DocType",
@@ -26,7 +26,9 @@
   "r_b_column",
   "r_heading_auslagen",
   "r_reisekosten",
+  "r_reisekosten_sum",
   "r_schreibkosten",
+  "r_schreibkosten_sum",
   "r_heading_zusammenfassung",
   "r_stundensatz_sum",
   "r_auslagen_gesamt",
@@ -58,7 +60,7 @@
   {
    "fieldname": "r_exploration",
    "fieldtype": "Data",
-   "label": "Exploration, Anamnese, testung, Fremdanamnese"
+   "label": "Exploration, Anamnese, Testung, Fremdanamnese"
   },
   {
    "fieldname": "r_entwurf",
@@ -94,13 +96,13 @@
    "description": "x0,42\u20ac/km",
    "fieldname": "r_reisekosten",
    "fieldtype": "Data",
-   "label": "Reisekosten (Kilometeranzahl Hin- und R\u00fcckfahrt)"
+   "label": "Kilometeranzahl Hin- und R\u00fcckfahrt"
   },
   {
    "description": "Anschl\u00e4ge/1000 x 1,50\u20ac",
    "fieldname": "r_schreibkosten",
    "fieldtype": "Data",
-   "label": "Schreibkosten f\u00fcr Reinschrift des Gutachtens"
+   "label": "Anschl\u00e4ge"
   },
   {
    "fieldname": "r_heading_1",
@@ -116,7 +118,7 @@
   {
    "fieldname": "r_heading_zusammenfassung",
    "fieldtype": "Heading",
-   "label": "B. Zusammenfassung"
+   "label": "C. Zusammenfassung"
   },
   {
    "fieldname": "r_heading_3",
@@ -199,11 +201,21 @@
    "fieldtype": "Link",
    "label": "Gutachten",
    "options": "Gutachten"
+  },
+  {
+   "fieldname": "r_reisekosten_sum",
+   "fieldtype": "Currency",
+   "label": "Reisekosten (Kilometeranzahl Hin- und R\u00fcckfahrt)"
+  },
+  {
+   "fieldname": "r_schreibkosten_sum",
+   "fieldtype": "Data",
+   "label": "Schreibkosten f\u00fcr Reinschrift des Gutachtens"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-16 13:33:00.342742",
+ "modified": "2024-04-24 14:17:12.308740",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Rechnung",

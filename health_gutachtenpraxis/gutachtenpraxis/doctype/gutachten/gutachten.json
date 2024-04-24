@@ -23,8 +23,10 @@
   "fax_court",
   "type",
   "pricing",
+  "honorar_type",
   "list_court_place",
   "list_patientname",
+  "file_creation",
   "column_break_rvh0l",
   "decision_date",
   "receipt_date",
@@ -376,11 +378,22 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "Infos f\u00fcr Tagesliste"
+  },
+  {
+   "fieldname": "file_creation",
+   "fieldtype": "Data",
+   "label": "Datum der Gutachtenerstellung"
+  },
+  {
+   "fieldname": "honorar_type",
+   "fieldtype": "Select",
+   "label": "Honorargruppe",
+   "options": "M1\nM2\nM3"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-18 17:49:02.966310",
+ "modified": "2024-04-23 12:29:02.422462",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten",

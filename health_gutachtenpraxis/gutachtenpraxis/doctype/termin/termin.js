@@ -3,7 +3,7 @@
 
 frappe.ui.form.on('Termin', {
     refresh: function (frm) {
-        var allowed_statuses = ['Vergebliche Anfahrt', 'Gutachten abgebrochen', 'Zutritt verweigert', 'Von Praxis abgesagt', 'Von Betroffenen abgesagt', 'Verschoben', 'Im Krankenhaus', 'Nicht erschienen', 'Standort gewechselt/ umgezogen', 'Verstorben'];
+        var allowed_statuses = ['Wiedervorlage', 'Privat Fichtel - Praxis', 'Termin bestätigt, Gutachten', 'Planung Fahrer', 'Vergebliche Anfahrt', 'abgs. Praxis - neu terminieren', 'Termin mitgeteilt, nicht bestätigt', 'Termin geplant nicht mitgeteilt', 'Urlaub', 'Arbeitszeiten (An- und Abwesenheit)'];
         if (allowed_statuses.includes(frm.doc.status)) {
             frm.add_custom_button(__('Neuer Termin'), function () {
                 frappe.model.with_doctype('Termin', function () {
@@ -20,6 +20,7 @@ frappe.ui.form.on('Termin', {
                 frappe.msgprint(__('Bitte den Status des Termins auf einen der folgenden setzen:\n {0}', [allowed_statuses.join(', ')]));
             }).addClass('disabled');
         }
+        frm.set_value("color", "#B04DD0")
     },
     status: function (frm) {
         var color = getStatusColor(frm.doc.status);
@@ -29,54 +30,31 @@ frappe.ui.form.on('Termin', {
 
 function getStatusColor(status) {
     var statusColorMapping = {
-        "Nicht terminiert": "#FAD7A0",
-        "Terminiert, nicht bestätigt": "#FDEBD0",
-        "Bestätigt": "#85C1E9",
-        "Begutachtet": "#82E0AA",
+
+        "Wiedervorlage": "#B04DD0",
+        "Privat Fichtel - Praxis": "#000000",
+        "Termin bestätigt, Gutachten": "#DA2B4D",
+        "Planung Fahrer": "#629EF2",
+        "Vergebliche Anfahrt": "#D0D0D0",
+        "abgs. Praxis - neu terminieren": "#E07F26",
+        "Termin mitgeteilt, nicht bestätigt": "#63D13B",
+        "Termin geplant nicht mitgeteilt": "#629EF2",
+        "Urlaub": "#629EF2",
+        "Arbeitszeiten (An- und Abwesenheit)": "#B04DD0",
+
+        /*
+        "Wiedervorlage": "#FAD7A0",
+        "Privat Fichtel - Praxis": "#FDEBD0",
+        "Termin bestätigt, Gutachten": "#85C1E9",
+        "Planung Fahrer": "#82E0AA",
         "Vergebliche Anfahrt": "#FAD7A0",
-        "Gutachten abgebrochen": "#E6B0AA",
-        "Zutritt verweigert": "#E6B0AA",
-        "Von Praxis abgesagt": "#E6B0AA",
-        "Von Betroffenen abgesagt": "#E6B0AA",
-        "Verschoben": "#E6B0AA",
-        "Im Krankenhaus": "#E6B0AA",
-        "Nicht erschienen": "#E6B0AA",
-        "Standort gewechselt/ umgezogen": "#E6B0AA",
-        "Verstorben": "#D7DBDD"
+        "abgs. Praxis - neu terminieren": "#E6B0AA",
+        "Termin mitgeteilt, nicht bestätigt": "#E6B0AA",
+        "Termin geplant nicht mitgeteilt": "#E6B0AA",
+        "Urlaub": "#E6B0AA",
+        "Arbeitszeiten (An- und Abwesenheit)": "#E6B0AA",
+        */
     };
 
     return statusColorMapping[status];
 }
-
-/*
-frappe.ui.form.on('Termin', {
-    onload: function (frm) {
-        frappe.call({
-            method: "frappe.client.get",
-            args: {
-                doctype: "Gutachten",
-                name: frm.doc.gutachten
-            },
-            callback: function (r) {
-                if (r.message && r.message.patient) {
-                    frappe.call({
-                        method: "frappe.client.get",
-                        args: {
-                            doctype: "Gutachten Patient",
-                            name: r.message.patient
-                        },
-                        callback: function (patient) {
-                            if (patient.message) {
-                                var patientData = patient.message;
-                                frm.set_value('infos_tl', patientData.m_patient_street + ', ' + patientData.m_patient_zipcode + ' ' + patientData.m_patient_city);
-                            }
-                        }
-                    });
-                } else {
-                    console.error("Es existiert kein Patient auf dem Gutachten");
-                }
-            }
-        });
-    }
-});
-*/

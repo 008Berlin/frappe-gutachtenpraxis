@@ -1,22 +1,31 @@
 frappe.listview_settings['Termin'] = {
-	//filters: [["status", "=", "Open"]],
-	get_indicator: function(doc) {
-		var colors = {
-			"Nicht terminiert": "orange",
-			"Terminiert, nicht bestätigt": "yellow",
-			"Bestätigt": "blue",
-			"Begutachtet": "green",
+    //filters: [["status", "=", "Open"]],
+    get_indicator: function (doc) {
+        var colors = {
+            "Wiedervorlage": "orange",
+            "Privat Fichtel - Praxis": "yellow",
+            "Termin bestätigt, Gutachten": "blue",
+            "Planung Fahrer": "green",
             "Vergebliche Anfahrt": "orange",
-            "Gutachten abgebrochen": "red",
-            "Zutritt verweigert": "red",
-            "Von Praxis abgesagt": "red",
-            "Von Betroffenen abgesagt": "red",
-            "Verschoben": "red",
-            "Im Krankenhaus": "red",
-            "Nicht erschienen": "red",
-            "Standort gewechselt/ umgezogen": "red",
-            "Verstorben": "grey"
-		};
-		return [__(doc.status), colors[doc.status], "status,=," + doc.status];
-	}
+            "abgs. Praxis - neu terminieren": "red",
+            "Termin mitgeteilt, nicht bestätigt": "red",
+            "Termin geplant nicht mitgeteilt": "red",
+            "Urlaub": "red",
+            "Arbeitszeiten (An- und Abwesenheit)": "red"
+
+            /*
+            "Wiedervorlage": "orange",
+            "Privat Fichtel - Praxis": "yellow",
+            "Termin bestätigt, Gutachten": "blue",
+            "Planung Fahrer": "green",
+            "Vergebliche Anfahrt": "orange",
+            "abgs. Praxis - neu terminieren": "red",
+            "Termin mitgeteilt, nicht bestätigt": "red",
+            "Termin geplant nicht mitgeteilt": "red",
+            "Urlaub": "red",
+            "Arbeitszeiten (An- und Abwesenheit)": "red"
+            */
+        };
+        return [__(doc.status), colors[doc.status], "status,=," + doc.status];
+    }
 };

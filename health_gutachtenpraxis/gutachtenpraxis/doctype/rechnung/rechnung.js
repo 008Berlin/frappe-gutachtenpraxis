@@ -10,17 +10,21 @@ frappe.ui.form.on('Rechnung', {
 
 function zeitaufwand(frm) {
 	//A. Zeitaufwand
-	var r_vorbereitende_arbeiten = Number(frm.doc.r_vorbereitende_arbeiten);
-	var r_aktenstudium = Number(frm.doc.r_aktenstudium);
-	var r_exploration = Number(frm.doc.r_exploration);
-	var r_entwurf = Number(frm.doc.r_entwurf);
-	var r_ueberarbeitung = Number(frm.doc.r_ueberarbeitung);
+	var r_vorbereitende_arbeiten = Number(frm.doc.r_vorbereitende_arbeiten); //Vorbereitende Arbeiten, Telefonate, Schriftverkehr
+	var r_aktenstudium = Number(frm.doc.r_aktenstudium); //Aktenstudium
+	var r_exploration = Number(frm.doc.r_exploration); //Exploration, Anamnese, Testung, Fremdanamnese
+	var r_entwurf = Number(frm.doc.r_entwurf); //Entwurf/Ausarbeitung/Diktat des Gutachtens
+	var r_ueberarbeitung = Number(frm.doc.r_ueberarbeitung); //r_ueberarbeitung
+	var r_fahrzeit = Number(frm.doc.r_fahrzeit); //r_fahrzeit
 
+	//WIRD NICHT MEHR BENÖTIGT: Fahrzeit (Hin- und Rückfahrt) x 0,0166 = Fahrzeit gesamt
+	/*
 	var r_fahrzeit_sum = Number((frm.doc.r_fahrzeit * 0.0166).toFixed(2));
 	frm.set_value('r_fahrzeit_sum', r_fahrzeit_sum);
+	*/
 
 	//A. Zeitaufwand: Gesamtzahl der Stunden
-	var r_sum_zeitaufwand = (r_vorbereitende_arbeiten + r_aktenstudium + r_exploration + r_entwurf + r_ueberarbeitung + r_fahrzeit_sum).toFixed(2);
+	var r_sum_zeitaufwand = (r_vorbereitende_arbeiten + r_aktenstudium + r_exploration + r_entwurf + r_ueberarbeitung + r_fahrzeit).toFixed(2);
 	frm.set_value('r_sum_zeitaufwand', r_sum_zeitaufwand);
 
 	//A. Zeitaufwand: Jede angefangene 30min werden aufgerundet (§8 Justizvergütungs- und entschädigungsgesetz)
@@ -34,7 +38,9 @@ function zeitaufwand(frm) {
 
 	//B. Zusammenfassung: Auslagen- und Aufwendungsersatz
 	var r_reisekosten_sum = Number((frm.doc.r_reisekosten * 0.42).toFixed(2));
+	frm.set_value('r_reisekosten_sum', r_reisekosten_sum);
 	var r_schreibkosten_sum = Number((frm.doc.r_schreibkosten / 1000 * 1.50).toFixed(2));
+	frm.set_value('r_schreibkosten_sum', r_schreibkosten_sum);
 	var r_auslagen_sum = r_reisekosten_sum + r_schreibkosten_sum;
 	frm.set_value('r_auslagen_gesamt', r_auslagen_sum);
 

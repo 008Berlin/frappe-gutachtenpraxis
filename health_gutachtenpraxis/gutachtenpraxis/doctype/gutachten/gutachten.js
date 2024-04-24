@@ -127,3 +127,11 @@ frappe.ui.form.on('Gutachten', {
   }
 });
 
+//Abbilden des Erstellungsdatums
+frappe.ui.form.on('Gutachten', {
+  onload: function (frm) {
+    var creationDate = frm.doc.creation;
+    var onlyDate = new Date(creationDate).toLocaleDateString('de-DE');
+    frm.set_value('file_creation', onlyDate);
+  }
+});

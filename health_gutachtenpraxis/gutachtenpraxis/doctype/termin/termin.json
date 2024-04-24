@@ -39,7 +39,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Nicht terminiert\nBegutachtet\nVergebliche Anfahrt\nGutachten abgebrochen\nZutritt verweigert\nVon Praxis abgesagt\nVon Betroffenen abgesagt\nTerminiert, nicht best\u00e4tigt\nVerschoben\nIm Krankenhaus\nNicht erschienen\nStandort gewechselt/ umgezogen\nVerstorben"
+   "options": "Wiedervorlage\nPrivat Fichtel - Praxis\nTermin best\u00e4tigt, Gutachten\nPlanung Fahrer\nVergebliche Anfahrt\nabgs. Praxis - neu terminieren\nTermin mitgeteilt, nicht best\u00e4tigt\nTermin geplant nicht mitgeteilt\nUrlaub\nArbeitszeiten (An- und Abwesenheit)"
   },
   {
    "fieldname": "start_time",
@@ -69,8 +69,7 @@
   {
    "fieldname": "color",
    "fieldtype": "Color",
-   "label": "Farbe",
-   "read_only": 1
+   "label": "Farbe"
   },
   {
    "fieldname": "weitere_informationen",
@@ -99,7 +98,7 @@
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2024-04-18 16:14:24.099231",
+ "modified": "2024-04-24 20:34:11.411398",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Termin",
