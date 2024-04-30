@@ -1,5 +1,5 @@
 // Copyright (c) 2023, Aron Wiederkehr and Contributors
-// See license.txt
+// For license information, please see license.txt
 
 frappe.listview_settings['Gutachten'] = {
 	get_indicator: function (doc) {
