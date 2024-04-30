@@ -1,7 +1,5 @@
-# Gutachten
-
 ## Description
-Frappe app based on healthcare module for Gutachtenpraxis
+Frappe app based on the healthcare module for a doctors office, doing psychological appraisal practice
 
 #### License
 MIT
@@ -200,21 +198,19 @@ docker exec -e "TERM=xterm-256color" -w /workspace/development -it devcontainer-
 ```
 
 # Production-setup
-
 ## Build and push custom app from dev environment - this follows the official frappe docker documentation: https://github.com/frappe/frappe_docker/blob/main/docs/custom-apps.md
-### Remember change the repository from "https://github.com/d0rianw/frappe-gutachtenpraxis.git" to yours.
 
-## Clone the Frappe Docker Repository
+Clone the Frappe Docker Repository
 ```shell
 git clone https://github.com/frappe/frappe_docker
 ```
 
-## Change in the frappe_docker folder
+Change in the frappe_docker folder
 ```shell
 cd frappe_docker
 ```
 
-## After that
+After that
 ```shell
 export APPS_JSON='[
   {
@@ -229,7 +225,7 @@ export APPS_JSON='[
 export APPS_JSON_BASE64=$(echo ${APPS_JSON} | base64 -w 0)
 ```
 
-## Then
+Then
 ```shell
 docker build \
   --build-arg=FRAPPE_PATH=https://github.com/frappe/frappe \
@@ -244,21 +240,20 @@ docker build \
   --file=images/custom/Containerfile .
 ```
 
-## Then Push Custom App to container repository:
-## Login to [ghcr.io](http://ghcr.io) with docker
-## Use a classic **personal access token** for password
+Then Push Custom App to container repository:
+Login to [ghcr.io](http://ghcr.io) with docker and use a classic **personal access token** for password
 ```shell
 docker login ghcr.io
 ```
 
-## and
+and
 ```shell
 docker push ghcr.io/d0rianw/frappe-gutachtenpraxis/app-image_full:1.0.6
 docker push ghcr.io/d0rianw/frappe-gutachtenpraxis/app-image_full:latest
 ```
 
-# Build Container on server
-## Create gutachtenpraxis.yaml 
+## Build Container on server
+### Create gutachtenpraxis.yaml 
 ### Remember change the image in compose.yaml to "ghcr.io/d0rianw/frappe-gutachtenpraxis/app-image_full:1.0.6"
 ```shell
 docker compose --project-name gutachtenpraxis \
@@ -269,7 +264,7 @@ docker compose --project-name gutachtenpraxis \
   -f overrides/compose.multi-bench-ssl.yaml config > ~/gitops/gutachtenpraxis.yaml
 ```
 
-## Then
+Then
 ```shell
 docker compose --project-name gutachtenpraxis -f ~/gitops/gutachtenpraxis.yaml up -d
 ```
@@ -277,13 +272,13 @@ docker compose --project-name gutachtenpraxis -f ~/gitops/gutachtenpraxis.yaml u
 docker compose --project-name gutachtenpraxis exec backend bench new-site example.com --no-mariadb-socket --mariadb-root-password ChangeMe --install-app erpnext --install-app health_gutachtenpraxis --admin-password ChangeMe
 ```
 
-# Running the Kanban Script
-## Connect to container bash
+## Running the Kanban Script
+Connect to container bash
 ```shell
 docker compose --project-name gutachtenpraxis exec -it backend bash
 ```
 
-## Run the script
+Run the script
 ```shell
 bench --site example.com execute health_gutachtenpraxis.patches.setup_kanban_board.execute
 ```
