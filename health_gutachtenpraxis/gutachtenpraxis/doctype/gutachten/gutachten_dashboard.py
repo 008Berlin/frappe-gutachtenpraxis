@@ -1,5 +1,5 @@
 # Copyright (c) 2023, Aron Wiederkehr and Contributors
-# See license.txt
+# For license information, please see license.txt
 
 from frappe import _
 
