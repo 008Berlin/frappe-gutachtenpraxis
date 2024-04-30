@@ -1,3 +1,6 @@
+// Copyright (c) 2023, Aron Wiederkehr and Contributors
+// See license.txt
+
 frappe.listview_settings['Gutachten'] = {
 	get_indicator: function (doc) {
 		var colors = {
