@@ -1,3 +1,6 @@
+# Copyright (c) 2023, Aron Wiederkehr and Contributors
+# See license.txt
+
 from frappe import _
 
 def get_data():
