@@ -264,6 +264,11 @@ docker compose --project-name gutachtenpraxis \
   -f overrides/compose.multi-bench-ssl.yaml config > ~/gitops/gutachtenpraxis.yaml
 ```
 
+Then: ONLY IF MARIADB HAS NOT STARTED!
+
+```shell
+docker compose --project-name mariadb --env-file ~/gitops/mariadb.env -f overrides/compose.mariadb-shared.yaml up -d
+```
 Then
 ```shell
 docker compose --project-name gutachtenpraxis -f ~/gitops/gutachtenpraxis.yaml up -d
