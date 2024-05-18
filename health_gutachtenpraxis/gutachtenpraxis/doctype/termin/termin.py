@@ -23,18 +23,22 @@ class Termin(Document):
             if self.end_time < self.start_time:
                 frappe.throw("Der Start muss vor dem Ende liegen!")
 
-        try:
+    def autoname(self):
+        # Count existing Termin documents for this Gutachten
+        termin_count = db.count("Termin", filters={"gutachten": self.gutachten})
+        # Construct the name
+        self.name = f"{self.gutachten}-{termin_count + 1}"
+
+"""     #Status des Gutachtens wird auf "Terminiert" gesetzt, sobald Termin erstellt wird
+    def after_insert(self):
+        g = frappe.get_doc("Gutachten", self.gutachten)
+        frappe.db.set_value("Gutachten", g, "status", 'Terminiert') """
+
+"""         try:
             og_value = self._original_values.get("status")
         except:
             og_value = None
         if self.get_value("status") != og_value:
             if self.get_value("status") == "Wiedervorlage":
                 gutachten.status == "Wiedervorlage"
-        # TODO: fixen
-
-    def autoname(self):
-        # Count existing Termin documents for this Gutachten
-        termin_count = db.count("Termin", filters={"gutachten": self.gutachten})
-
-        # Construct the name
-        self.name = f"TRN-{self.gutachten}-{self.patient_last_name}-{termin_count + 1}"
+"""

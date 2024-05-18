@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{gutachten} - {####}",
+ "autoname": "format:{gutachten}-{####}",
  "creation": "2023-06-16 15:25:28.162646",
  "default_view": "List",
  "doctype": "DocType",
@@ -9,28 +9,19 @@
  "engine": "InnoDB",
  "field_order": [
   "details_section",
+  "info",
   "gutachten",
   "status",
   "color",
   "start_time",
   "end_time",
   "all_day",
-  "column_break_ntzls",
-  "t_patientendaten_kombiniert",
   "weitere_informationen_section",
   "weitere_informationen",
-  "patient_last_name"
+  "patient_last_name",
+  "column_break_ntzls"
  ],
  "fields": [
-  {
-   "fetch_from": "gutachten.file_name",
-   "fieldname": "gutachten",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Termin f\u00fcr Gutachten:",
-   "options": "Gutachten",
-   "reqd": 1
-  },
   {
    "fieldname": "column_break_ntzls",
    "fieldtype": "Column Break"
@@ -82,23 +73,31 @@
    "label": "Weitere Informationen"
   },
   {
-   "fetch_from": "gutachten.patient",
-   "fieldname": "t_patientendaten_kombiniert",
-   "fieldtype": "Data",
-   "label": "Patient"
-  },
-  {
    "fetch_from": "gutachten.patient_last_name",
    "fieldname": "patient_last_name",
    "fieldtype": "Data",
    "hidden": 1,
    "label": "Name fetch"
+  },
+  {
+   "fetch_from": "gutachten.file_name",
+   "fieldname": "gutachten",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Termin f\u00fcr Gutachten:",
+   "options": "Gutachten",
+   "reqd": 1
+  },
+  {
+   "fieldname": "info",
+   "fieldtype": "Heading",
+   "label": "Termine bitte mit \u2318 + S speichern"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2024-04-24 20:34:11.411398",
+ "modified": "2024-05-16 13:18:01.681022",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Termin",

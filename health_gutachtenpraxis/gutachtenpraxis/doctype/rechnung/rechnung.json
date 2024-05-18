@@ -19,6 +19,7 @@
   "r_ueberarbeitung",
   "r_fahrzeit",
   "r_fahrzeit_sum",
+  "r_fahrzeitzusammensetzung",
   "r_heading_1",
   "r_sum_zeitaufwand",
   "r_sum_zeitaufwand_round",
@@ -211,11 +212,16 @@
    "fieldname": "r_schreibkosten_sum",
    "fieldtype": "Data",
    "label": "Schreibkosten f\u00fcr Reinschrift des Gutachtens"
+  },
+  {
+   "fieldname": "r_fahrzeitzusammensetzung",
+   "fieldtype": "Data",
+   "label": "Fahrzeitzusammensetzung"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-24 14:17:12.308740",
+ "modified": "2024-05-18 11:23:03.757482",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Rechnung",

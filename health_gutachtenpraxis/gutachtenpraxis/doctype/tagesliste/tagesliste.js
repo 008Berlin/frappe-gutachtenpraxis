@@ -6,7 +6,7 @@ frappe.ui.form.on('Tagesliste', {
         refreshMap(frm, createMap);
     },
     refresh: function (frm) {
-        frm.add_custom_button(__('View Route'), function () {
+        frm.add_custom_button(__('Route öffnen'), function () {
             // Use the GeoJSON data to create the route
             if (frm.geojson_data) {
                 createRoute(frm, frm.geojson_data.features);
@@ -18,7 +18,7 @@ frappe.ui.form.on('Tagesliste', {
     },
     optimize_route: function (frm) {
         frappe.show_alert({
-            message: __("Optimizing Route"),
+            message: __("Route wurde optimiert"),
             indicator: 'orange'
         });
         frappe.call({
@@ -27,7 +27,7 @@ frappe.ui.form.on('Tagesliste', {
             callback: function (response) {
                 if (response.message) {
                     frm.reload_doc();
-                    frappe.msgprint(__('Route optimized'));
+                    frappe.msgprint(__('Route wurde optimiert'));
                 }
             }
         });
@@ -76,7 +76,7 @@ function createRoute(frm, features) {
     frappe.call({
         method: 'health_gutachtenpraxis.gutachtenpraxis.doctype.tagesliste.tagesliste.get_company_address',
         args: {},
-        callback: function(response) {
+        callback: function (response) {
             var company_address = response.message;
 
             var waypoints = features.map(feature => {
@@ -86,9 +86,9 @@ function createRoute(frm, features) {
             }).join('|');
 
             var google_maps_url = "https://www.google.com/maps/dir/?api=1" +
-                                  "&origin=" + encodeURIComponent(company_address) +
-                                  "&destination=" + encodeURIComponent(company_address) +
-                                  "&travelmode=driving&waypoints=" + encodeURIComponent(waypoints);
+                "&origin=" + encodeURIComponent(company_address) +
+                "&destination=" + encodeURIComponent(company_address) +
+                "&travelmode=driving&waypoints=" + encodeURIComponent(waypoints);
 
             window.open(google_maps_url, '_blank');
         }

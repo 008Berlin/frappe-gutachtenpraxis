@@ -58,3 +58,10 @@ function getStatusColor(status) {
 
     return statusColorMapping[status];
 }
+
+frappe.ui.form.on('Termin', {
+    after_save: function (frm) {
+        // Neu laden der Seite nach dem Speichern des Termins
+        window.location.reload();
+    }
+});

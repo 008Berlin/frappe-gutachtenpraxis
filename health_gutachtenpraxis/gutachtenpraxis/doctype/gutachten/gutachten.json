@@ -64,6 +64,11 @@
   "geolocation_html",
   "lat",
   "lon",
+  "heading_fax_sachstand",
+  "fax_sachstand_nummer",
+  "betreff_fax_sachstand",
+  "anliegen_fax_sachstand",
+  "text_fax_sachstand",
   "gutachtentext"
  ],
  "fields": [
@@ -104,7 +109,6 @@
    "options": "14\n30\n44\n60"
   },
   {
-   "description": "Wird automatisch bef\u00fcllt",
    "fieldname": "due_date",
    "fieldtype": "Date",
    "label": "F\u00e4llig am"
@@ -264,7 +268,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status des Falls",
-   "options": "Nicht terminiert\nAbgeschlossen\nWiedervorlage\n\u00dcberf\u00e4llig\nin Tagesliste\nBegutachtet\nVergebliche Anfahrt\nGutachten abgebrochen\nZutritt verweigert\nBegutachtung nicht m\u00f6glich\nVon Praxis abgesagt\nKurzfristig abgesagt\nVon Betroffenen abgesagt\nNicht angetroffen\nNicht best\u00e4tigt\nKeine Info\nIm Krankenhaus\nNicht erschienen\nStandort gewechselt/ umgezogen\nVerstorben\nTour abgesagt/ verschoben\nUm Entbindung gebeten\nKrankenhausaufenthalt",
+   "options": "Nicht terminiert\nTerminiert\nAbgeschlossen\nWiedervorlage\n\u00dcberf\u00e4llig\nin Tagesliste\nBegutachtet\nVergebliche Anfahrt\nGutachten abgebrochen\nZutritt verweigert\nBegutachtung nicht m\u00f6glich\nVon Praxis abgesagt\nKurzfristig abgesagt\nVon Betroffenen abgesagt\nNicht angetroffen\nNicht best\u00e4tigt\nKeine Info\nIm Krankenhaus\nNicht erschienen\nStandort gewechselt/ umgezogen\nVerstorben\nTour abgesagt/ verschoben\nUm Entbindung gebeten\nKrankenhausaufenthalt",
    "reqd": 1
   },
   {
@@ -389,11 +393,37 @@
    "fieldtype": "Select",
    "label": "Honorargruppe",
    "options": "M1\nM2\nM3"
+  },
+  {
+   "fieldname": "heading_fax_sachstand",
+   "fieldtype": "Heading",
+   "label": "Nachricht f\u00fcr Fax Sachstand"
+  },
+  {
+   "fieldname": "text_fax_sachstand",
+   "fieldtype": "Text Editor",
+   "label": "Text f\u00fcr Fax Sachstand"
+  },
+  {
+   "fieldname": "betreff_fax_sachstand",
+   "fieldtype": "Data",
+   "label": "Betreff"
+  },
+  {
+   "fieldname": "anliegen_fax_sachstand",
+   "fieldtype": "Select",
+   "label": "Anliegen",
+   "options": "Eilt\nZur Pr\u00fcfung\nZur Kenntnis\nBitte um Stellungnahme\nBitte um Erledigung"
+  },
+  {
+   "fieldname": "fax_sachstand_nummer",
+   "fieldtype": "Data",
+   "label": "Fax Nummer"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-23 12:29:02.422462",
+ "modified": "2024-05-17 12:57:52.025973",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Gutachten",

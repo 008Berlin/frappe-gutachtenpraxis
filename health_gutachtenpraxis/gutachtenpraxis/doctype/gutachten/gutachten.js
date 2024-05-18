@@ -11,6 +11,7 @@ frappe.ui.form.on("Gutachten", {
     }
   },
 
+  /*
   refresh: function (frm) {
     // Add Custom button for Anamnesebogen pdf
     frm.add_custom_button("Anamnesebogen generieren", function () {
@@ -27,6 +28,7 @@ frappe.ui.form.on("Gutachten", {
       }
     });
   },
+*/
 
   court: function (frm) {
     if (frm.doc.court) {
@@ -76,6 +78,7 @@ frappe.ui.form.on("Gutachten", {
   },
 });
 
+
 function createMap(frm) {
   // We'll use the first feature to set the initial map view
   var lat = frm.doc.lat;
@@ -94,13 +97,32 @@ function createMap(frm) {
 }
 
 function refreshMapGeo(frm) {
+  // Erst nach Speichern ausführen
+  frm.save(function (r) {
+    if (!r.exc) {
+      frappe.call({
+        method: "health_gutachtenpraxis.gutachtenpraxis.doctype.gutachten.gutachten.address_to_geojson",
+        args: {
+          gutachten: frm.doc
+        }
+      });
+    } else {
+      console.error("Fehler beim Speichern des Dokuments:", r.exc);
+    }
+  });
+}
+
+/* 
+Alte Funktion, wird vor dem Speichern schon aufgerufen
+function refreshMapGeo(frm) {
   frappe.call({
     method: "health_gutachtenpraxis.gutachtenpraxis.doctype.gutachten.gutachten.address_to_geojson",
     args: {
       gutachten: frm.doc
     }
   });
-}
+} */
+
 
 //Adresse für die Tagesliste
 frappe.ui.form.on('Gutachten', {
@@ -120,6 +142,27 @@ frappe.ui.form.on('Gutachten', {
             } else {
               frm.set_value('infos_tl', patientData.m_patient_street + ', ' + patientData.m_patient_zipcode + ' ' + patientData.m_patient_city);
             }
+          }
+        }
+      });
+    }
+  }
+});
+
+//Aktualisierende Faxnummer der Gerichte
+frappe.ui.form.on('Gutachten', {
+  onload: function (frm) {
+    if (frm.doc.gericht) {
+      frappe.call({
+        method: "frappe.client.get",
+        args: {
+          doctype: "Gericht",
+          name: frm.doc.gericht
+        },
+        callback: function (r) {
+          if (r.message) {
+            var courtData = r.message;
+            frm.set_value('fax_court', courtData.fax_number);
           }
         }
       });

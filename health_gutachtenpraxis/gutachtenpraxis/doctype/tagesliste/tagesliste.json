@@ -33,13 +33,15 @@
    "fieldtype": "Date",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Datum"
+   "label": "Datum",
+   "reqd": 1
   },
   {
    "fieldname": "court",
    "fieldtype": "Link",
    "label": "Gericht bzw. Bezirk",
-   "options": "Gericht"
+   "options": "Gericht",
+   "reqd": 1
   },
   {
    "default": "true",
@@ -63,7 +65,7 @@
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2024-04-09 11:59:21.719921",
+ "modified": "2024-05-13 14:57:46.076157",
  "modified_by": "Administrator",
  "module": "Gutachtenpraxis",
  "name": "Tagesliste",

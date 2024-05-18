@@ -12,7 +12,7 @@ from frappe import _
 class Gutachten(Document):
     def validate(self):
         self.file_name = self.name
-        address_to_geojson(self)
+        #address_to_geojson(self)
 
     def address_string(self):
         if self.patient_a_patient_street:
@@ -76,3 +76,5 @@ def address_to_geojson(gutachten):
             return json.dumps(geojson)
     except IndexError:
         frappe.msgprint(_("Fehler: Bitte Adresse überprüfen"))
+
+

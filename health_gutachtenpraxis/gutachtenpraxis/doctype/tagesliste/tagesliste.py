@@ -13,7 +13,6 @@ class Tagesliste(Document):
     def validate(self):
         self.update_gutachten_status()
         
-    
     def on_trash(self):
         current_gutachten_set = set([d.gutachten for d in self.gutachten_list])
         for g in current_gutachten_set:
@@ -41,19 +40,14 @@ class Tagesliste(Document):
     def get_current_gutachten_list(self):
         return [d.gutachten for d in self.gutachten_list]
 
-
-
-
     def get_gutachtens(self):
         gutachtens = []
         for item in self.gutachten_list:
             gutachtens.append(frappe.get_doc("Gutachten", item.gutachten))
         return gutachtens
 
-
 def change_gutachten_status(gutachten, status):
     pass
-
 
 def address_to_geojson_feature(gutachten):
     if gutachten.lat and gutachten.lon:
