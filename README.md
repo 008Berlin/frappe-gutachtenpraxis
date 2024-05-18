@@ -233,7 +233,7 @@ docker build \
   --build-arg=PYTHON_VERSION=3.11.6 \
   --build-arg=NODE_VERSION=18.18.2 \
   --build-arg=APPS_JSON_BASE64=$APPS_JSON_BASE64 \
-  --tag=ghcr.io/d0rianw/frappe-gutachtenpraxis/app-image_full:1.0.6 \
+  --tag=ghcr.io/d0rianw/frappe-gutachtenpraxis/app-image_full:1.0.7 \
   --tag=ghcr.io/d0rianw/frappe-gutachtenpraxis/app-image_full:latest \
   --no-cache \
 	--platform=linux/amd64 \
@@ -248,13 +248,13 @@ docker login ghcr.io
 
 and
 ```shell
-docker push ghcr.io/d0rianw/frappe-gutachtenpraxis/app-image_full:1.0.6
+docker push ghcr.io/d0rianw/frappe-gutachtenpraxis/app-image_full:1.0.7
 docker push ghcr.io/d0rianw/frappe-gutachtenpraxis/app-image_full:latest
 ```
 
 ## Build Container on server
 ### Create gutachtenpraxis.yaml 
-### Remember change the image in compose.yaml to "ghcr.io/d0rianw/frappe-gutachtenpraxis/app-image_full:1.0.6"
+### Remember change the image in compose.yaml to "ghcr.io/d0rianw/frappe-gutachtenpraxis/app-image_full:1.0.7"
 ```shell
 docker compose --project-name gutachtenpraxis \
   --env-file ~/gitops/gutachtenpraxis.env \
