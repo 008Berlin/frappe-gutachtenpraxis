@@ -78,3 +78,16 @@ def address_to_geojson(gutachten):
         frappe.msgprint(_("Fehler: Bitte Adresse überprüfen"))
 
 
+@frappe.whitelist()
+def get_sorted_appraisal_types_query(doctype, txt, searchfield, start, page_len, filters):
+    return frappe.db.sql("""
+        SELECT name, CONCAT('[', appraisal_category, '] ')
+        FROM `tabGutachtenarten`
+        WHERE appraisal_type LIKE %(txt)s
+        ORDER BY appraisal_category ASC
+        LIMIT %(start)s, %(page_len)s
+    """, {
+        'txt': "%%%s%%" % txt,
+        'start': start,
+        'page_len': page_len
+    })
