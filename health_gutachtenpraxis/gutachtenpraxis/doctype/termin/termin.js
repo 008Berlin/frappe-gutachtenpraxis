@@ -5,6 +5,7 @@ frappe.ui.form.on('Termin', {
     refresh: function (frm) {
         var allowed_statuses = ['Wiedervorlage', 'Privat Fichtel - Praxis', 'Termin bestätigt, Gutachten', 'Planung Fahrer', 'Vergebliche Anfahrt', 'abgs. Praxis - neu terminieren', 'Termin mitgeteilt, nicht bestätigt', 'Termin geplant nicht mitgeteilt', 'Urlaub', 'Arbeitszeiten (An- und Abwesenheit)'];
         if (allowed_statuses.includes(frm.doc.status)) {
+            frm.set_value("color", getStatusColor(frm.doc.status));
             frm.add_custom_button(__('Neuer Termin'), function () {
                 frappe.model.with_doctype('Termin', function () {
                     var new_doc = frappe.model.get_new_doc('Termin');
@@ -19,8 +20,8 @@ frappe.ui.form.on('Termin', {
             frm.add_custom_button(__('Neuer Termin'), function () {
                 frappe.msgprint(__('Bitte den Status des Termins auf einen der folgenden setzen:\n {0}', [allowed_statuses.join(', ')]));
             }).addClass('disabled');
+            frm.set_value("color", "#B04DD0")
         }
-        frm.set_value("color", "#B04DD0")
     },
     status: function (frm) {
         var color = getStatusColor(frm.doc.status);
