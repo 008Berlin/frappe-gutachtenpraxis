@@ -5,8 +5,8 @@ frappe.ui.form.on('Termin', {
     refresh: function (frm) {
         var allowed_statuses = ['Wiedervorlage', 'Privat Fichtel - Praxis', 'Termin bestätigt, Gutachten', 'Planung Fahrer', 'Vergebliche Anfahrt', 'abgs. Praxis - neu terminieren', 'Termin mitgeteilt, nicht bestätigt', 'Termin geplant nicht mitgeteilt', 'Urlaub', 'Arbeitszeiten (An- und Abwesenheit)'];
         if (allowed_statuses.includes(frm.doc.status)) {
-            frm.set_value("color", getStatusColor(frm.doc.status));
-            frm.add_custom_button(__('Neuer Termin'), function () {
+          frm.set_value("color", getStatusColor(frm.doc.status));
+          frm.add_custom_button(__('Neuer Termin'), function () {
                 frappe.model.with_doctype('Termin', function () {
                     var new_doc = frappe.model.get_new_doc('Termin');
                     new_doc.gutachten = frm.doc.gutachten;
@@ -20,7 +20,7 @@ frappe.ui.form.on('Termin', {
             frm.add_custom_button(__('Neuer Termin'), function () {
                 frappe.msgprint(__('Bitte den Status des Termins auf einen der folgenden setzen:\n {0}', [allowed_statuses.join(', ')]));
             }).addClass('disabled');
-            frm.set_value("color", "#B04DD0")
+           frm.set_value("color", "#B04DD0")
         }
     },
     status: function (frm) {
@@ -43,18 +43,6 @@ function getStatusColor(status) {
         "Urlaub": "#629EF2",
         "Arbeitszeiten (An- und Abwesenheit)": "#B04DD0",
 
-        /*
-        "Wiedervorlage": "#FAD7A0",
-        "Privat Fichtel - Praxis": "#FDEBD0",
-        "Termin bestätigt, Gutachten": "#85C1E9",
-        "Planung Fahrer": "#82E0AA",
-        "Vergebliche Anfahrt": "#FAD7A0",
-        "abgs. Praxis - neu terminieren": "#E6B0AA",
-        "Termin mitgeteilt, nicht bestätigt": "#E6B0AA",
-        "Termin geplant nicht mitgeteilt": "#E6B0AA",
-        "Urlaub": "#E6B0AA",
-        "Arbeitszeiten (An- und Abwesenheit)": "#E6B0AA",
-        */
     };
 
     return statusColorMapping[status];
@@ -65,4 +53,29 @@ frappe.ui.form.on('Termin', {
         // Neu laden der Seite nach dem Speichern des Termins
         window.location.reload();
     }
+});
+
+frappe.ui.form.on('Termin', {
+  refresh: function (frm) {
+
+    // Function to handle custom back button navigation
+    function backNavigationWarning(event) {
+      // Prevent immediate navigation if there are unsaved changes and warning is not ignored
+      if (frm.is_dirty()) {
+
+        frappe.confirm(
+          "Es gab ungespeicherte Änderungen. Wollen Sie diese speichern?",
+          function () {
+            // User clicked "Yes", save changes and navigate back after save
+            frm.save();
+          },
+        );
+      }
+    }
+
+    if (!frm.backNavigationWarningAdded) {
+      window.addEventListener("popstate", backNavigationWarning);
+      frm.backNavigationWarningAdded = true;  // Set flag to indicate listener is added
+    }
+  }
 });
