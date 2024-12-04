@@ -67,3 +67,50 @@ frappe.router.on('change', () => {
         setTimeout(addCustomButton, 5000);  // Adjust the delay time if necessary
     }
 });
+
+
+const doctypesWithBackNavigationWarning = [
+    "Termin",
+    "Gutachten",
+    "Gutachtenart",
+    "Rechnung",
+    "Richter",
+    "Gericht Richter",
+    "Gutachten Patient",
+    "Einrichtung",
+    "Gericht",
+    "Rechnung",
+    "Tagesliste"
+];
+
+doctypesWithBackNavigationWarning.forEach((doctype) => {
+    frappe.ui.form.on(doctype, {
+        onload: function (frm) {
+
+            setInterval(() => {
+
+                if ( frm.is_dirty() && frm.is_new() !== 1 ) {
+                    frm.save();
+                }
+
+            }, 5000); // 5000ms = 5 seconds
+
+        }
+    });
+});
+$(document).ready(function () {
+    // Create the button
+    let button_html = `
+      <button class="btn btn-primary header-calender" style="margin-left: 15px;">
+          Terminkalender
+      </button>
+    `;
+
+    // Add it next to the search bar
+    $('.navbar .form-inline').append(button_html);
+
+    // Add click handler
+    $('.header-calender').click(function () {
+        window.location.href = 'https://erp.folkerfichtel.com/app/termin/view/calendar/Standard';
+    });
+});

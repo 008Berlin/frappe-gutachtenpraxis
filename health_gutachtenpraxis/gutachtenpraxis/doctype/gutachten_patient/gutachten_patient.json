@@ -46,7 +46,9 @@
   "b_patient_first_name",
   "b_patient_last_name",
   "b_patient_address",
+  "b_patient_zipcode",
   "b_patient_phone",
+  "b_patient_mobile",
   "b_patient_mail",
   "b_patient_fax"
  ],
@@ -200,9 +202,19 @@
    "label": "Adresse"
   },
   {
+   "fieldname": "b_patient_zipcode",
+   "fieldtype": "Data",
+   "label": "PLZ"
+  },
+  {
    "fieldname": "b_patient_phone",
    "fieldtype": "Data",
    "label": "Telefon"
+  },
+  {
+   "fieldname": "b_patient_mobile",
+   "fieldtype": "Data",
+   "label": "Mobil Telefon"
   },
   {
    "fieldname": "b_patient_fax",
