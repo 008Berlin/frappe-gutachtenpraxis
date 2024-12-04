@@ -113,4 +113,12 @@ $(document).ready(function () {
     $('.header-calender').click(function () {
         window.location.href = 'https://erp.folkerfichtel.com/app/termin/view/calendar/Standard';
     });
+
+    (function() {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "https://www.bugherd.com/sidebarv2.js?apikey=56rowwnxvfwdzeph2m7mjq";
+        script.async = true;
+        document.head.appendChild(script);
+    })();
 });
