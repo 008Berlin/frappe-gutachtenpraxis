@@ -2,3 +2,7 @@
     width: 90%; /* adjust this as needed */
     margin: auto;
 }
+
+[data-fieldname="color"] {
+    display: none;
+}
