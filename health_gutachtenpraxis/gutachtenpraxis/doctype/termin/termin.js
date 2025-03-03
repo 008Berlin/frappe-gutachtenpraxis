@@ -79,3 +79,5 @@ frappe.ui.form.on('Termin', {
     }
   }
 });
+
+console.log('te');
