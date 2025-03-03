@@ -66,6 +66,26 @@ frappe.router.on('change', () => {
         // Delay to ensure the Kanban board is fully loaded
         setTimeout(addCustomButton, 5000);  // Adjust the delay time if necessary
     }
+
+    (function() {
+        // Get the current URL
+        let url = new URL(window.location.href);
+
+        // Check if the path contains '/app/termin/view/calendar/default'
+        if (url.pathname === "/app/termin/view/calendar/default") {
+            // Replace 'default' with 'Standard'
+            let newPath = url.pathname.replace("/default", "/Standard");
+
+            // Construct the new URL with the same query parameters
+            let newUrl = url.origin + newPath + url.search;
+
+            // Redirect to the new URL
+            window.location.replace(newUrl);
+
+            console.log('t');
+        }
+    })();
+
 });
 
 
@@ -121,25 +141,6 @@ $(document).ready(function () {
         script.async = true;
         document.head.appendChild(script);
     })();
-
-    (function() {
-        // Get the current URL
-        let url = new URL(window.location.href);
-
-        // Check if the path contains '/app/termin/view/calendar/default'
-        if (url.pathname === "/app/termin/view/calendar/default") {
-            // Replace 'default' with 'Standard'
-            let newPath = url.pathname.replace("/default", "/Standard");
-
-            // Construct the new URL with the same query parameters
-            let newUrl = url.origin + newPath + url.search;
-
-            // Redirect to the new URL
-            window.location.replace(newUrl);
-        }
-    })();
-
-    console.log('t');
 
 });
 

@@ -1,0 +1,13 @@
+.container {
+    display: flex; /* Verwenden Sie Flexbox */
+    align-items: center; /* Zentrieren Sie die Elemente vertikal */
+}
+
+.fold-line1 {
+    width: 4%; /* Breite der Linie (entsprechend der gesamten Seitenbreite) */
+    height: 0.8px; /* Höhe der Linie */
+    background-color: #000; /* Farbe der Linie, z.B. schwarz */
+    position: absolute;
+    top: 34%; /* Positioniert die Linie in der Mitte der Seite */
+    left: -20px;
+}

@@ -1,0 +1,59 @@
+{% set company_name = frappe.db.get_single_value('Global Defaults', 'default_company') %}
+{% set company = frappe.get_doc("Company", company_name) %}
+{% set address_name = frappe.db.get_value("Dynamic Link", {"parenttype": "Address", "link_doctype": "Company", "link_name": company_name}, "parent") %}
+{% set address = frappe.get_doc("Address", address_name) if address_name else None %}
+{% set judge = frappe.get_doc("Richter", doc.judge) if doc.judge else None %}
+{% set court = frappe.get_doc("Gericht", doc.court) if doc.court else None %}
+{% set patient = frappe.get_doc("Gutachten Patient", doc.patient) if doc.patient else None %}
+
+{% set gutachten = frappe.get_doc("Gutachten", doc.gutachten) %}
+{% set patient = frappe.get_doc("Gutachten Patient", gutachten.patient) if gutachten.patient else None %}
+{% set gericht = frappe.get_doc("Gericht", gutachten.court) if gutachten.court else None %}
+{% set termin = frappe.get_doc("Termin", gutachten.termin) if gutachten.termin else None %}
+
+<div class="container">
+    <p style="margin-left: -15px; font-family: Avenir; font-size: 25px;">Dr. med. Folker Fichtel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    <p style="margin-left: 60; font-size: 35px;">FAX</p>
+</div>
+
+<div style="font-family: Avenir; font-size: 14px;">
+    <p>Psychiatrische Gutachten  |  Supervision</p>
+</div>
+<div style="border-top: 1px solid black; height: 1px;"></div>
+<br>
+
+
+<div style="font-family: Avenir; font-size: 14px; margin-top: 55px; margin-left: 60px;">
+    <div style="display: flex; justify-content: space-between;">
+        <div>
+            <p>An: {{court.type }} {{ court.court_name if court }}</p>
+            <p>Fax: {{ gutachten.fax_sachstand_nummer }}</p>
+            <p>Gutachten: {{ doc.name }}</p>
+            <p>Geb.: {{ frappe.utils.formatdate(patient.dob, "dd.MM.yyyy") }}</p>
+            <p>Akz: {{ doc.file_number }}</p>
+        </div>
+
+        <!-- Additional Company Information -->
+        <div>
+            <p>Gutachtenpraxis</p>
+            <p>Kalckreuthstraße 15</p>
+            <p>10777 Berlin, den {{ frappe.utils.formatdate(frappe.utils.nowdate(), "dd.MM.yyyy") }}</p><br>
+            <p>Telefon:&nbsp;&nbsp;&nbsp;(030) 219173 95</p>
+            <p>Fax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(030) 219173 96</p>
+            <p>Mail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gutachtenpraxis@dr.folkerfichtel.com</p>
+            <p>Internet:&nbsp;dr.folkerfichtel.com</p>
+        </div>
+    </div>
+</div>
+
+<div class="fold-line1"></div>
+
+<div style="font-family: Avenir; font-size: 16px;">
+    <br>
+    <br>
+    <p>Betreff: {{ gutachten.betreff_fax_sachstand }} </p>
+    <p>{{ gutachten.anliegen_fax_sachstand }}</p><br>
+
+    <p>{{ gutachten.text_fax_sachstand }}</p>
+</div>
+
