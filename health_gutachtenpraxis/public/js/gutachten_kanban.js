@@ -121,4 +121,118 @@ $(document).ready(function () {
         script.async = true;
         document.head.appendChild(script);
     })();
+
+    (function() {
+        // Get the current URL
+        let url = new URL(window.location.href);
+
+        // Check if the path contains '/app/termin/view/calendar/default'
+        if (url.pathname === "/app/termin/view/calendar/default") {
+            // Replace 'default' with 'Standard'
+            let newPath = url.pathname.replace("/default", "/Standard");
+
+            // Construct the new URL with the same query parameters
+            let newUrl = url.origin + newPath + url.search;
+
+            // Redirect to the new URL
+            window.location.replace(newUrl);
+        }
+    })();
+
+    console.log('t');
+
 });
+
+
+
+// Gutachten Anwendung auf Formular
+frappe.ui.form.on('Gutachten', {
+    refresh(frm) {
+        frm.fields_dict['type'].get_query = function() {
+            return {
+                query: 'health_gutachtenpraxis.gutachtenpraxis.doctype.gutachten.gutachten.get_sorted_appraisal_types_query'
+            };
+        };
+    }
+});
+
+// Termin Anwendung auf Formular
+frappe.ui.form.on('Termin', {
+    gutachten: function(frm) {  // Überwacht das verknüpfte 'gutachten'-Feld
+        // Verhindere Endlosloop, indem du den API-Aufruf nur einmal ausführst
+        frappe.call({
+            method: 'frappe.client.validate_link',
+            args: {
+                doctype: 'Gutachten',       // Gib den Doctype an
+                docname: frm.doc.gutachten, // Gib den Namen des Dokuments an
+                link: frm.doc.gutachten      // Ersetze dies durch den Wert des Gutachtens
+            },
+            callback: function(response) {
+                if (response.message) {
+                    //frm.set_value('link_validated', true);  // Setze ein Flag, um zu verhindern, dass der Aufruf erneut getätigt wird
+                    //frappe.msgprint(__('Link validiert: {0}', [response.message]));
+                } else {
+                    //frappe.msgprint(__('Keine Antwort erhalten.'));
+                }
+            },
+            error: function(err) {
+                // Fehlerbehandlung
+                if (err.message) {
+                    //frappe.msgprint(__('Fehler aufgetreten: {0}', [err.message]));
+                } else {
+                    //frappe.msgprint(__('Unbekannter Fehler.'));
+                }
+            }
+        });
+
+    }
+});
+
+
+// Termin Anwendung auf Formular
+frappe.ui.form.on('Termin', {
+    refresh: function (frm) {
+        var allowed_statuses = ['Wiedervorlage', 'Privat Fichtel - Praxis', 'Termin bestätigt, Gutachten', 'Planung Fahrer', 'Vergebliche Anfahrt', 'abgs. Praxis - neu terminieren', 'Termin mitgeteilt, nicht bestätigt', 'Termin geplant nicht mitgeteilt', 'Urlaub', 'Arbeitszeiten (An- und Abwesenheit)'];
+        if (allowed_statuses.includes(frm.doc.status)) {
+            frm.set_value("color", getStatusColor(frm.doc.status));
+            frm.add_custom_button(__('Neuer Termin'), function () {
+                frappe.model.with_doctype('Termin', function () {
+                    var new_doc = frappe.model.get_new_doc('Termin');
+                    new_doc.gutachten = frm.doc.gutachten;
+                    new_doc.date = frm.doc.date;
+                    new_doc.last_name = frm.doc.last_name;
+                    frappe.set_route('Form', 'Termin', new_doc.name);
+                });
+
+            });
+        } else {
+            frm.add_custom_button(__('Neuer Termin'), function () {
+                frappe.msgprint(__('Bitte den Status des Termins auf einen der folgenden setzen:\n {0}', [allowed_statuses.join(', ')]));
+            }).addClass('disabled');
+            frm.set_value("color", "#B04DD0")
+        }
+    },
+    status: function (frm) {
+        var color = getStatusColor(frm.doc.status);
+        frm.set_value('color', color);
+    }
+});
+
+function getStatusColor(status) {
+    var statusColorMapping = {
+
+        "Wiedervorlage": "#B04DD0",
+        "Privat Fichtel - Praxis": "#000000",
+        "Termin bestätigt, Gutachten": "#DA2B4D",
+        "Planung Fahrer": "#629EF2",
+        "Vergebliche Anfahrt": "#D0D0D0",
+        "abgs. Praxis - neu terminieren": "#E07F26",
+        "Termin mitgeteilt, nicht bestätigt": "#63D13B",
+        "Termin geplant nicht mitgeteilt": "#629EF2",
+        "Urlaub": "#629EF2",
+        "Arbeitszeiten (An- und Abwesenheit)": "#B04DD0",
+
+    };
+
+    return statusColorMapping[status];
+}
