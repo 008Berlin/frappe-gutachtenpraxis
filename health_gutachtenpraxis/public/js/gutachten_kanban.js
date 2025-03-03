@@ -82,7 +82,7 @@ frappe.router.on('change', () => {
             // Redirect to the new URL
             window.location.replace(newUrl);
 
-            console.log('t');
+            console.log('tview');
         }
     })();
 
