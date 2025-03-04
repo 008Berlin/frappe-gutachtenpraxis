@@ -139,7 +139,7 @@ bench --site health.localhost install-app healthcare
 
 To install gutachten app
 ```shell
-bench get-app https://github.com/d0rianw/frappe-gutachtenpraxis.git
+bench get-app https://github.com/008Berlin/frappe-gutachtenpraxis.git
 bench --site health.localhost install-app health_gutachtenpraxis
 ```
 
@@ -218,7 +218,7 @@ export APPS_JSON='[
     "branch": "version-15"
   },
   {
-    "url": "https://github.com/d0rianw/frappe-gutachtenpraxis.git",
+    "url": "https://github.com/008Berlin/frappe-gutachtenpraxis.git",
     "branch": "main"
   }
 ]'
@@ -233,8 +233,8 @@ docker build \
   --build-arg=PYTHON_VERSION=3.11.6 \
   --build-arg=NODE_VERSION=18.18.2 \
   --build-arg=APPS_JSON_BASE64=$APPS_JSON_BASE64 \
-  --tag=ghcr.io/d0rianw/frappe-gutachtenpraxis/app-image_full:1.0.7 \
-  --tag=ghcr.io/d0rianw/frappe-gutachtenpraxis/app-image_full:latest \
+  --tag=ghcr.io/008Berlin/frappe-gutachtenpraxis/app-image_full:1.0.7 \
+  --tag=ghcr.io/008Berlin/frappe-gutachtenpraxis/app-image_full:latest \
   --no-cache \
 	--platform=linux/amd64 \
   --file=images/custom/Containerfile .
@@ -248,13 +248,13 @@ docker login ghcr.io
 
 and
 ```shell
-docker push ghcr.io/d0rianw/frappe-gutachtenpraxis/app-image_full:1.0.7
-docker push ghcr.io/d0rianw/frappe-gutachtenpraxis/app-image_full:latest
+docker push ghcr.io/paddy194/frappe-gutachtenpraxis/app-image_full:1.0.7
+docker push ghcr.io/paddy194/frappe-gutachtenpraxis/app-image_full:latest
 ```
 
 ## Build Container on server
 ### Create gutachtenpraxis.yaml 
-### Remember change the image in compose.yaml to "ghcr.io/d0rianw/frappe-gutachtenpraxis/app-image_full:1.0.7"
+### Remember change the image in compose.yaml to "ghcr.io/paddy194/frappe-gutachtenpraxis/app-image_full:1.0.7"
 ```shell
 docker compose --project-name gutachtenpraxis \
   --env-file ~/gitops/gutachtenpraxis.env \
