@@ -61,6 +61,13 @@
   "patient_a_patient_city",
   "patient_a_patient_residence_phone",
   "infos_tl",
+  "custom_betreuungsumfang",
+  "custom_behoerden",
+  "custom_entscheidung",
+  "custom_gesundheitssorge",
+  "custom_versicherungsangelegenheiten__wohnungsangelegenheiten",
+  "custom_aufenthaltsbestimmung",
+  "custom_sonstiger_umfang",
   "section_break_lofdj",
   "geolocation_html",
   "lat",
@@ -260,6 +267,10 @@
    "fieldtype": "Section Break"
   },
   {
+   "fieldname": "section_break_umfang",
+   "fieldtype": "Section Break"
+  },
+  {
    "fetch_from": "patient.m_patient_zipcode",
    "fieldname": "patient_m_patient_zipcode",
    "fieldtype": "Data",
@@ -308,6 +319,11 @@
   {
    "fieldname": "tab_break_fgzle",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "custom_column_break_dfajs",
+   "fieldtype": "Column Break",
+   "label": "Umfang der Betreuungsverlängerung / Vorl. Betreuung"
   },
   {
    "fieldname": "tab_break_hn5rq",
@@ -399,6 +415,41 @@
    "fieldtype": "Select",
    "label": "Honorargruppe",
    "options": "M1\nM2\nM3"
+  },
+  {
+   "fieldname": "custom_betreuungsumfang",
+   "fieldtype": "Check",
+   "label": "Vermögenssorge"
+  },
+  {
+   "fieldname": "custom_behoerden",
+   "fieldtype": "Check",
+   "label": "Behörden-, Renten- und andere Sozialleistungsangelegenheiten"
+  },
+  {
+   "fieldname": "custom_entscheidung",
+   "fieldtype": "Check",
+   "label": "Entscheidung über die Entgegennahme, das Öffnen und das Anhalten der Post"
+  },
+  {
+   "fieldname": "custom_gesundheitssorge",
+   "fieldtype": "Check",
+   "label": "Gesundheitssorge"
+  },
+  {
+   "fieldname": "custom_versicherungsangelegenheiten__wohnungsangelegenheiten",
+   "fieldtype": "Check",
+   "label": "Wohnungsangelegenheiten"
+  },
+  {
+   "fieldname": "custom_aufenthaltsbestimmung",
+   "fieldtype": "Check",
+   "label": "Aufenthaltsbestimmung"
+  },
+  {
+   "fieldname": "custom_sonstiger_umfang",
+   "fieldtype": "Text Editor",
+   "label": "Sonstiger Umfang"
   },
   {
    "fieldname": "heading_fax_sachstand",
