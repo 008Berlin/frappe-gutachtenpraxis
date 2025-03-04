@@ -30,6 +30,7 @@
   "column_break_rvh0l",
   "decision_date",
   "receipt_date",
+  "custom_ende_der_betreuung",
   "period",
   "due_date",
   "preliminary_end",
@@ -100,6 +101,11 @@
    "fieldname": "receipt_date",
    "fieldtype": "Date",
    "label": "Eingangsdatum"
+  },
+  {
+   "fieldname": "custom_ende_der_betreuung",
+   "fieldtype": "Date",
+   "label": "Ende der Betreuung"
   },
   {
    "description": "in Tagen",
