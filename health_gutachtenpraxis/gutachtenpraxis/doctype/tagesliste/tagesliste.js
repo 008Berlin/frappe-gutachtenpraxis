@@ -49,7 +49,7 @@ function refreshMap(frm) {
 
 function createMap(features) {
 
-    if ( typeof features[0].geometry === undefined ) {
+    if ( typeof features === undefined ) {
         return;
     }
 
