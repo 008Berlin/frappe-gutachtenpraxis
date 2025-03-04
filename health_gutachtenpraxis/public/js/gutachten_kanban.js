@@ -100,7 +100,6 @@ const doctypesWithBackNavigationWarning = [
     "Einrichtung",
     "Gericht",
     "Rechnung",
-    "Tagesliste"
 ];
 
 doctypesWithBackNavigationWarning.forEach((doctype) => {

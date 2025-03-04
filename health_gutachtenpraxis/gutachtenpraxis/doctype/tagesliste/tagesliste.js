@@ -48,6 +48,11 @@ function refreshMap(frm) {
 }
 
 function createMap(features) {
+
+    if ( typeof features[0].geometry === undefined ) {
+        return;
+    }
+
     // We'll use the first feature to set the initial map view
     var lat = features[0].geometry.coordinates[1];
     var lon = features[0].geometry.coordinates[0];
