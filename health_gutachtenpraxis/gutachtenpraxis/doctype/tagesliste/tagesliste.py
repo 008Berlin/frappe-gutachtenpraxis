@@ -6,13 +6,23 @@ import requests
 import json
 from frappe.model.document import Document
 import googlemaps
-from datetime import datetime
-
+from datetime import datetime, timedelta
 
 class Tagesliste(Document):
+    def before_save(self):
+        if not self.gutachten_list:
+            frappe.logger().error("gutachten_list is empty before save!")
+            return
+
+        for item in self.gutachten_list:
+            item.parent = self.name
+            item.parentfield = "gutachten_list"
+            item.parenttype = "Tagesliste"
+
+        frappe.logger().error(f"Final gutachten_list Before Save: {self.gutachten_list}")
     def validate(self):
         self.update_gutachten_status()
-        
+
     def on_trash(self):
         current_gutachten_set = set([d.gutachten for d in self.gutachten_list])
         for g in current_gutachten_set:
@@ -62,7 +72,7 @@ def address_to_geojson_feature(gutachten):
         if data:
             lat = data[0]["lat"]
             lon = data[0]["lon"]
-    
+
     geojson = {
         "type": "Feature",
         "properties": {"name": gutachten.name},
@@ -86,8 +96,6 @@ def gutachten_list_to_geojson(tagesliste):
     for gutachten in gutachtens:
         feature = address_to_geojson_feature(gutachten)
         geojson["features"].append(feature)
-
-    print(geojson)
 
     return json.dumps(geojson)
 
@@ -116,48 +124,69 @@ def create_tagesliste(court):
 
 @frappe.whitelist()
 def optimize_route(tagesliste_name):
-    tagesliste = frappe.get_doc('Tagesliste', tagesliste_name)
+    tagesliste = frappe.get_doc("Tagesliste", tagesliste_name)
     api_key = frappe.db.get_single_value("Google Settings", "api_key")
-    client = googlemaps.Client(key=api_key)
-        
-    # Get company address as the origin
-    company_address = get_company_address()
-    print(company_address)
-    
-    # Extract lat, lon from gutachten_list
-    locations = ["{0},{1}".format(gutachten.lat, gutachten.lon) for gutachten in tagesliste.get_gutachtens()]
 
-    print(locations)
-        
-    # Request optimized route from Google Maps
-    result = client.directions(
-        origin=company_address,
-        destination=company_address,
-        waypoints=locations,
-        optimize_waypoints=True,
-        mode="driving",
-        departure_time=datetime.now()
-    )
-    print(result)
-    print(result[0]['waypoint_order'])
-    
-    # Get the optimized waypoint order
-    waypoint_order = result[0]['waypoint_order']
-    
-    # Reorder gutachten_list based on the optimized order
-    gutachten_order = []
-    for new_idx, old_idx in enumerate(waypoint_order, 1):
-        tagesliste.gutachten_list[old_idx].idx = new_idx
-        gutachten_order.append(tagesliste.gutachten_list[old_idx])
-    
-    # Replace the gutachten_list with the reordered list
-    tagesliste.gutachten_list = gutachten_order
-    
-    # Save the updated document
-    tagesliste.save()
-    frappe.db.commit()
+    # Hole die Firmenadresse als Start-/Endpunkt
+    company_address = get_company_address()  # Deine Methode für Firmenadresse hier verwenden
+
+    # Koordinaten der Gutachten extrahieren
+    gutachten_list = tagesliste.get_gutachtens()
+    locations = [
+        {"location": {"latLng": {"latitude": float(gutachten.lat), "longitude": float(gutachten.lon)}}}
+        for gutachten in gutachten_list
+    ]
+
+    url = "https://routes.googleapis.com/directions/v2:computeRoutes"
+
+    headers = {
+        "Content-Type": "application/json",
+        "X-Goog-Api-Key": api_key,
+        "X-Goog-FieldMask": "routes",
+    }
+
+    data = {
+        "origin": {"address": company_address},
+        "destination": {"address": company_address},
+        "intermediates": locations,
+        "travelMode": "DRIVE",
+        "routingPreference": "TRAFFIC_AWARE",
+        "departureTime": (datetime.utcnow() + timedelta(minutes=5)).isoformat() + "Z",
+        "optimizeWaypointOrder": True
+    }
+
+    response = requests.post(url, json=data, headers=headers)
+
+    if response.status_code != 200:
+        frappe.throw(f"API request failed: {response.text}")
+
+    result = response.json()
+#     print(result)
+
+    if "routes" in result and result["routes"]:
+        optimized_order = result["routes"][0].get("optimizedIntermediateWaypointIndex", [])
+        print(f"Optimized Order: {optimized_order}")
+
+        print("Before Sorting:", tagesliste.gutachten_list)
+
+        # Reorder gutachten_list based on optimized order
+        sorted_gutachten_list = [tagesliste.gutachten_list[i] for i in optimized_order]
+
+        # Clear current child table and add sorted items with correct idx
+        tagesliste.set("gutachten_list", [])
+
+        for idx, gutachten in enumerate(sorted_gutachten_list, start=1):
+            gutachten.idx = idx  # Ensure correct indexing
+            tagesliste.append("gutachten_list", gutachten)
+
+        print("After Sorting:", tagesliste.gutachten_list)
+
+        # Save changes
+        tagesliste.save()
+        frappe.db.commit()
 
     return True
+
 
 @frappe.whitelist()
 def get_company_address():
@@ -175,3 +204,17 @@ def get_company_address():
         return company_address[0] + ", " + company_address[2] + " " + company_address[1]
 
     return None
+
+def sort_gutachten_list(tagesliste, correct_order):
+    """ Sort tagesliste.gutachten_list based on the provided correct order of lat/lng values """
+
+    def get_index(item):
+        # Fetch the associated Gutachten document
+        gutachten = frappe.get_doc("Gutachten", item.gutachten)  # Assuming `gutachten` is the field name
+        if hasattr(gutachten, "lat") and hasattr(gutachten, "lon"):
+            lat_lng = (gutachten.lat, gutachten.lon)
+            return correct_order.index(lat_lng) if lat_lng in correct_order else float('inf')
+        return float('inf')  # Push items without lat/lon to the end
+
+    tagesliste.gutachten_list.sort(key=get_index)
+    return tagesliste
