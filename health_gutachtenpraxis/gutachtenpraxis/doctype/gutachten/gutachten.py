@@ -12,7 +12,7 @@ from frappe import _
 class Gutachten(Document):
     def validate(self):
         self.file_name = self.name
-        #address_to_geojson(self)
+        address_to_geojson(self)
 
     def address_string(self):
         if self.patient_a_patient_street:
@@ -50,12 +50,19 @@ def address_to_geojson(gutachten):
     #print(gutachten)
     if (type(gutachten)==str):
         gutachten = frappe.get_doc(json.loads(gutachten))
-        
+
     try:
+
+        headers = {
+            'User-Agent': 'YourAppNameHere/1.0 (your-email@example.com)'
+        }
+
         response = requests.get(
             "https://nominatim.openstreetmap.org/search",
             params={"q": gutachten.address_string(), "format": "json"},
+            headers=headers
         )
+
         data = response.json()
         gutachten.lat = data[0]["lat"]
         gutachten.lon = data[0]["lon"]

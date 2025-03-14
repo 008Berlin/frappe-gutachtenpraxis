@@ -13,8 +13,36 @@ frappe.ui.form.on('Tagesliste', {
             }
         });
     },
-    after_save: function (frm) {
-        location.reload();
+    before_save: function(frm) {
+        if (!frm.doc.gutachten_list) {
+            frm.doc.gutachten_list = [];
+        }
+
+        $.each(frm.doc.gutachten_list, function(idx, row) {
+            row.idx = idx + 1;
+            row.parent = frm.doc.name;
+            row.parentfield = "gutachten_list";
+            row.parenttype = "Tagesliste";
+        });
+
+        // **Force ERPNext to detect changes**
+        frm.set_value("gutachten_list", frm.doc.gutachten_list);
+        frm.refresh_field("gutachten_list");
+        frm.dirty();
+
+        // **Override Save Function to Manually Send `gutachten_list`**
+        frappe.call({
+            method: "frappe.desk.form.save.savedocs",
+            args: {
+                doc: frm.doc,
+                action: "Save"
+            },
+            callback: function(response) {
+                location.reload();
+            }
+        });
+
+        return false;  // Stop default save process, use our manual save
     },
     optimize_route: function (frm) {
         frappe.show_alert({
@@ -49,7 +77,7 @@ function refreshMap(frm) {
 
 function createMap(features) {
 
-    if ( typeof features === undefined ) {
+    if ( typeof features === undefined || typeof features[0] === undefined || features.length === 0 ) {
         return;
     }
 
@@ -99,28 +127,3 @@ function createRoute(frm, features) {
         }
     });
 }
-
-frappe.ui.form.on('Tagesliste', {
-  refresh: function (frm) {
-
-    // Function to handle custom back button navigation
-    function backNavigationWarning(event) {
-      // Prevent immediate navigation if there are unsaved changes and warning is not ignored
-      if (frm.is_dirty()) {
-
-        frappe.confirm(
-          "Es gab ungespeicherte Änderungen. Wollen Sie diese speichern?",
-          function () {
-            // User clicked "Yes", save changes and navigate back after save
-            frm.save();
-          },
-        );
-      }
-    }
-
-    if (!frm.backNavigationWarningAdded) {
-      window.addEventListener("popstate", backNavigationWarning);
-      frm.backNavigationWarningAdded = true;  // Set flag to indicate listener is added
-    }
-  }
-});
